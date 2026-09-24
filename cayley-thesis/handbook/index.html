@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cayley Surface 專題手冊</title>
+<style>
+  :root { --accent:#0b5fa5; --soft:#f4f6f8; --line:#d8dee4; --ok:#237a3b; }
+  body { font-family:"Segoe UI","Noto Sans TC",sans-serif; max-width:820px; margin:0 auto;
+         padding:3rem 1.2rem 5rem; color:#1a1a1a; line-height:1.65; }
+  h1 { color:var(--accent); border-bottom:3px solid var(--accent); padding-bottom:.45rem; }
+  h2 { color:var(--accent); margin-top:2rem; }
+  .lead { font-size:1.05rem; }
+  .card { display:block; border:1px solid var(--line); border-left:5px solid var(--accent);
+          border-radius:8px; padding:1rem 1.3rem; margin:1rem 0; text-decoration:none;
+          color:inherit; background:var(--soft); transition:transform .1s; }
+  .card:hover { transform:translateX(4px); }
+  .card b { color:var(--accent); font-size:1.08rem; }
+  .status { border-left-color:var(--ok); }
+  .status b { color:var(--ok); }
+  code { background:#eceff1; border-radius:4px; padding:.1rem .3rem; }
+  small { color:#666; }
+</style>
+</head>
+<body>
+<h1>Cayley Surface 專題手冊</h1>
+<p class="lead">本專題研究同一個 Cayley graph 骨架如何藉由不同面系統形成不同曲面，
+並比較一般圖譜、離散 Hodge 譜與 spectral clustering 能保留哪些代數及拓撲資訊。</p>
+
+<div class="card status"><b>目前可重現狀態：25 / 25 通過</b><br>
+10 個有限群、25 個曲面 witness 均已通過連通性、inverse closure、dart 唯一使用、
+simple face、單圈 vertex link、Euler genus、鏈複形與
+<code>dim ker(Delta_1) = 2g</code> 的檢查。更新日期：2026-07-16。</div>
+
+<h2>從這裡開始</h2>
+
+<a class="card" href="../README/README.md"><b>專案 README</b><br>
+研究問題、資料單位、完整 pipeline、執行方式、目前成果與下一步。</a>
+
+<a class="card" href="notes.html"><b>數學筆記</b><br>
+Cayley graph、rotation system、face permutation、Euler genus、表示論譜與離散 Hodge 的統一定義。</a>
+
+<a class="card" href="../README/THREE_REAL_PROBLEMS.md"><b>三個真實數學問題</b><br>
+圖 genus 與 embedding 枚舉、bounded-genus spectral partitioning、Cayley-DS 與 cospectrality。</a>
+
+<a class="card" href="roadmap.html"><b>研究路線圖</b><br>
+16 週工作包、判斷關卡、可交付成果，以及哪些問題是已完成、可實驗或仍待證明。</a>
+
+<a class="card" href="slides.html"><b>口頭報告投影片</b><br>
+以方向鍵或點擊切換，內容已同步到 25 個已驗證曲面與三條對外問題線。</a>
+
+<h2>資料與程式</h2>
+
+<a class="card" href="../data/surfaces/catalogue.json"><b>曲面 catalogue</b><br>
+唯一的 machine-readable source of truth：群、生成元、面系統 witness、genus、face profile 與驗證狀態。</a>
+
+<div class="card"><b>驗證器</b><br>
+在專案根目錄執行 <code>python handbook/verify_examples.py</code>。驗證器會由 catalogue
+重建每一個曲面，而不是讀取預先寫死的答案。</div>
+
+<div class="card"><b>建構核心與繪圖</b><br>
+<code>code/surface_systems.py</code> 是群、rotation system、face 與驗證的核心；
+<code>code/draw.py</code> 是舊版 Plotly 視覺化入口，其 torus 背景只代表顯示座標，不能取代拓撲驗證。</div>
+
+<p><small><code>thesis/</code>、<code>progress/</code> 與 <code>references/</code> 中的 PDF
+保留為歷史材料；數值或狀態若與本頁不同，以 catalogue、驗證器與 README 為準。</small></p>
+</body>
+</html>

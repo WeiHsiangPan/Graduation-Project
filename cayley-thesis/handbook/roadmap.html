@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cayley Surface 研究路線圖</title>
+<script>MathJax={tex:{inlineMath:[['$','$']]}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root { --ink:#1a1a1a; --accent:#0b5fa5; --soft:#f4f6f8; --line:#d8dee4;
+          --ok:#237a3b; --warn:#a55b00; }
+  body { font-family:"Segoe UI","Noto Sans TC",sans-serif; color:var(--ink); max-width:940px;
+         margin:0 auto; padding:2rem 1.2rem 6rem; line-height:1.62; }
+  h1,h2,h3 { color:var(--accent); }
+  h1 { border-bottom:3px solid var(--accent); padding-bottom:.4rem; }
+  h2 { margin-top:2.4rem; border-bottom:1px solid var(--line); padding-bottom:.25rem; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th,td { border:1px solid var(--line); padding:.5rem .65rem; vertical-align:top; text-align:left; }
+  th { background:var(--soft); }
+  .topbar a { color:var(--accent); text-decoration:none; margin-right:1rem; font-size:.9rem; }
+  .box { border-left:5px solid var(--accent); background:var(--soft); border-radius:0 7px 7px 0;
+         padding:.8rem 1.1rem; margin:1rem 0; }
+  .ok { color:var(--ok); font-weight:700; } .warn { color:var(--warn); font-weight:700; }
+  .gate { background:#eef7ef; }
+  code { background:#eef1f3; border-radius:4px; padding:.1rem .3rem; }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="index.html">&larr; 手冊首頁</a><a href="notes.html">數學筆記</a><a href="slides.html">投影片</a></div>
+
+<h1>研究路線圖：從已驗證 catalogue 到可答的研究問題</h1>
+
+<div class="box"><b>目前基線（2026-07-16）</b><br>
+10 個有限群、25 個 surface witnesses 已達 V2：拓撲與 Hodge 都通過。
+下一個真正缺口不是再畫更多圖，而是做 automorphism quotient、建立 matched experiments，
+並把計算結果收斂成一個可證明的命題。</div>
+
+<h2>1. 驗證層級</h2>
+
+<table>
+<tr><th>層級</th><th>意義</th><th>目前狀態</th></tr>
+<tr><td>V0</td><td>有可重建的群、生成集與面系統 witness</td><td class="ok">25 / 25</td></tr>
+<tr><td>V1</td><td>通過 darts、simple faces、vertex links、Euler genus</td><td class="ok">25 / 25</td></tr>
+<tr><td>V2</td><td>通過 $B_1B_2=0$ 與 $\dim\ker\Delta_1=2g$</td><td class="ok">25 / 25</td></tr>
+<tr><td>V3</td><td>商掉 graph automorphisms，證明相同 profile witnesses 是否非同構</td><td class="warn">6 個 A/B entries 待做</td></tr>
+</table>
+
+<h2>2. 三條研究線及其角色</h2>
+
+<table>
+<tr><th>研究線</th><th>精確問題</th><th>本學期角色</th></tr>
+<tr><td><b>A. 面系統與 genus</b></td><td>固定 $(G,S)$ 時，哪些 cellular embeddings 在 automorphism quotient 後不同？哪些 genus 可達？</td><td><b>主線</b>：直接承接 catalogue 與 rotation systems。</td></tr>
+<tr><td><b>B. bounded-genus spectral clustering</b></td><td>固定 skeleton、切換 faces 或破壞對稱後，哪個 operator 的低頻 eigenspaces 仍反映 cut、face 或 coset？</td><td><b>實驗線</b>：建立 matched controls，避免只看漂亮投影。</td></tr>
+<tr><td><b>C. Cayley-DS / cospectrality</b></td><td>不同 $(G,S)$ 何時有相同 spectrum？加入 face-aware spectrum 後能否分開？</td><td><b>對外連結</b>：把本專題放進仍活躍的分類問題。</td></tr>
+</table>
+
+<p>三個問題的已知狀態與主要文獻見
+<a href="../README/THREE_REAL_PROBLEMS.md">三個真實數學問題</a>。上帝之數／Cayley graph diameter
+可保留為動機或小型 benchmark，但目前不應與曲面主線競爭。</p>
+
+<h2>3. 16 週執行計畫</h2>
+
+<table>
+<tr><th>週次</th><th>工作</th><th>可交付成果</th></tr>
+<tr><td>1–2</td><td>凍結 schema 與驗證規格；整理 catalogue IDs、witness 類型與錯誤訊息。</td><td>可重現 baseline；25/25 regression test。</td></tr>
+<tr><td>3–4</td><td>實作 graph automorphism 對 local rotations 的作用；canonical form 與 orbit representatives。</td><td>完成 6 個 A/B entries 的 V3 判定。</td></tr>
+<tr><td>5–6</td><td>選三組 matched data：同 skeleton 不同 genus、同 genus 不同 profile、同 order 不同群。</td><td>實驗設計表與固定 random seeds。</td></tr>
+<tr><td>7–8</td><td>建立 $L_0$、dual、face-inflated 與 $\Delta_1$ 的統一輸出。</td><td>每個 surface 的 spectrum/features CSV。</td></tr>
+<tr><td>9–10</td><td>加入 generator-weight 與 local edge-weight asymmetry；追蹤 eigengap、eigenvector stability。</td><td>對稱破壞曲線與失效案例。</td></tr>
+<tr><td>11–12</td><td>執行 2-way / multiway spectral clustering；以 normalized cut、ARI、stability 評估。</td><td>可重現圖表，不以肉眼判定。</td></tr>
+<tr><td>13–14</td><td>從資料挑一個最窄命題：orbit count、family genus pattern 或 face-aware distinguishability。</td><td>定理／反例草稿與證明責任清單。</td></tr>
+<tr class="gate"><td>15</td><td><b>決策關卡：</b>若命題尚不穩，縮小到一個群族或一種 operator，不擴資料量。</td><td>最終研究問題一頁紙。</td></tr>
+<tr class="gate"><td>16</td><td>整合論文段落、程式、catalogue、圖表與口頭報告。</td><td>可交付專題版本。</td></tr>
+</table>
+
+<h2>4. 四組優先 matched experiments</h2>
+
+<table>
+<tr><th>組別</th><th>固定</th><th>改變</th><th>要回答的問題</th></tr>
+<tr><td>D4</td><td>同一 $(G,S)$</td><td>genus 0 vs 1；genus 1 的不同 profile</td><td>哪些 face-aware spectra 能分開，$L_0$ 為何不能？</td></tr>
+<tr><td>Q8</td><td>同一 4-regular skeleton</td><td>genus 1, 2, 3</td><td>Hodge kernel 與非零譜如何隨拓撲改變？</td></tr>
+<tr><td>Dihedral</td><td>生成規則 $\{r,r^{-1},s\}$</td><td>$D_4,D_6,D_8$</td><td>是否出現可證明的 genus／rotation pattern？</td></tr>
+<tr><td>S4</td><td>同一群與 Coxeter generators</td><td>Coxeter faces vs uniform rotation</td><td>genus 0 與 genus 4 的 face-aware distinguishability。</td></tr>
+</table>
+
+<h2>5. 每週紀律與停止條件</h2>
+
+<ul>
+  <li>每個新例子先寫 catalogue witness，再畫圖；圖不是驗證。</li>
+  <li>每個譜結論先標明 operator；禁止只寫「the spectrum」。</li>
+  <li>每個 clustering 圖同時報 objective 與 stability。</li>
+  <li>若 degree $d>3$ 的 brute-force 空間 $((d-1)!)^{|G|}$ 過大，先做 symmetry reduction，
+  不宣稱已找完所有面系統。</li>
+  <li>若第 15 週沒有一般定理，最低可行論文是：嚴格資料模型 + V3 小群 atlas +
+  matched spectral experiments + 一個明確反例。</li>
+</ul>
+
+<p>詳細工作包以 <a href="../README/RESEARCH_PLAN.md">RESEARCH_PLAN.md</a> 為單一排程來源；
+本頁是口頭檢視版。</p>
+</body>
+</html>

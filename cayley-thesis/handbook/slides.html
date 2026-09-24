@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cayley Surface 專題簡報</title>
+<script>MathJax={tex:{inlineMath:[['$','$']]}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root { --accent:#0b5fa5; --soft:#f4f6f8; --ok:#237a3b; }
+  html,body { margin:0; height:100%; font-family:"Segoe UI","Noto Sans TC",sans-serif; background:#111; }
+  .slide { display:none; box-sizing:border-box; width:100%; min-height:100vh; padding:5vh 8vw; background:white; }
+  .slide.active { display:block; }
+  h1 { color:var(--accent); font-size:2.3rem; margin-top:0; }
+  h2 { color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:.3rem; margin-top:0; }
+  h3 { color:#244b68; }
+  .sub { color:#666; }
+  table { border-collapse:collapse; margin:1rem 0; width:100%; font-size:1rem; }
+  th,td { border:1px solid #ccc; padding:.45rem .7rem; text-align:center; }
+  th { background:var(--soft); }
+  .box { border-left:5px solid var(--accent); background:var(--soft); padding:.85rem 1.2rem;
+         margin:1rem 0; border-radius:0 8px 8px 0; font-size:1.08rem; }
+  .cols { display:flex; gap:2rem; } .cols>div { flex:1; }
+  .foot { position:fixed; bottom:.8rem; right:1.2rem; color:#999; font-size:.85rem; }
+  .note { color:#777; font-size:.9rem; } .ok { color:var(--ok); font-weight:700; }
+  li { margin:.45rem 0; }
+</style>
+</head>
+<body>
+
+<section class="slide active">
+  <div style="margin-top:17vh">
+    <h1>Constructing Surfaces from Cayley Graphs</h1>
+    <p class="sub" style="font-size:1.35rem">Rotation Systems、離散 Hodge 與 Spectral Clustering</p>
+    <p class="sub">Pan Wei-Hsiang · Department of Mathematics, NYCU</p>
+    <p class="note">使用左右方向鍵或點擊畫面切換</p>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>核心問題</h2>
+  <div class="box">Cayley graph $\operatorname{Cay}(G,S)$ 只是一維骨架。<b>加入哪些面，
+  才得到 closed orientable surface？同一骨架能得到哪些不同曲面？</b></div>
+  <ul>
+    <li>代數資料：有限群 $G$ 與對稱生成集 $S=S^{-1}$</li>
+    <li>拓撲資料：face system $\mathcal F$</li>
+    <li>可重現資料：建構 witness $c$；可選 edge weights $\omega$</li>
+  </ul>
+  <div class="box">本專題的基本單位是 $(G,S,\mathcal F,c,\omega)$，不是只有一張漂亮的圖。</div>
+</section>
+
+<section class="slide">
+  <h2>兩種乘法，兩種工作</h2>
+  <div class="cols">
+    <div>
+      <h3>右乘</h3>
+      <p>$g\to gs_1\to gs_1s_2\to\cdots$</p>
+      <p>沿生成元走邊；relator 產生 closed walk。</p>
+    </div>
+    <div>
+      <h3>左乘</h3>
+      <p>$\{g,gs\}\mapsto\{hg,hgs\}$</p>
+      <p>平移整張圖與面；給出 vertex transitivity。</p>
+    </div>
+  </div>
+  <p class="note">Relator 只產生候選面：仍需檢查 simplicity、dart coverage 與 vertex links。</p>
+</section>
+
+<section class="slide">
+  <h2>Rotation system 產生面</h2>
+  <p>Dart $(g,s)$ 表示 $g\to gs$；反向 permutation：</p>
+  <div class="box">$$\alpha(g,s)=(gs,s^{-1}).$$</div>
+  <p>在每個頂點選一個離開 darts 的 cyclic order，合成 rotation permutation $\sigma$。</p>
+  <div class="box">$$\varphi=\sigma\alpha,\qquad \text{faces = cycles of }\varphi.$$</div>
+  <p>對 connected graph，一個 orientable rotation system 決定 cellular embedding；
+  從任意 face list 重建時，vertex link 必須是單一圓。</p>
+</section>
+
+<section class="slide">
+  <h2>驗證 surface，而不是相信圖形</h2>
+  <ol>
+    <li>$S=S^{-1}$ 且 Cayley graph connected</li>
+    <li>每個 face 是 simple cycle</li>
+    <li>所有 face darts 恰好 partition $G\times S$</li>
+    <li>每個 vertex link 是一個 cycle</li>
+    <li>$\chi=V-E+F=2-2g$</li>
+  </ol>
+  <div class="box">只驗證「每條 edge 左右各有一個面」不夠：vertex 仍可能成為 pinch point。</div>
+</section>
+
+<section class="slide">
+  <h2>$D_4$：同一骨架，三個面系統</h2>
+  <p>$S=\{r,r^{-1},s\}$，固定 $V=8,E=12$。</p>
+  <table>
+    <tr><th>face profile</th><th>$F$</th><th>$\chi$</th><th>genus</th></tr>
+    <tr><td>$4^6$</td><td>6</td><td>2</td><td>0</td></tr>
+    <tr><td>$6^4$</td><td>4</td><td>0</td><td>1</td></tr>
+    <tr><td>$4^2\,8^2$</td><td>4</td><td>0</td><td>1</td></tr>
+  </table>
+  <div class="box">Vertex adjacency spectrum 完全相同；topology 與 face profile 位於 $\mathcal F$。</div>
+</section>
+
+<section class="slide">
+  <h2>「所有面系統」為何困難</h2>
+  <p>若 degree $d=|S|$，每個頂點有 $(d-1)!$ 個 cyclic orders；一般候選數約為</p>
+  <div class="box">$$((d-1)!)^{|G|}.$$</div>
+  <table>
+    <tr><th>搜尋法</th><th>完備性</th></tr>
+    <tr><td>relator orbits</td><td>只覆蓋指定 relations</td></tr>
+    <tr><td>uniform rotations</td><td>只覆蓋所有頂點同一 generator order</td></tr>
+    <tr><td>cubic local binary</td><td>三正則固定骨架完整，但尚未商 automorphisms</td></tr>
+  </table>
+  <p class="note">25 個已驗證 witnesses 不等於已列出每個群的所有 non-isomorphic embeddings。</p>
+</section>
+
+<section class="slide">
+  <h2>兩種 spectrum：一個看不到面，一個看得到</h2>
+  <div class="cols">
+    <div>
+      <h3>Vertex Laplacian</h3>
+      <p>$L_0=|S|I-A$</p>
+      <p>只依賴 $(G,S)$；可由 irreducible representations block-diagonalize。</p>
+    </div>
+    <div>
+      <h3>Hodge 1-Laplacian</h3>
+      <p>$\Delta_1=B_1^\mathsf{T}B_1+B_2B_2^\mathsf{T}$</p>
+      <p>使用 edge-face incidence；依賴 $\mathcal F$。</p>
+    </div>
+  </div>
+  <div class="box">$$B_1B_2=0,\qquad \dim\ker\Delta_1=2g.$$</div>
+</section>
+
+<section class="slide">
+  <h2>目前 catalogue</h2>
+  <table style="font-size:.92rem">
+    <tr><th>群</th><th>曲面數</th><th>genus</th><th>群</th><th>曲面數</th><th>genus</th></tr>
+    <tr><td>$D_4$</td><td>3</td><td>0,1</td><td>$Q_8$</td><td>4</td><td>1,2,3</td></tr>
+    <tr><td>$D_6$</td><td>3</td><td>0,1,2</td><td>$D_8$</td><td>3</td><td>0,1,3</td></tr>
+    <tr><td>$\mathbb Z_4^2$</td><td>3</td><td>1,3</td><td>$\mathbb Z_3^2$</td><td>3</td><td>1</td></tr>
+    <tr><td>$\mathbb Z_2^3$</td><td>2</td><td>0,1</td><td>$S_3$</td><td>1</td><td>0</td></tr>
+    <tr><td>$A_4$</td><td>1</td><td>0</td><td>$S_4$</td><td>2</td><td>0,4</td></tr>
+  </table>
+  <p class="ok">25 / 25 通過 topology 與 Hodge checks。</p>
+  <p class="note">下一層：6 個 same-profile A/B entries 的 automorphism quotient。</p>
+</section>
+
+<section class="slide">
+  <h2>不對稱圖與 spectral clustering</h2>
+  <table>
+    <tr><th>層級</th><th>變動</th><th>要測的現象</th></tr>
+    <tr><td>S0</td><td>只換 faces</td><td>$L_0$ 不變，face-aware spectra 改變</td></tr>
+    <tr><td>S1</td><td>generator weights</td><td>方向不對稱，但群作用仍可分析</td></tr>
+    <tr><td>S2</td><td>local edge perturbation</td><td>eigenspace splitting 與 localization</td></tr>
+  </table>
+  <div class="box">比較 eigengap、normalized cut、ARI 與 cluster stability；
+  不以二維投影看起來像分群作為證據。</div>
+</section>
+
+<section class="slide">
+  <h2>三個真實數學問題</h2>
+  <ol>
+    <li><b>Graph genus / embedding enumeration：</b>Cayley 對稱能否降低一般 genus 問題的複雜度？</li>
+    <li><b>Bounded-genus spectral partitioning：</b>face-aware 或不對稱 operator 是否保留 cut guarantees？</li>
+    <li><b>Cayley-DS / cospectrality：</b>vertex spectrum 分不開的 Cayley graphs，加入曲面資料後能否區分？</li>
+  </ol>
+  <p class="note">三者分別提供：複雜度背景、既有理論 benchmark、仍活躍的分類問題。</p>
+</section>
+
+<section class="slide">
+  <h2>下一學期的可交付成果</h2>
+  <ol>
+    <li>完成 automorphism quotient，明確說明哪些 embeddings 真正不同。</li>
+    <li>建立 D4、Q8、dihedral family、S4 的 matched spectral experiments。</li>
+    <li>輸出 $L_0$、dual、inflated、$\Delta_1$ 的統一資料表。</li>
+    <li>從結果選一個窄命題：小群分類、群族 genus pattern，或 face-aware distinguishability。</li>
+  </ol>
+  <div class="box"><b>研究主軸：</b>骨架由代數固定，面由組合資料選擇，拓撲由 Hodge 結構驗證。</div>
+  <p style="text-align:center;font-size:1.4rem;margin-top:2rem">Thank you</p>
+</section>
+
+<div class="foot"><span id="pg"></span></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  document.getElementById('pg').textContent=(i+1)+' / '+slides.length;
+  if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise();}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')show(i+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);});
+document.addEventListener('click',e=>{if(e.clientX>innerWidth/2)show(i+1);else show(i-1);});
+show(0);
+</script>
+</body>
+</html>

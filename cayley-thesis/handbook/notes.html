@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cayley Surface 數學筆記</title>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root { --ink:#1a1a1a; --accent:#0b5fa5; --soft:#f4f6f8; --line:#d8dee4;
+          --def:#2e7d32; --warn:#a55b00; --ex:#6a2a91; }
+  body { font-family:Georgia,"Noto Serif TC",serif; color:var(--ink); max-width:900px;
+         margin:0 auto; padding:2rem 1.2rem 6rem; line-height:1.68; }
+  h1,h2,h3 { font-family:"Segoe UI","Noto Sans TC",sans-serif; color:var(--accent); }
+  h1 { font-size:1.9rem; border-bottom:3px solid var(--accent); padding-bottom:.4rem; }
+  h2 { margin-top:2.6rem; border-bottom:1px solid var(--line); padding-bottom:.25rem; }
+  .topbar a, nav a { color:var(--accent); text-decoration:none; }
+  .topbar a { margin-right:1rem; font-family:"Segoe UI","Noto Sans TC",sans-serif; font-size:.9rem; }
+  nav { background:var(--soft); padding:1rem 1.4rem; border-radius:8px; margin:1.5rem 0; }
+  nav a { display:block; margin:.18rem 0; }
+  .env { border-left:4px solid var(--accent); background:var(--soft); padding:.75rem 1rem;
+         margin:1.1rem 0; border-radius:0 6px 6px 0; }
+  .env.def { border-color:var(--def); } .env.warn { border-color:var(--warn); }
+  .env.ex { border-color:var(--ex); }
+  .tag { font-family:"Segoe UI","Noto Sans TC",sans-serif; font-weight:700; font-size:.9rem; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.93rem; }
+  th,td { border:1px solid var(--line); padding:.45rem .6rem; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-family:"Segoe UI","Noto Sans TC",sans-serif; }
+  code { background:#eef1f3; border-radius:4px; padding:.1rem .3rem; }
+  .ok { color:var(--def); font-weight:700; }
+  .small { color:#666; font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="index.html">&larr; 手冊首頁</a><a href="roadmap.html">研究路線</a><a href="slides.html">投影片</a></div>
+
+<h1>從 Cayley graph 到 Cayley surface：統一數學筆記</h1>
+<p>這份筆記只陳述目前程式真正能重建與驗證的數學物件。資料單位不是一張圖，而是
+$(G,S,\mathcal F,c,\omega)$：有限群、對稱生成集、面系統、可重建面系統的 witness，
+以及可選的正 edge weights。catalogue 保存 $c$；未做不對稱實驗時 $\omega\equiv1$。</p>
+
+<nav>
+<b>目錄</b>
+<a href="#s1">1. Cayley graph 與兩種乘法</a>
+<a href="#s2">2. Darts、rotation system 與面</a>
+<a href="#s3">3. 曲面條件、Euler characteristic 與 genus</a>
+<a href="#s4">4. 搜尋範圍與「所有面系統」的限制</a>
+<a href="#s5">5. 一般 Laplacian 與表示論</a>
+<a href="#s6">6. 離散 Hodge Laplacian</a>
+<a href="#s7">7. 已驗證 catalogue</a>
+<a href="#s8">8. Spectral clustering 與不對稱性</a>
+<a href="#s9">9. 三個對外數學問題</a>
+</nav>
+
+<h2 id="s1">1. Cayley graph 與兩種乘法</h2>
+
+<div class="env def"><span class="tag">定義 1.1（Cayley graph）</span><br>
+令 $G$ 為有限群，$S\subset G$ 滿足 $S=S^{-1}$、$e\notin S$，並假設 $S$ 生成 $G$。
+$\Gamma=\operatorname{Cay}(G,S)$ 的頂點是 $G$，無向邊是
+$\{\{g,gs\}:g\in G,s\in S\}$。因此
+$$V=|G|,\qquad E=\frac{|G||S|}{2}.$$
+</div>
+
+<div class="env"><span class="tag">兩種乘法的工作不同</span><br>
+右乘 $g\mapsto gs$ 用來沿生成元標記走邊；字 $s_1\cdots s_k$ 產生路徑
+$g,gs_1,\ldots,gs_1\cdots s_k$。左乘 $g\mapsto hg$ 則保存生成元標記，
+把整張圖、路徑或面平移。左乘是 vertex-transitive graph automorphism，
+因為 $h(gs)=(hg)s$。</div>
+
+<div class="env warn"><span class="tag">重要限制</span><br>
+關係式 $s_1\cdots s_k=e$ 只保證路徑閉合，不保證路徑為 simple cycle，
+也不保證一批 relator cycles 能覆蓋每一條 dart 恰好一次。因此「找關係式」是候選面生成法，
+不是所有面系統的標準枚舉法。</div>
+
+<h2 id="s2">2. Darts、rotation system 與面</h2>
+
+<div class="env def"><span class="tag">定義 2.1（dart 與 reversal）</span><br>
+dart 是 $(g,s)\in D:=G\times S$，表示 $g\to gs$。反向 involution 為
+$$\alpha(g,s)=(gs,s^{-1}).$$
+每條無向邊正好對應兩條 darts，所以 $|D|=2E$。</div>
+
+<div class="env def"><span class="tag">定義 2.2（orientable rotation system）</span><br>
+在每一個頂點 $g$ 選擇離開該點之 darts 的一個 cyclic order。把所有局部 cyclic orders
+合併成 permutation $\sigma$。則 face permutation 定義為
+$$\varphi=\sigma\alpha.$$
+$\varphi$ 的 cycles 就是嵌入的有向面邊界。對 connected graph 而言，一個 rotation system
+決定一個 closed orientable cellular embedding。</div>
+
+<div class="env ex"><span class="tag">為何 rotation system 比 dart 清單可靠</span><br>
+只檢查每條 dart 被某個 cycle 使用一次，仍可能在頂點產生多個 link circles，
+把同一頂點夾成 pinch point。rotation system 直接規定每個頂點只有一個 cyclic order；
+若從任意 face list 反推曲面，仍必須額外檢查每個 vertex link 是單一圓。</div>
+
+<div class="env"><span class="tag">群對稱與面的方向</span><br>
+左乘必須保存無向面集合；它不一定保存每一個面的已選方向。左乘可能把某面送到另一個面，
+也可能送到同一無向面的反向。因此 catalogue 對 face cycle 的 canonicalization
+同時商掉 cyclic shift 與 reversal，不把「directed orbit invariant」誤當必要條件。</div>
+
+<h2 id="s3">3. 曲面條件、Euler characteristic 與 genus</h2>
+
+<div class="env"><span class="tag">驗證條件 3.1</span><br>
+一個 catalogue witness 被接受為 closed orientable Cayley surface 前，驗證器依序檢查：
+<ol>
+  <li>$S=S^{-1}$、$e\notin S$，而且 Cayley graph connected；</li>
+  <li>每個 face 是 simple cycle；</li>
+  <li>所有 faces 的 darts 恰好等於 $G\times S$，無遺漏也無重複；</li>
+  <li>每個頂點的 face corners 形成一個 vertex-link cycle；</li>
+  <li>$\chi=V-E+F$ 給出非負整數 genus $g=1-\chi/2$。</li>
+</ol>
+</div>
+
+<div class="env def"><span class="tag">定理 3.2（Euler genus）</span><br>
+若以上條件成立，所得 cell complex 是 connected closed orientable surface，且
+$$\chi=|G|-\frac{|G||S|}{2}+|\mathcal F|=2-2g.$$
+因此同一 $(G,S)$ 可因 $|\mathcal F|$ 或 face incidence 不同而得到不同 genus。</div>
+
+<div class="env ex"><span class="tag">例 3.3（$D_4$ 的 topological switching）</span><br>
+固定 $D_4=\langle r,s\mid r^4=s^2=e,\ srs=r^{-1}\rangle$ 與
+$S=\{r,r^{-1},s\}$，故 $V=8,E=12$：
+<ul>
+  <li>6 個 squares：$\chi=8-12+6=2$，$g=0$；</li>
+  <li>4 個 hexagons：$\chi=8-12+4=0$，$g=1$；</li>
+  <li>2 個 squares 加 2 個 octagons：仍有 $F=4$，$g=1$，但 face profile 不同。</li>
+</ul>
+骨架與 adjacency spectrum 固定，曲面資料則不同。</div>
+
+<h2 id="s4">4. 搜尋範圍與「所有面系統」的限制</h2>
+
+<p>不存在一個對任意有限群都廉價地列出所有面系統的單一步驟。正確的通用對象是
+rotation systems，但候選數目隨 degree 與 $|G|$ 指數成長。若 $d=|S|$，固定頂點標記後，
+一般 local rotation search 約有</p>
+$$((d-1)!)^{|G|}$$
+<p>個候選，還未除以 graph automorphisms 或 orientation reversal。</p>
+
+<table>
+<tr><th>建構法</th><th>真正覆蓋的範圍</th><th>是否完整</th></tr>
+<tr><td>relator orbits</td><td>由指定關係字與其左平移生成的面</td><td>否</td></tr>
+<tr><td>uniform rotation</td><td>所有頂點使用相同 generator cyclic order</td><td>只對 uniform subclass 完整</td></tr>
+<tr><td>local binary rotation</td><td>三正則圖每頂點的兩種方向，共 $2^{|G|}$</td><td>對固定 cubic skeleton 的 orientable rotations 完整，尚未商 automorphisms</td></tr>
+<tr><td>general local rotation</td><td>每頂點任意 cyclic order</td><td>概念上完整，但通常不可直接暴力枚舉</td></tr>
+<tr><td>explicit rotation</td><td>保存一個可重建的具體 witness</td><td>不是搜尋法</td></tr>
+</table>
+
+<div class="env warn"><span class="tag">目前的完備性聲明</span><br>
+catalogue 證明「這 25 個 witness 都有效」，不證明「每個 $(G,S)$ 的所有非同構面系統都已找到」。
+若兩個 witness 有相同 genus 與 face profile，仍需計算 graph automorphism 對 rotation systems
+的作用，才能判斷它們是否真為不同 embedding。這是目前 V3 驗證層。</div>
+
+<h2 id="s5">5. 一般 Laplacian 與表示論</h2>
+
+<div class="env def"><span class="tag">定義 5.1</span><br>
+若 $A$ 是 Cayley graph adjacency matrix，$d=|S|$，則
+$L_0=dI-A$。因 $A$ 與 left regular action commute，在有限群 Fourier decomposition 下，
+每個 irreducible representation $\rho$ 對應小矩陣
+$$A_\rho=\sum_{s\in S}\rho(s).$$
+$A_\rho$ 的每個 eigenvalue 在 regular representation 中重複 $\dim\rho$ 次。</div>
+
+<div class="env warn"><span class="tag">Spectral blindness</span><br>
+$A$ 與 $L_0$ 只依賴 $(G,S)$，完全不讀取 $\mathcal F$。因此 $D_4$ sphere 與 torus
+擁有相同 vertex spectrum。一般 graph eigenvalues 可以描述骨架對稱、expansion 與 cut，
+卻不能單獨恢復所選曲面的 genus。</div>
+
+<h2 id="s6">6. 離散 Hodge Laplacian</h2>
+
+<div class="env def"><span class="tag">定義 6.1（cellular boundary 與 $\Delta_1$）</span><br>
+固定每條 edge 與 face 的方向。令 $B_1:C_1\to C_0$ 為 vertex-edge incidence，
+$B_2:C_2\to C_1$ 為 edge-face incidence。首先必須有 boundary-of-boundary 條件
+$$B_1B_2=0.$$
+一階 Hodge Laplacian 為
+$$\Delta_1=B_1^\mathsf{T}B_1+B_2B_2^\mathsf{T}.$$
+</div>
+
+<div class="env"><span class="tag">拓撲可見性</span><br>
+離散 Hodge theorem 給出
+$$\ker\Delta_1\cong H^1,\qquad \dim\ker\Delta_1=b_1=2g$$
+（connected closed orientable surface）。這不是 vertex Laplacian 的經驗猜測，
+而是直接使用 face incidence 的可驗證拓撲量。</div>
+
+<p class="ok">catalogue 中 25 個曲面全部通過 $B_1B_2=0$ 與
+$\dim\ker\Delta_1=2g$ 的數值檢查。</p>
+
+<h2 id="s7">7. 已驗證 catalogue</h2>
+
+<table>
+<tr><th>群與生成集骨架</th><th>曲面數</th><th>目前出現 genus</th></tr>
+<tr><td>$D_4$</td><td>3</td><td>0, 1</td></tr>
+<tr><td>$Q_8$</td><td>4</td><td>1, 2, 3</td></tr>
+<tr><td>$D_6$</td><td>3</td><td>0, 1, 2</td></tr>
+<tr><td>$\mathbb Z_4\times\mathbb Z_4$</td><td>3</td><td>1, 3</td></tr>
+<tr><td>$\mathbb Z_2^3$</td><td>2</td><td>0, 1</td></tr>
+<tr><td>$\mathbb Z_3\times\mathbb Z_3$</td><td>3</td><td>1</td></tr>
+<tr><td>$S_3$</td><td>1</td><td>0</td></tr>
+<tr><td>$A_4$</td><td>1</td><td>0</td></tr>
+<tr><td>$D_8$</td><td>3</td><td>0, 1, 3</td></tr>
+<tr><td>$S_4$</td><td>2</td><td>0, 4</td></tr>
+<tr><th>合計</th><th>25</th><th>0 至 4（非連續地出現）</th></tr>
+</table>
+
+<p>完整 face profile、witness 與驗證層級請看
+<a href="../data/surfaces/catalogue.json">catalogue.json</a>。特別注意：
+$S_4$ 的 Coxeter faces 是 genus 0；舊版 uniform rotation 的 6 個 dodecagons
+則是 genus 4，兩者不可混稱為 sphere。</p>
+
+<h2 id="s8">8. Spectral clustering 與不對稱性</h2>
+
+<p>研究不應只問「eigenvalue 是否與 genus 相關」，而應先指定哪個 operator、哪種對稱破壞、
+以及 clustering 的 ground truth：</p>
+
+<table>
+<tr><th>層級</th><th>操作</th><th>可觀察問題</th></tr>
+<tr><td>S0</td><td>固定 Cayley skeleton，只換 face system</td><td>$L_0$ 不變；$\Delta_1$ 與 face-aware operators 改變</td></tr>
+<tr><td>S1</td><td>改 generator weights</td><td>regular group action 仍在，但不同方向的重要性不對稱</td></tr>
+<tr><td>S2</td><td>改個別 edge weights 或刪邊</td><td>vertex transitivity 破壞，eigenspaces 分裂，clusters 可能局部化</td></tr>
+</table>
+
+<p>可執行實驗是：對同一 skeleton 的不同 $\mathcal F$，比較 $L_0$、dual graph Laplacian、
+face-inflated graph Laplacian 與 $\Delta_1$；再用 eigengap、normalized cut、cluster stability
+以及與 face/coset labels 的 adjusted Rand index 評估。這能把「圖看起來分群」改成可重現問題。</p>
+
+<h2 id="s9">9. 三個對外數學問題</h2>
+
+<ol>
+  <li><b>Graph genus 與 cellular embedding enumeration：</b>一般 graph genus 決定問題已知困難；
+  本專題可問 Cayley 對稱是否允許 orbit reduction、canonical labeling 或受限群族分類。</li>
+  <li><b>Bounded-genus spectral partitioning：</b>已有理論把 genus 與 spectral cut 品質連結；
+  本專題可測試 face-aware operator、asymmetry 與 multiway clustering 是否保留這些界。</li>
+  <li><b>Cayley-DS 與 cospectral Cayley graphs：</b>哪些有限群可由 Cayley graph spectrum
+  區分、哪些不同生成集產生 cospectral non-isomorphic graphs，仍有大量分類問題。</li>
+</ol>
+
+<p>問題的精確狀態、主要文獻與本專題可交付成果整理於
+<a href="../README/THREE_REAL_PROBLEMS.md">THREE_REAL_PROBLEMS.md</a>。</p>
+
+<p class="small">本頁的 computational claims 由 <code>handbook/verify_examples.py</code>
+對 <code>data/surfaces/catalogue.json</code> 重建驗證；更新日期 2026-07-16。</p>
+</body>
+</html>

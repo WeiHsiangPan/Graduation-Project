@@ -1,0 +1,73 @@
+=== PAGE 1 ===
+Spectral-Genus Conjecture Calculation SOP
+Goal for the Week: Manually calculate the spectral eigenvalues of  to verify the conjecture.
+I. Core Logical Chain
+Key Idea: There is no need to brute-force the  large matrix. Simply calculate the small matrix  for each
+irreducible representation , then aggregate the eigenvalues.
+II. Key Definitions
+Definition of 
+ is the "adjacency operator as seen in representation ." For each generator , simply sum up the 
+matrices.
+Eigenvalue Multiplicity Formula
+Because each  appears  times in the regular representation, the eigenvalues of  are "amplified."
+Composition of the Full Spectrum
+Laplacian Eigenvalue Conversion
+Since , and  for this example.
+III. Basic Data for 
+Group:
+Generating Set:
+Result: , the Cayley graph is 3-regular.
+IV. Character Table for 
+ has 5 conjugacy classes, thus 5 irreducible representations:
+1 1 1 1 1
+=== PAGE 2 ===
+1 1 1 -1 -1
+1 1 -1 1 -1
+1 1 -1 -1 1
+2 -2 0 0 0
+Dimension Check:  ✓
+V. Calculating  (1D Representations)
+For 1D representations,  is a scalar value:
+Read  and  from the character table. Note that  as  and  are in the same conjugacy
+class:
+Rep  Eigenvalue Multiplicity in 
+1 1 1 3 1
+1 1 -1 1 1
+-1 -1 1 -1 1
+-1 -1 -1 -3 1
+VI. Calculating  (2D Representation)
+6-1. Matrix Setup
+The standard 2D representation of  (rotation + reflection):
+Why ? Rotation matrices are orthogonal, so the inverse equals the transpose.
+6-2. Summation
+Notice the first two terms cancel out, leaving .
+6-3. Eigenvalues
+ (each mult. 1).
+In the full matrix , with :
+Eigenvalue Mult. in Mult. in 
+1 1
+-1 1
+=== PAGE 3 ===
+VII. Full  and 
+Adjacency Spectrum
+Eigenvalue Source Multiplicity in 
+3  (Trivial) 1
+1 1
+1 2
+-1 1
+-1 2
+-3 1
+Merged:
+Laplacian Spectrum ( )
+VIII. Comparison Table
+Case Surface Min Non-trivial Multiplicity Source Min Non-trivial Multiplicity
+, sphere
+, torus
+, torus
+IX. Statement of Conjecture
+Intuition: A torus has two independent winding directions (horizontal and vertical), corresponding to two
+independent translation generators. These directions each contribute a dimension to the eigenspace, making the
+multiplicity at least 2.
+Note: Since the  sphere and torus use the same Cayley graph, their  are identical. The conjecture's
+distinction lies in which eigenspaces are "utilized" by the face system. This detail must be clarified in the next
+phase.

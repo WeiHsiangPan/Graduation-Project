@@ -1,0 +1,1379 @@
+=== PAGE 1 ===
+Constructing Surfaces from Cayley Graphs
+Spectral Drawing, Face Systems, and Dual Graph Invariants
+潘煒翔 (Pan Wei-Hsiang)
+Supervised by Prof. Ming-Hsuan Kang ( 康明軒 教授)
+Department of Mathematics, National Yang Ming Chiao Tung University
+June 2025
+1 Introduction
+This thesis studies how a finite group, viewed through its Cayley graph, can give rise to
+a closed orientable surface. The guiding principle is that a Cayley graph provides only a
+one-dimensional combinatorial skeleton: it contains vertices and edges, but it does not by
+itself determine which cycles should be filled as faces. The missing two-dimensional datum
+is the face system. Thus the central object of this thesis is not merely the pair ( G,S ), but
+the triple
+(G,S,F),
+whereG is a finite group, S is a symmetric generating set, andF is a G-invariant collection
+of directed cycles satisfying a precise dart condition.
+The main theme is the separation between algebraic symmetry, geometric embedding,
+and topological verification. The Cayley graph Cay( G,S ) records the algebraic structure of
+G through right multiplication by generators. Spectral drawing uses the eigenspaces of the
+unweighted graph Laplacian
+L =|S|I−A
+to produce symmetry-preserving coordinates. However, the topology of the resulting surface
+is determined only after a valid face system F is chosen and verified. In particular, the
+same Cayley skeleton can support different face systems and hence produce closed orientable
+surfaces of different genera.
+1.1 Problem Background and Mathematical Motivation
+1.1.1 Cayley Skeletons and Group Combinatorics
+Let G be a finite group, and let S⊂G be a symmetric generating set satisfying
+e /∈S, S =S−1.
+1
+=== PAGE 2 ===
+The Cayley graph Cay(G,S ) is the|S|-regular graph whose vertex set is G and whose edges
+are the unordered pairs
+{g,gs}, g ∈G, s∈S.
+Since S =S−1, the directed steps
+g−→gs, gs −→g
+represent the same undirected edge. Thus Cay( G,S ) is naturally an undirected regular
+graph.
+A central point of the construction is that the Cayley graph carries two algebraically
+distinct operations, and these must not be confused.
+Right multiplication: edge traversal. Moving along an edge of Cay( G,S ) is governed
+by right multiplication. Starting from g∈ G and applying a generator s∈ S moves the
+vertex to gs. Therefore a word
+w =s1s2··· sk
+is read from left to right as the walk
+g7−→gs17−→gs1s27−→···7−→ gs1s2··· sk.
+Ifs1s2··· sk =e, this walk closes and gives a cycle in Cay(G,S ). Such relator cycles are the
+basic candidates from which faces will later be chosen.
+Left multiplication: face translation. The groupG also acts on the vertices of Cay(G,S )
+by left multiplication:
+h·g =hg.
+This action preserves adjacency, because the edge {g,gs} is sent to
+{hg,hgs},
+which is again an edge labelled by the same generator s. Hence the left action of G is an
+action by graph automorphisms.
+The role of this left action is global rather than local. Once a cycle C based at the
+identity is selected as a face candidate, the whole G-orbit
+{h·C :h∈G}
+must be included in the face system. This is the G-invariance requirement onF. Thus right
+multiplication traces each local cycle, while left multiplication translates entire cycles across
+the Cayley skeleton.
+This asymmetry is fundamental. Right multiplication constructs the internal sequence
+of vertices in a face, whereas left multiplication distributes that face consistently over the
+graph. The surface construction depends on keeping these two algebraic roles separate.
+2
+=== PAGE 3 ===
+1.1.2 The Combinatorial Manifold Conditions and Dart Formalism
+The one-dimensional graph Cay( G,S ) becomes a closed orientable surface only after one
+specifies which directed cycles are to be filled as faces. This additional datum is the face
+systemF. To express the required closedness and orientability conditions purely combina-
+torially, we use darts.
+Definition 1.1 (Dart). A dart is an ordered pair
+(g,s )∈G×S,
+representing the directed edge from g to gs in Cay(G,S ). The reversal of this dart is
+(g,s ) = (gs,s−1),
+which traverses the same undirected edge in the opposite direction.
+Definition 1.2 (Face system). A face system for Cay(G,S ) is a finite collectionF of directed
+simple cycles in Cay(G,S ) satisfying the following conditions:
+(i) every cycle in F is simple;
+(ii)F is invariant under the left action of G;
+(iii) every dart (g,s )∈G×S belongs to exactly one cycle in F.
+Condition (iii) is the central combinatorial constraint of the thesis. We call it the dart
+condition. It says that the face system F gives an exact partition of the dart set
+D =G×S.
+This single condition simultaneously encodes the two surface properties needed in this work.
+First, each undirected edge{g,gs} has exactly two directed realizations:
+(g,s ), (gs,s−1).
+If every dart belongs to exactly one face, then the two directed realizations of the same edge
+are assigned to two opposite face incidences. Thus no edge-side is left unassigned and no
+directed edge is used twice.
+Second, the two faces adjacent along a common edge traverse that edge in opposite dart
+directions. This gives the combinatorial form of orientability. In particular, orientability
+is verified directly by the dart-reversal structure rather than by any external homological
+machinery.
+OnceF satisfies the dart condition, the resulting surface is a closed orientable surface
+with
+V =|G|, E =|G||S|
+2 , F =|F|.
+Its Euler characteristic is
+χ =V−E +F.
+3
+=== PAGE 4 ===
+By the classification of closed orientable surfaces,
+χ = 2− 2g,
+where g is the genus.
+This immediately reveals the main mathematical tension. The pair ( G,S ) determines
+the Cayley skeleton and therefore fixes V and E. However, it does not determine F . The
+face count depends on the choice of F. Hence the same Cayley graph may support different
+valid face systems and produce surfaces of different genera.
+The key example is the Cayley graph of the dihedral group D4 with
+S ={r,r−1,s}.
+This graph has
+V = 8, E = 12.
+One valid face system has six square faces, giving
+χ = 8− 12 + 6 = 2,
+so the surface is a sphere. Another valid face system has four hexagonal faces, giving
+χ = 8− 12 + 4 = 0,
+so the surface is a torus. The Cayley skeleton is identical in both cases; only the face system
+changes. This example is the central motivation for separating the algebraic graph, the
+spectral drawing, and the combinatorial face verification.
+1.2 Computational Methodology and Spectral Pipeline
+1.2.1 Representation-Theoretic Graph Spectra
+Let
+Γ = Cay(G,S )
+and let A be its unweighted adjacency matrix. Since Γ is |S|-regular, the graph Laplacian
+used throughout this thesis is
+L =|S|I−A.
+No normalized Laplacian is used in this work.
+The left action of G on itself induces the left regular representation on functions on G.
+Since left multiplication preserves adjacency, bothA andL commute with this group action.
+Consequently, the eigenspaces of A and L are compatible with the representation theory of
+G.
+The complex group algebra decomposes as
+C[G]∼=
+M
+ρ∈ bG
+V⊕ deg(ρ)
+ρ ,
+4
+=== PAGE 5 ===
+where bG is the set of irreducible complex representations of G, and deg(ρ) = dimVρ. On the
+representation block associated with ρ, the adjacency operator is represented by the finite
+matrix
+Aρ =
+X
+s∈S
+ρ(s).
+Therefore the spectrum of the full adjacency operator is obtained from the spectra of these
+smaller matrices Aρ, and the Laplacian eigenvalues are obtained by the relation
+λL =|S|− λA.
+The multiplicity structure is representation-theoretic. The representation Vρ appears
+deg(ρ) times inside the regular representation, so each eigenvalue coming from the matrix
+Aρ appears globally with the corresponding representation multiplicity, before any accidental
+coincidences with eigenvalues from other representations are combined. In the special case
+where Aρ acts as a scalar on Vρ, the resulting global multiplicity is deg( ρ)2. Thus spectral
+degeneracy is not merely numerical; it reflects the internal representation structure of the
+finite group.
+For spectral drawing, one chooses a real eigenspace or a direct sum of real eigenspaces
+and uses its basis functions as coordinate functions. If
+W = span{ψ1,...,ψ k}
+is the chosen coordinate space, then the spectral map is
+Φ :G−→ Rk, Φ(g) =
+ 
+ψ1(g),...,ψ k(g)
+
+.
+BecauseW is invariant under the left action ofG, the resulting drawing is equivariant: group
+symmetries appear as Euclidean symmetries of the embedded point configuration.
+A three-dimensional eigenspace may suggest a spherical polyhedral realization, while a
+2 + 2 direct-sum structure of two real two-dimensional eigenspaces may suggest a toroidal
+realization. However, spectral drawing only suggests geometry. The actual surface type is
+verified only after a face system F satisfies the dart condition.
+1.2.2 Dual Graph Spectra and Information Loss
+The vertex LaplacianL =|S|I−A depends only on the Cayley skeleton Cay(G,S ). Therefore
+it is blind to the choice of face systemF. If the same Cayley graph admits two distinct valid
+face systemsF1 andF2, the vertex spectrum remains unchanged:
+Spec(LCay(G,S))
+is the same for both surface systems.
+To encode information depending on F, one may pass to the classical dual graph.
+Definition 1.3 (Classical dual graph). Given a valid surface system (G,S,F), the classical
+dual graph Γ∗ is the graph whose vertices correspond to faces F∈F . Two dual vertices are
+connected when the corresponding faces share an edge of the original Cayley skeleton.
+5
+=== PAGE 6 ===
+The dual graph Γ ∗ is sensitive to the face system. For example, in the D4 case, the
+spherical square-face system and the toroidal hexagon-face system have the same vertex
+spectrum on Cay(D4,S ), but they produce different dual graphs. Thus Γ ∗ begins to record
+topology that the original vertex Laplacian cannot see.
+Nevertheless, the classical dual graph loses two important types of information. First,
+it forgets the original Cayley vertices, since each face is collapsed into a single dual vertex.
+Second, it forgets the cyclic dart order inside each face. It records that two faces are adjacent,
+but not how the vertices and darts are cyclically arranged around each face.
+This motivates the face-inflated graph, denoted
+Γinf.
+Instead of collapsing each face to a single vertex, Γ inf replaces each face by a small ordered
+polygon. The vertices of this polygon are face-local copies of the original Cayley vertices,
+and the polygon edges record the cyclic dart order of the face. Radial incidence edges then
+connect each face-local copy back to the corresponding original Cayley vertex.
+Thus Γinf retains three pieces of information simultaneously:
+Cay(G,S ), F, the cyclic dart order of each face.
+This makes it a more faithful graph-theoretic data structure for studying a chosen surface
+system spectrally.
+1.2.3 Summary of the Eight-Step Operational Triad
+The methodology of the thesis is organized around the principle:
+spectral drawing suggests; face systems verify; dual-inflated graphs record.
+This principle can be implemented as the following eight-step pipeline.
+(1) Choose algebraic data. Select a finite group G and a symmetric generating set
+S =S−1 with e /∈S.
+(2) Construct the Cayley skeleton. Build the graph Cay(G,S ) and record
+V =|G|, E =|G||S|
+2 .
+(3) Form the unweighted Laplacian. Construct the adjacency matrix A and the graph
+Laplacian
+L =|S|I−A.
+(4) Compute spectral coordinates. Use low-frequency eigenspaces ofL to define a spec-
+tral drawing
+Φ :G→ Rk.
+The embedding space is built from direct sums of invariant eigenspaces.
+6
+=== PAGE 7 ===
+(5) Identify candidate face cycles. Use relator words and the geometry of the spectral
+drawing to select simple directed cycles as possible faces.
+(6) Generate the G-invariant face system. Translate each chosen base cycle by the left
+action of G and form a candidate face system F.
+(7) Verify the dart condition. Check that every dart ( g,s )∈ G×S occurs in exactly
+one face ofF. This verifies that the assembled object is a closed orientable surface.
+(8) Record the chosen surface system. Compute
+χ =V−E +F
+and determine the genus from χ = 2− 2g. Then construct Γ ∗ or, more faithfully, Γ inf,
+to encode the face system for further spectral analysis.
+In this framework, the roles of the three main objects are sharply separated. The Cayley
+graph Cay(G,S ) supplies the symmetric one-dimensional skeleton. The face systemF verifies
+the topology through the dart condition and the Euler characteristic. The face-inflated graph
+Γinf records the chosen surface system without discarding vertex identity or cyclic dart order.
+This separation is the conceptual foundation of the thesis. The graph alone does not
+determine the surface. Spectral drawing alone does not verify topology. The face system is
+the decisive combinatorial datum, and the inflated graph is the refined structure that allows
+this datum to be studied within the same spectral framework.
+2 Algebraic Foundations: Finite Group Actions and
+Combinatorial Skeletons
+This section establishes the algebraic language used throughout the thesis. The goal is
+to separate three levels of structure: relator words inside the finite group G, the Cayley
+skeleton Cay(G,S ) determined by right multiplication, and the left G-action that translates
+cycles globally across the graph. This separation is essential for the later construction of
+G-invariant face systems.
+2.1 Group Presentations and Relator Words
+Throughout this thesis, G denotes a finite group. We fix a symmetric generating set
+S =S−1, e / ∈S,
+and we regard words in the alphabet S as instructions for moving along the Cayley graph
+by right multiplication.
+A group presentation is written as
+G =⟨S|R⟩,
+where R is a collection of relator words. A relator word is a finite sequence of generators
+whose product is the identity element of G.
+7
+=== PAGE 8 ===
+Definition 2.1 (Word and relator). A word of length k overS is an expression
+w =s1s2··· sk, s i∈S.
+The word evaluates in G to the product
+s1s2··· sk∈G.
+A word
+r =s1s2··· sk
+is called a relator if
+s1s2··· sk =e
+in G.
+The convention is that words are read from left to right. Starting at a group element
+g∈G, the word
+w =s1s2··· sk
+traces the sequence
+g, gs 1, gs 1s2, ..., gs 1s2··· sk.
+If w is a relator, then the final element is again g, so the word traces a closed walk in the
+Cayley graph.
+Definition 2.2 (Relator cycle). Let
+r =s1s2··· sk
+be a relator. The corresponding relator cycle based at g∈G is the cyclic sequence
+Cg =
+ 
+g, gs1, gs1s2, ..., gs1s2··· sk−1
+
+.
+The final step is understood to return from gs1s2··· sk−1 to g by multiplying on the right
+bysk.
+Not every relator is suitable for defining a face. A relator may repeat vertices before
+returning to its starting point, in which case it gives a closed walk but not a simple cycle.
+Remark 2.1 (Simple relator cycles). A relator cycle
+Cg =
+ 
+g, gs1, gs1s2, ..., gs1s2··· sk−1
+
+is called simple if all displayed vertices are pairwise distinct. Only simple relator cycles are
+used as face candidates in this thesis. This condition ensures that each candidate face has a
+well-defined cyclic dart order and does not repeat vertices internally.
+Thus relator words provide the algebraic source of candidate faces, but they do not by
+themselves determine a surface. A surface arises only after suitable relator cycles are selected,
+translated by the left G-action, and verified by the dart condition.
+8
+=== PAGE 9 ===
+2.2 Cayley Skeletons and Graph Operators
+We now pass from words in the group to the graph-theoretic skeleton on which the surface
+construction will take place.
+Definition 2.3 (Cayley graph). Let G be a finite group and let S⊂ G be a symmetric
+generating set satisfying
+S =S−1, e / ∈S.
+The Cayley graph Cay(G,S ) is the graph
+Γ = (V,E )
+defined by
+V ={vg :g∈G},
+and
+E =
+
+{vg,vgs} :g∈G, s∈S
+	
+.
+Each edge is produced by right multiplication by a generator s.
+Since S =S−1, the directed step
+vg−→vgs
+and the directed step
+vgs−→vg
+represent the same undirected edge. Hence Cay( G,S ) is an undirected regular graph. Its
+number of vertices and edges is
+|V| =|G|, |E| =|G||S|
+2 .
+The graph is |S|-regular because from every vertex vg there is one edge corresponding to
+each generator s∈S.
+Definition 2.4 (Graph operators). Let
+Γ = Cay(G,S )
+and let d =|S|. The adjacency matrix of Γ is the unweighted matrix A indexed by G×G
+and defined by
+Ag,h =
+(
+1, if h =gs for some s∈S,
+0, otherwise.
+Since Γ is d-regular, its degree matrix is
+D =dI =|S|I.
+The graph Laplacian used throughout this thesis is the unweighted Laplacian
+L =D−A =|S|I−A.
+9
+=== PAGE 10 ===
+No normalized Laplacian is used in this work. The operator
+L =|S|I−A
+is the fixed vertex Laplacian associated only with the Cayley skeleton Cay( G,S ). In partic-
+ular, L depends on G and S, but not on any choice of face system F.
+Remark 2.2 (Left vertex-transitivity). The group G acts on the vertex set of Cay(G,S ) by
+left multiplication:
+h·vg =vhg.
+This action preserves adjacency, since
+{vg,vgs}7−→{ vhg,vhgs},
+which is again an edge labelled by the same generator s. Thus every h∈G acts as a graph
+automorphism of Cay(G,S ). The action is free and transitive on vertices, so Cay( G,S ) is
+vertex-transitive.
+This vertex-transitivity is the graph-theoretic expression of the homogeneity of G. It is
+also the reason why many local checks, such as the dart condition, can be verified at the
+identity and then propagated to every vertex by left multiplication.
+The adjacency matrixA and the LaplacianL =|S|I−A commute with the left action of
+G. Therefore their eigenspaces are compatible with the representation-theoretic decomposi-
+tion of functions on G. This observation is the algebraic foundation for the spectral drawing
+construction developed in Section 4.
+2.3 The Dart Algebra and Disjoint Algebraic Actions
+The Cayley graph Cay(G,S ) is undirected, but the construction of faces requires oriented
+edge data. For this reason, we work with darts.
+Definition 2.5 (Dart). A dart of Cay(G,S ) is an ordered pair
+(g,s )∈G×S.
+It represents the directed edge
+vg−→vgs.
+The set of all darts is
+D =G×S.
+Hence
+|D| =|G||S| = 2|E|.
+Each undirected edge corresponds to exactly two darts. These two darts are related by
+a reversal operation.
+10
+=== PAGE 11 ===
+Definition 2.6 (Dart reversal). The reversal of a dart (g,s ) is
+(g,s ) = (gs,s−1).
+This is the directed edge
+vgs−→vg.
+The reversal map is an involution:
+(g,s ) = (g,s ).
+The dart set D = G× S carries two algebraically distinct operations. The first is
+right multiplication, which traces edges and cycles. The second is left multiplication, which
+translates whole cycles. The surface construction depends on keeping these two operations
+separate.
+Remark 2.3 (Right multiplication versus left multiplication). There are two different roles
+played by multiplication in this thesis.
+Right multiplication: local edge traversal. A dart
+(g,s )
+means that one moves from g to gs by multiplying on the right by s. Therefore a sequence
+of generators
+s1,s 2,...,s k
+traces the walk
+g−→gs1−→gs1s2−→···−→ gs1s2··· sk.
+If s1s2··· sk =e, this walk returns to g and gives a relator cycle.
+Left multiplication: global face translation. The group G acts on darts by
+h· (g,s ) = (hg,s ).
+This operation changes the base vertex but preserves the generator label. If
+Ce = (e,s 1,s 1s2,...,s 1s2··· sk−1)
+is a relator cycle based at the identity, then left multiplication by h gives
+h·Ce = (h,hs 1,hs 1s2,...,hs 1s2··· sk−1).
+Thus the left action moves the entire cycle rigidly to a new basepoint.
+Separation of roles. Right multiplication constructs the internal cyclic order of a face.
+Left multiplication distributes that face across the Cayley skeleton. The former is local and
+stepwise; the latter is global and equivariant. These two operations are not interchangeable.
+11
+=== PAGE 12 ===
+The compatibility between left multiplication and dart reversal is important. For any
+h∈G and any dart (g,s ), one has
+h· (g,s ) =h· (gs,s−1) = (hgs,s−1),
+while
+h· (g,s ) = (hg,s ) = (hgs,s−1).
+Hence
+h· (g,s ) =h· (g,s ).
+That is, left multiplication commutes with dart reversal.
+This compatibility ensures that if a face system is invariant under the left action of G,
+then its dart-reversal structure is transported uniformly across the graph. Consequently,
+the local dart condition can be checked at the identity and then extended to all vertices by
+left-transitivity.
+The algebraic mechanism can be summarized as follows. A relator word
+r =s1s2··· sk =e
+defines a cycle Ce based at the identity by right multiplication. The left orbit
+O(Ce) ={h·Ce :h∈G}
+then gives a G-invariant family of candidate faces. If
+StabG(Ce) ={h∈G :h·Ce =Ce}
+is the stabilizer of Ce, then the orbit-stabilizer theorem gives
+|O(Ce)| = |G|
+| StabG(Ce)|.
+Thus the construction of a face system is algebraic but not automatic. One must choose
+relator cycles, take their leftG-orbits, and then verify that the resulting collection of directed
+cycles gives an exact partition of the dart setD. This dart partition is the basic combinatorial
+object from which the closed orientable surface will be obtained in Section 3.
+3 Combinatorial Topology of Face Systems and Dart
+Formalism
+This section gives the topological verification mechanism of the thesis. The Cayley graph
+Cay(G,S ) supplies only a one-dimensional skeleton. A closed orientable surface is obtained
+only after a valid face system F is specified. The central point is that this verification can
+be carried out entirely through darts: every directed edge must appear in exactly one face
+cycle. This exact dart partition is the combinatorial condition that replaces any need for
+boundary-operator or chain-complex language.
+Throughout this section, we fix
+Γ = Cay(G,S ), D =G×S,
+whereD is the dart set of Γ.
+12
+=== PAGE 13 ===
+3.1 Regular Face Systems and Orbit Decomposition
+We first define the class of face systems used in this thesis. The definition has two indepen-
+dent components: each individual face must be a simple directed cycle, and the collection of
+faces must be invariant under the left action of G.
+Definition 3.1 (Simple cycle). A simple cycle in Γ = Cay(G,S ) of length k based at g∈G
+is a cyclic sequence
+Cg =
+ 
+g, gs1, gs1s2, ..., gs1s2··· sk−1
+
+,
+where s1,...,s k∈S and
+s1s2··· sk =e.
+The displayed vertices are required to be pairwise distinct. The final step returns from
+gs1s2··· sk−1 to g by right multiplication by sk.
+The corresponding cyclic sequence of darts is
+ 
+(g,s 1), (gs1,s 2), ..., (gs1s2··· sk−1,sk)
+
+.
+This dart sequence records both the vertices of the cycle and the clockwise or counterclock-
+wise order in which the cycle is traversed.
+Definition 3.2 (Face system). A face system for Γ = Cay(G,S ) is a finite collection F of
+simple directed cycles in Γ, whose elements are called faces, satisfying the following condi-
+tions:
+(i) Simplicity. Every face inF is a simple cycle.
+(ii) Left G-invariance. If
+Ce = (e,s 1,s 1s2,...,s 1s2··· sk−1)
+is a face inF, then for every h∈G the left translate
+h·Ce = (h,hs 1,hs 1s2,...,hs 1s2··· sk−1)
+is also a face in F.
+The left G-invariance condition is essential. It ensures that the left action of G on
+the Cayley skeleton extends from vertices and edges to the chosen faces. Thus the group
+symmetry is not merely a symmetry of the graph; it is also a symmetry of the assembled
+surface system.
+Orbit decomposition of face systems. Let Ce be a simple cycle based at the identity.
+Its face orbit under the left action of G is
+O(Ce) ={h·Ce :h∈G}.
+The stabilizer of Ce is
+StabG(Ce) ={h∈G :h·Ce =Ce}.
+13
+=== PAGE 14 ===
+By the orbit-stabilizer theorem,
+|O(Ce)| = |G|
+| StabG(Ce)|.
+A G-invariant face system is therefore a disjoint union of finitely many face orbits:
+F =O(C (1)
+e )⊔O (C (2)
+e )⊔···⊔O (C (m)
+e ).
+Consequently, its total number of faces is
+|F| =
+mX
+i=1
+|G|
+| StabG(C (i)
+e )|
+.
+This orbit decomposition reduces the construction of F to a finite list of identity-based
+cycles. Once these base cycles are chosen, the left action of G determines all their translates.
+The remaining task is to verify that the resulting directed cycles fit together correctly. This
+is exactly the role of the dart condition.
+3.2 The Dart Adjacency Condition for Orientable 2-Manifolds
+Each face inF contributes a cyclic list of darts. The decisive question is whether these cyclic
+lists collectively use the dart set
+D =G×S
+in the correct way.
+Definition 3.3 (Dart partition). A face system F partitions the dart set D if every dart
+(g,s )∈D occurs in the dart sequence of at least one face in F. It exactly partitions D if
+every dart occurs in the dart sequence of exactly one face in F.
+Theorem 3.1 (Dart Adjacency Condition) . LetF be a G-invariant face system for Γ =
+Cay(G,S ) consisting of simple cycles. Then F defines a closed orientable surface with one-
+dimensional skeleton Γ if and only if F exactly partitions the dart set
+D =G×S.
+Equivalently, every dart (g,s )∈G×S must belong to exactly one face of F.
+Proof. We prove both directions.
+Necessity. Assume that F defines a closed orientable surface with skeleton Γ. Consider
+any undirected edge
+{g,gs}.
+It has precisely two dart realizations:
+(g,s ), (gs,s−1).
+Since the surface is closed and orientable, each edge is adjacent to two face incidences, and
+these two incidences traverse the edge in opposite directions. Hence one face uses the dart
+14
+=== PAGE 15 ===
+(g,s ) and the other uses the reversed dart ( gs,s−1). Therefore every dart occurs in exactly
+one face. Thus F exactly partitionsD.
+Sufficiency. Conversely, assume thatF exactly partitionsD. Fix an undirected edge
+{g,gs}.
+Its two dart realizations are
+(g,s ) and ( gs,s−1).
+By the exact partition hypothesis, the dart ( g,s ) occurs in a unique face F1∈F , and the
+reversed dart (gs,s−1) occurs in a unique face F2∈F .
+These two face incidences traverse the same edge in opposite directions. Thus every edge
+is paired by two opposite dart usages. No directed edge-side is missing, and no directed
+edge-side is used more than once. Therefore the local edge structure is that of a closed
+surface.
+Moreover, because the two usages of each edge are opposite in dart direction, the ori-
+entations induced by adjacent faces are compatible across every shared edge. Assigning
+each face the orientation determined by its dart sequence therefore gives a consistent global
+orientation. Hence the surface assembled from F is orientable.
+Finally, sinceF is invariant under the left action ofG, this surface structure is transported
+equivariantly across the entire Cayley skeleton. Thus F defines a closed orientable surface
+with one-dimensional skeleton Γ.
+Remark 3.1 (Local verification at the identity) . Because the left action of G is transitive
+on vertices and preserves dart reversal,
+h· (g,s ) =h· (g,s ),
+it is often enough in computations to verify the dart condition at the identity vertex. Once
+the darts based ate are covered exactly once, leftG-invariance propagates the same condition
+to every vertex.
+Remark 3.2 (Failure modes). There are two basic ways in which a proposed face system
+can fail the dart condition.
+(i) If a dart occurs in no face, then one directed edge-side has not been assigned to any
+face. The proposed surface system is incomplete.
+(ii) If a dart occurs in two or more faces, then the same directed edge-side is used repeatedly.
+The proposed surface system is overfilled along that dart direction.
+Both failures are detected purely by counting dart occurrences. This is why the dart formal-
+ism is the correct combinatorial language for the surface verification used in this thesis.
+15
+=== PAGE 16 ===
+3.3 Topological Invariants: Euler Characteristic and Genus Clas-
+sification
+Once the dart condition has been verified, the topological type of the resulting closed ori-
+entable surface is determined by the Euler characteristic.
+Definition 3.4 (Euler characteristic). LetF be a G-invariant face system satisfying the
+Dart Adjacency Condition. The Euler characteristic of the resulting surface is
+χ =V−E +F,
+where
+V =|G|, E =|G||S|
+2 , F =|F|.
+Using the orbit decomposition of F, the face count can be written as
+F =
+mX
+i=1
+|G|
+| StabG(C (i)
+e )|
+.
+The quantitiesV andE are fixed once the pair (G,S ) is fixed. The quantity F , however,
+depends on the choice of the face system F. Therefore the Euler characteristic is not an
+invariant of the Cayley graph alone; it is an invariant of the triple
+(G,S,F).
+Theorem 3.2 (Genus classification). Let Σ be the closed orientable surface obtained from
+a valid triple (G,S,F). Then there exists a unique integer g≥ 0 such that
+χ(Σ) = 2− 2g.
+Equivalently,
+g = 1− χ(Σ)
+2 = 1− V−E +F
+2 .
+The cases are:
+g = 0⇐⇒Σ∼=S2, g = 1⇐⇒Σ∼=T 2,
+and g≥ 2 corresponds to a closed orientable surface of higher genus.
+Proof. By Theorem 3.1, the face system F assembles the Cayley skeleton into a closed
+orientable surface. The classification of closed orientable surfaces states that every such
+surface is classified up to homeomorphism by its genus g, and its Euler characteristic is
+χ = 2− 2g.
+Solving for g gives
+g = 1− χ
+2.
+Substituting χ =V−E +F gives the stated formula.
+16
+=== PAGE 17 ===
+The following example is the basic topological switching phenomenon driving the thesis.
+Example 3.1 (D4: one skeleton, two surface systems) . Let
+G =D4 =⟨r,s|r4 =e, s2 =e, srs =r−1⟩
+and choose the symmetric generating set
+S ={r,r−1,s}.
+Then
+|G| = 8, |S| = 3,
+so
+V = 8, E = 8· 3
+2 = 12.
+Square-face system. One validG-invariant face system consists of six square faces. Hence
+F = 6, χ = 8− 12 + 6 = 2.
+By Theorem 3.2, the genus is
+g = 1− 2
+2 = 0.
+Thus the resulting surface is the sphere S2.
+Hexagon-face system. Another validG-invariant face system on the same Cayley skeleton
+consists of four hexagonal faces. Hence
+F = 4, χ = 8− 12 + 4 = 0.
+Therefore
+g = 1− 0
+2 = 1.
+The resulting surface is the torus T 2.
+In both cases, the Cayley graph Cay( D4,S ) is identical. The vertex set, edge set, adja-
+cency matrix, and unweighted Laplacian
+L =|S|I−A
+are unchanged. Only the face system F changes. Consequently, the change in genus is a
+purely combinatorial effect of choosing different valid dart partitions of the same dart set.
+This example shows why the topology cannot be recovered from the Cayley skeleton
+alone. The graph Cay( G,S ) determines V and E, but the choice of F determines F , and
+hence determines the genus. The subsequent sections use spectral drawing to suggest nat-
+ural geometric realizations, but the final topological verification always returns to the dart
+condition and the Euler characteristic of the triple
+(G,S,F).
+17
+=== PAGE 18 ===
+4 Spectral Drawing: Group Representations, Graph
+Spectra, and Geometric Embeddings
+The previous sections established the combinatorial mechanism by which a Cayley skeleton
+Cay(G,S ) becomes a closed orientable surface after a valid face system F is chosen. We
+now turn to the geometric side of the thesis: how can the abstract vertices of Cay( G,S ) be
+placed in Euclidean space in a way that reflects the symmetry of G?
+The method used in this thesis is spectral drawing. Starting from the unweighted graph
+Laplacian
+L =|S|I−A,
+we use selected eigenspaces of L as coordinate spaces. Since the Cayley graph is invariant
+under the left action ofG, these eigenspaces are compatible with the representation theory of
+G. Thus spectral drawing provides a bridge from finite group symmetry to discrete geometric
+realization.
+The central warning remains the same as before: spectral drawing suggests geometry, but
+it does not determine topology. The actual surface type is verified only after a face system
+F satisfies the dart condition and the Euler characteristic
+χ =V−E +F
+is computed.
+4.1 Representation-Theoretic Diagonalization of the Graph Lapla-
+cian
+Let
+Γ = Cay(G,S )
+be the Cayley skeleton of a finite groupG with symmetric generating setS =S−1 ande /∈S.
+Let A denote the unweighted adjacency matrix of Γ. Since Γ is |S|-regular, the Laplacian
+used throughout this thesis is
+L =|S|I−A.
+This is the ordinary unweighted graph Laplacian; no normalized Laplacian is used.
+The left action of G on itself induces an action on functions f :G→ C by
+(h·f)(g) =f(h−1g).
+This is the left regular representation on C[G]. Because left multiplication preserves adja-
+cency in Cay(G,S ), the adjacency operator A commutes with this left G-action. Conse-
+quently, the Laplacian L =|S|I−A also commutes with the same action.
+The representation-theoretic consequence is that the spectral structure of A and L can
+be analyzed through the irreducible representations of G. The group algebra decomposes as
+C[G]∼=
+M
+ρ∈ bG
+V⊕ deg(ρ)
+ρ ,
+18
+=== PAGE 19 ===
+where bG denotes the set of irreducible complex representations of G, and deg(ρ) = dimVρ.
+For each irreducible representation ρ, define the representation block
+Aρ =
+X
+s∈S
+ρ(s).
+The eigenvalues of the full adjacency operator A are obtained from the eigenvalues of these
+smaller matricesAρ. If λA is an eigenvalue arising from the blockAρ, then the corresponding
+Laplacian eigenvalue is
+λL =|S|− λA.
+The multiplicity is governed by the regular representation. Since Vρ appears deg(ρ)
+times in C[G], each eigenvalue arising from Aρ contributes to the full spectrum with this
+representation-theoretic repetition, before possible coincidences with eigenvalues from other
+irreducible representations are combined. In the special case where Aρ acts as a scalar onVρ,
+this produces a global multiplicity of deg( ρ)2. In general, however, one should not assume
+that Aρ is scalar; the correct object is the finite matrix
+Aρ =
+X
+s∈S
+ρ(s).
+Thus the spectral data of Cay(G,S ) are rigidly determined by the pair ( G,S ). They do
+not depend on the face system F. This is the source of both the power and the limitation
+of spectral drawing: it captures the symmetry of the Cayley skeleton, but it remains blind
+to the later topological choice of faces.
+4.2 The Spectral Embedding Mechanism via Direct Sums of Eigenspaces
+A spectral drawing assigns Euclidean coordinates to the vertices of Cay( G,S ) by using
+eigenvectors of the unweighted Laplacian
+L =|S|I−A.
+Let
+W⊆ℓ2(G)
+be a real eigenspace, or a direct sum of real eigenspaces, chosen as the coordinate space for
+the drawing. Suppose
+W = span{ψ1,ψ 2,...,ψ k}.
+Then the spectral embedding is the map
+Φ :G−→ Rk
+defined by
+Φ(g) =
+ 
+ψ1(g),ψ 2(g),...,ψ k(g)
+
+.
+19
+=== PAGE 20 ===
+Definition 4.1 (Spectral drawing). LetW⊆ℓ2(G) be ak-dimensional real coordinate space
+obtained from eigenspaces of the unweighted Laplacian L =|S|I−A. If
+W = span{ψ1,...,ψ k},
+then the associated spectral drawing is
+Φ :G→ Rk, Φ(g) =
+ 
+ψ1(g),...,ψ k(g)
+
+.
+Because the eigenspaces of L are compatible with the left action of G, the coordinate
+space W may be chosen to be invariant under this action. Then the spectral drawing is
+equivariant in the following sense: for each h∈G, there exists an orthogonal transformation
+Oh of Rk such that
+Φ(hg) =OhΦ(g).
+Thus the algebraic symmetry of G appears as Euclidean symmetry of the embedded point
+configuration.
+Remark 4.1 (Direct-sum structure of the coordinate space) . The coordinate space used
+for a three-dimensional spectral drawing need not be an irreducible three-dimensional rep-
+resentation. In many examples, it is a reducible invariant space built as a direct sum of
+lower-dimensional representation components:
+W =Vρ1⊕Vρ2⊕···⊕ Vρm.
+The symbol ⊕ is essential: the coordinates are assembled by placing independent invari-
+ant components side by side as coordinate directions. This direct-sum construction is the
+algebraic source of the embedding space used in the examples below.
+This distinction is geometrically important. A three-dimensional coordinate space may
+suggest a spherical polyhedral realization, while a direct sum of two real two-dimensional
+eigenspaces may suggest two independent circular phase directions and hence a toroidal
+realization. Nevertheless, these are geometric suggestions only. The topology is not settled
+until a valid face systemF is chosen and verified by the dart condition.
+4.3 Concrete Case Studies: Abelian Torus and Non-Abelian Com-
+binatorial Verifications
+We now examine two concrete examples. The first, Z3× Z3, shows how Fourier eigenspaces
+naturally produce a toroidal parameter system. The second, D4, shows that even when the
+spectral embedding is fixed, different valid face systems on the same Cayley skeleton can
+produce different topological surfaces.
+4.3.1 The Smooth Fourier Parameterization of Z3× Z3
+Let
+G = Z3× Z3, S ={(±1, 0), (0,±1)}.
+20
+=== PAGE 21 ===
+Then Cay(G,S ) is the 3× 3 periodic square grid. The graph has
+V =|G| = 9, E =|G||S|
+2 = 9· 4
+2 = 18.
+The unweighted Laplacian is
+L =|S|I−A = 4I−A.
+Since G is abelian, all irreducible representations are one-dimensional characters. The
+low-frequency eigenvectors are therefore discrete Fourier modes. The two cyclic directions
+of Z3× Z3 give two independent real two-dimensional coordinate systems. Algebraically, the
+relevant coordinate structure is
+R2⊕ R2.
+The first copy of R2 records the Fourier phase along the first cyclic direction, and the second
+copy records the Fourier phase along the second cyclic direction.
+Let these two phase variables be denoted by
+θ, ϕ.
+They should be interpreted as the two circular coordinates of the periodic grid. Thus the
+spectral data naturally suggest the product of two circles:
+S1×S1,
+which is the torus.
+After subdividing and smoothing the square cells of the periodic grid, the corresponding
+smooth toroidal surface in R3 can be represented by the standard parameterization
+X = (R +r cosϕ) cosθ,
+Y = (R +r cosϕ) sinθ,
+Z =r sinϕ.
+This smooth model is not used to define the topology; it is a geometric realization suggested
+by the Fourier coordinates.
+The topology is verified combinatorially. Let F consist of the nine square 4-cycles of the
+3× 3 periodic grid. The dart condition is satisfied, and hence
+F = 9.
+Therefore
+χ =V−E−F + 2F =V−E +F = 9− 18 + 9 = 0.
+Equivalently,
+χ =V−E +F = 0.
+By the genus formula
+χ = 2− 2g,
+21
+=== PAGE 22 ===
+Figure 1: Fourier torus realization of Cay( Z3× Z3,S ) with S ={(±1, 0), (0,±1)}. The left
+panel shows the 3× 3 periodic fundamental domain, where the blue and red arrows indicate
+the two independent cyclic directions of the group. The nine colored squares correspond to
+the nine elements of Z3× Z3. The right panel shows the corresponding smoothed toroidal re-
+alization in R3. Spectrally, the two cyclic directions give the direct-sum coordinate structure
+R2⊕ R2, which is geometrically interpreted as two angular phase coordinates on S1×S1.
+The face system consists of nine square 4-cycles, giving χ = 9− 18 + 9 = 0, hence a torus.
+22
+=== PAGE 23 ===
+we obtain
+g = 1.
+Thus the verified surface is a torus.
+This example illustrates the cleanest toroidal signal in the thesis: a 2 + 2 Fourier coordi-
+nate structure suggests a torus, and the nine-square face system verifies it through the dart
+condition and the Euler characteristic.
+4.3.2 The Dihedral Group D4 and Topological Switching under a Static Eigenspace
+We now consider the non-abelian example
+D4 =⟨r,s|r4 =e, s2 =e, srs =r−1⟩
+with symmetric generating set
+S ={r,r−1,s}.
+The Cayley graph Cay(D4,S ) has
+V =|D4| = 8, E =|D4||S|
+2 = 8· 3
+2 = 12.
+Its unweighted graph Laplacian is
+L =|S|I−A = 3I−A.
+The irreducible representations ofD4 consist of four one-dimensional representations and
+one two-dimensional representation. Let the one-dimensional representations be denoted by
+ρ1,ρ 2,ρ 3,ρ 4,
+and let the two-dimensional representation be denoted by ρ5. A standard choice is
+ρ1(r) = 1, ρ 1(s) = 1,
+ρ2(r) = 1, ρ 2(s) =−1,
+ρ3(r) =−1, ρ 3(s) = 1,
+ρ4(r) =−1, ρ 4(s) =−1,
+and
+ρ5(r) =
+0 −1
+1 0
+
+, ρ 5(s) =
+1 0
+0 −1
+
+.
+For each representationρ, the adjacency block is
+Aρ =
+X
+t∈S
+ρ(t) =ρ(r) +ρ(r−1) +ρ(s).
+Computing these blocks gives the Laplacian spectrum
+Spec(L) ={0(1), 2(3), 4(3), 6(1)}.
+23
+=== PAGE 24 ===
+The lowest non-zero eigenspace has eigenvalue
+λ = 2
+and dimension 3. Its representation-theoretic structure is
+Vλ=2 =Vρ2⊕Vρ5.
+This is a direct sum of a one-dimensional component and a two-dimensional component.
+Geometrically, theVρ5 component gives the fourfold rotational structure in a plane, while
+the Vρ2 component separates the vertices into two parallel layers. Together they produce a
+fixed three-dimensional spectral drawing of the Cayley skeleton Cay( D4,S ).
+The crucial point is that this spectral drawing is fixed once ( D4,S ) is fixed. It does
+not change when the face system changes. However, the topology of the resulting surface
+depends entirely on the choice of F.
+The 4-cycle face system. ChooseF to consist of six square faces. The dart condition is
+satisfied, and therefore
+F = 6.
+Since
+V = 8, E = 12,
+we obtain
+χ =V−E +F = 8− 12 + 6 = 2.
+Hence
+g = 1− χ
+2 = 1− 2
+2 = 0.
+The resulting closed orientable surface is the sphere S2. Geometrically, the same Cayley
+skeleton is interpreted as the one-dimensional skeleton of a cube.
+The 6-cycle face system. Choose instead a face system F consisting of four hexagonal
+faces. Again, the dart condition is satisfied on the same dart set D4×S. Now
+F = 4,
+so
+χ =V−E +F = 8− 12 + 4 = 0.
+Hence
+g = 1.
+The resulting closed orientable surface is the torus T 2.
+This example is the central topological switching phenomenon of the thesis. The graph
+Cay(D4,S ), the adjacency matrix A, the Laplacian
+L =|S|I−A,
+and the spectral embedding space
+Vλ=2 =Vρ2⊕Vρ5
+are all fixed. Nevertheless, two different valid face systems produce two different genera.
+Therefore the topology is not determined by the vertex spectrum. It is determined by the
+combinatorial choice ofF.
+24
+=== PAGE 25 ===
+Figure 2: Topological switching on the fixed Cayley skeleton Cay( D4,{r,r−1,s}). The
+left column shows the 4-cycle face system: six square faces are assembled into a cubical
+realization of the sphere, with V = 8, E = 12, F = 6, and χ = 8− 12 + 6 = 2. The right
+column shows the 6-cycle face system: four hexagonal faces are assembled into a toroidal
+realization, with V = 8, E = 12, F = 4, and χ = 8− 12 + 4 = 0. In both cases, the Cayley
+skeleton and the unweighted Laplacian L =|S|I−A are fixed. The topological difference is
+entirely determined by the choice of face system F.
+25
+=== PAGE 26 ===
+5 Dual Graphs, Face Inflation, and Topologically Sen-
+sitive Invariants
+The previous section showed that the vertex Laplacian
+L =|S|I−A
+is determined entirely by the Cayley skeleton Cay(G,S ). It therefore does not change when
+the face system F changes. This is the spectral blindness of vertex operators: they detect
+the symmetry of the one-dimensional skeleton, but not the two-dimensional combinatorial
+choice of faces.
+To record information depending on F, we now shift from vertex adjacency to face
+adjacency and then refine this idea further by introducing the face-inflated graph. The goal
+is to construct graph objects whose spectra are sensitive to the chosen surface system while
+remaining within the same discrete linear-algebraic framework.
+5.1 The Spectral Blindness of Vertex Operators and Classical Du-
+ality
+Fix a finite group G, a symmetric generating set S, and the Cayley skeleton
+Γ = Cay(G,S ).
+Let A be the unweighted adjacency matrix of Γ, and let
+L =|S|I−A
+be its unweighted graph Laplacian. Since A is defined only from the edges of Cay(G,S ), the
+operator L depends only on the pair (G,S ). It does not depend on any face system F.
+Thus, if the same Cayley graph admits two different valid face systems F1 andF2, then
+the vertex Laplacian remains the same:
+LF1 =LF2 =LCay(G,S).
+Consequently,
+Spec(LF1) = Spec(LF2) = Spec(LCay(G,S)).
+This equality is not a topological statement; it simply reflects the fact that the vertex
+operator has no access to the chosen faces.
+The classical way to introduce face-level information is to form the dual graph.
+Definition 5.1 (Classical dual graph). Let (G,S,F) be a valid Cayley surface system. The
+classical dual graph, denoted by
+Γ∗ = (V∗,E∗),
+is defined as follows:
+(i) for each face F∈F , introduce one dual vertex v∗
+F∈V∗;
+26
+=== PAGE 27 ===
+(ii) if two faces F,F′∈F share an edge of the original Cayley skeleton, then place a dual
+edge between v∗
+F and v∗
+F ′.
+Equivalently, suppose a dart
+(g,s )
+belongs to the face F , while its reversal
+(g,s ) = (gs,s−1)
+belongs to the face F′. Then the original edge {g,gs} contributes an adjacency between the
+dual vertices v∗
+F and v∗
+F ′. If the same pair of faces share more than one original edge, the
+dual graph may be treated as a multigraph or, after aggregation, as a weighted graph.
+Let A∗ be the adjacency matrix of Γ∗, and let
+L∗ =D∗−A∗
+be its unweighted dual Laplacian when Γ∗ is treated as a simple graph, or the corresponding
+weighted Laplacian when multiple shared edges are aggregated. Unlike the vertex Laplacian
+L, the dual operators A∗ and L∗ depend explicitly on the face system F.
+This already distinguishes the two D4 surface systems. For
+G =D4, S ={r,r−1,s},
+the Cayley skeleton has
+V = 8, E = 12.
+The square-face system has
+F = 6, χ = 8− 12 + 6 = 2,
+and its dual graph has six dual vertices. Geometrically, this is the dual structure associated
+with the cubical sphere system. The hexagon-face system has
+F = 4, χ = 8− 12 + 4 = 0,
+and its dual graph has four dual vertices. Thus the dual graph changes when the face system
+changes, even though the original vertex spectrum does not.
+The classical dual graph therefore partially resolves the spectral blindness ofL. However,
+it does so by compressing every face into a single dual vertex, and this compression loses
+important information. This motivates the refined constructions in the next subsection.
+5.2 Information Loss and the Construction of Face-Inflated Graphs
+The classical dual graph Γ∗ records which faces are adjacent, but it does not faithfully record
+the full surface system. Two types of information are lost.
+First, Γ∗ forgets the original Cayley vertices. Its vertices are faces, not group elements.
+Therefore the explicit vertex identity coming from the group G is no longer visible.
+27
+=== PAGE 28 ===
+Second, Γ∗ forgets the cyclic dart order inside each face. It records that two faces are
+adjacent, but not the order in which darts appear around a face. Since the dart order is
+precisely what encodes the local orientation of each face cycle, this information is essential
+for reconstructing the chosen surface system.
+To reduce this loss, we introduce two augmented graph structures. The first is the face-
+center augmented graph. The second, more refined construction is the face-inflated graph
+Γinf.
+5.2.1 The Face-Center Augmented Graph
+The face-center augmented graph keeps the original Cayley skeleton and adds one new vertex
+for each face.
+Definition 5.2 (Face-center augmented graph) . Let (G,S,F) be a valid Cayley surface
+system. The face-center augmented graph, denoted by
+Γaug,
+is constructed as follows:
+(i) retain all original vertices vg of Cay(G,S );
+(ii) retain all original Cayley edges {vg,vgs};
+(iii) for each face F∈F , add one new vertex cF ;
+(iv) if the original vertex vg appears in the cyclic vertex list of the face F , add an incidence
+edge between vg and cF .
+This construction records which original vertices occur in which faces. It therefore pre-
+serves more information than the classical dual graph. It also keeps the original Cayley
+skeleton visible, so the left action of G remains explicit whenF is G-invariant.
+However, Γ aug still compresses each face into one center vertex. It records vertex-face
+incidence, but it does not record the cyclic order of darts inside the face. Therefore it is still
+not the most faithful graph-theoretic encoding of the surface system.
+5.2.2 The Face-Inflated Graph
+The face-inflated graph is designed to preserve the original vertex identities, the chosen
+faces, and the cyclic dart order simultaneously. Instead of collapsing a face into one vertex,
+it replaces each face by a small ordered polygon.
+Definition 5.3 (Face-inflated graph). Let (G,S,F) be a valid Cayley surface system satis-
+fying the dart condition. For each face
+F = (v1,v 2,...,v k)∈F ,
+28
+=== PAGE 29 ===
+where the order is the cyclic order determined by the dart sequence ofF , introduce face-local
+vertices
+uF,1,uF,2,...,u F,k.
+The face-inflated graph
+Γinf
+is constructed by the following rules.
+(i) Original Cayley skeleton. Retain the original vertices vg and the original edges of
+Cay(G,S ).
+(ii) Face-local copies. For every occurrence of a vertex vi in a face F = (v1,...,v k), add
+a local copy uF,i.
+(iii) Intra-face cyclic edges. Add edges
+uF,i∼uF,i+1, i = 1,...,k,
+with indices taken modulo k. These edges record the cyclic dart order of the face.
+(iv) Radial incidence edges. Add edges
+vi∼uF,i, i = 1,...,k.
+These edges attach each face-local copy back to its corresponding original Cayley vertex.
+The face-inflated graph therefore contains three layers of information:
+Cay(G,S ), F, the cyclic dart order in each face.
+This makes Γ inf more informative than the classical dual graph Γ ∗ and the face-center aug-
+mented graph Γ aug.
+IfF is invariant under the left action of G, then Γ inf also inherits a natural G-action.
+The original vertices transform by
+h·vg =vhg,
+and the local copy attached to the faceF transforms to the corresponding local copy attached
+to the translated face h·F . Thus the inflated graph remains compatible with the algebraic
+symmetry of the Cayley skeleton.
+For spectral analysis, one may form the unweighted adjacency matrixAinf of Γinf and the
+corresponding unweighted Laplacian
+Linf =Dinf−Ainf.
+This operator is no longer blind to F, because the graph Γ inf itself was built from the
+chosen face system. Thus Linf provides a matrix-level object that simultaneously records the
+skeleton and the face structure.
+The role of Γ inf can be summarized as follows:
+the Cayley graph gives the skeleton,
+the face system verifies the surface,
+and the face-inflated graph records the verified structure.
+29
+=== PAGE 30 ===
+Face-Inflated Graph Placeholder
+Classical dual graph Γ∗: one vertex for each face.
+Face-inflated graph Γinf: each face is replaced by an ordered polygon of local
+vertex copies (uF,1,...,u F,k), with radial incidence edges back to the original
+Cayley vertices.
+Figure 3: Comparison between the classical dual graph Γ ∗ and the face-inflated graph Γ inf.
+In the classical dual graph, each face of the surface system F is collapsed to a single vertex,
+so the original Cayley vertices and the cyclic dart order are not retained. In the face-inflated
+graph, each faceF = (v1,...,v k) is replaced by a small ordered polygon (uF,1,...,u F,k). The
+intra-face polygon edges record the cyclic dart order, while the radial incidence edges attach
+each local copy uF,i back to the corresponding original Cayley vertex vi. This structure
+preserves face adjacency, vertex identity, and cyclic order simultaneously.
+5.3 Case Study on Q8: Non-Abelian Toroidal Surface System
+We now examine the quaternion group
+Q8 ={±1,±i,±j,±k}
+with symmetric generating set
+S ={i,−i,j,−j}.
+The Cayley graph
+Cay(Q8,S )
+has
+V =|Q8| = 8, |S| = 4,
+and hence
+E =|Q8||S|
+2 = 8· 4
+2 = 16.
+The unweighted graph Laplacian is
+L =|S|I−A = 4I−A.
+The groupQ8 has four one-dimensional irreducible representations and one two-dimensional
+irreducible representation. For the generating set S ={i,−i,j,−j}, the adjacency spectrum
+is obtained from the matrices
+Aρ =
+X
+s∈S
+ρ(s).
+The trivial representation contributes adjacency eigenvalue 4, one one-dimensional repre-
+sentation contributes adjacency eigenvalue −4, and the remaining components contribute
+adjacency eigenvalue 0. Therefore the Laplacian spectrum is
+Spec(L) ={0(1), 4(6), 8(1)}.
+30
+=== PAGE 31 ===
+The lowest non-zero eigenvalue is
+λL = 4.
+Although the full eigenspace for λL = 4 has dimension 6, a three-dimensional invariant
+coordinate subspace can be selected for visualization. In the spectral drawing used here,
+we take a direct sum of one real one-dimensional component and one real two-dimensional
+component:
+Wdraw =Vρa⊕V R
+ρ5,
+whereV R
+ρ5 denotes the real coordinate space coming from the two-dimensional representation.
+This gives a three-dimensional symmetry-preserving drawing
+Φ :Q8→ R3.
+One normalized coordinate realization is:
+Φ(1) =
+1
+2, 0, 1
+2
+√
+2
+
+, Φ(−1) =
+
+−1
+2, 0, 1
+2
+√
+2
+
+,
+Φ(i) =
+
+0, 1
+2, 1
+2
+√
+2
+
+, Φ(−i) =
+
+0,−1
+2, 1
+2
+√
+2
+
+,
+Φ(j) =
+
+0, 1
+2,− 1
+2
+√
+2
+
+, Φ(−j) =
+
+0,−1
+2,− 1
+2
+√
+2
+
+,
+Φ(k) =
+1
+2, 0,− 1
+2
+√
+2
+
+, Φ(−k) =
+
+−1
+2, 0,− 1
+2
+√
+2
+
+.
+Equivalently, using decimal approximations,
+1
+2
+√
+2≈ 0.3536.
+We now choose a valid face systemF on this fixed Cayley skeleton. Since
+E = 16,
+the dart set has size
+|D| = 2E = 32.
+Therefore a toroidal face system with
+F = 8
+must have total face length 32. In the quadrilateral case this means that F consists of eight
+4-cycles.
+One such G-invariant quadrilateral structure is generated by the relator cycles
+i4 =e, (−i)4 =e, j 4 =e, (−j)4 =e,
+together with their left translates. These cycles give a collection of eight oriented square
+faces. Their dart sequences exactly partition
+D =Q8×S.
+31
+=== PAGE 32 ===
+Hence the dart condition is satisfied.
+The Euler characteristic is
+χ =V−E +F = 8− 16 + 8 = 0.
+By the classification of closed orientable surfaces,
+χ = 2− 2g.
+Thus
+0 = 2− 2g, g = 1.
+The resulting surface is therefore a torus.
+The significance of this example is twofold. First, the vertex spectrum of L = 4I−A
+is fixed by the pair ( Q8,S ) and does not determine the face system. Second, once the
+quadrilateral face system F is chosen and verified by the dart condition, the face-inflated
+graph Γ inf records the resulting non-abelian toroidal surface structure in a graph-theoretic
+form suitable for further spectral analysis.
+Thus the Q8 example reinforces the main thesis:
+spectral drawing suggests, face systems verify, and
+face-inflated graphs record.
+6 Conclusions and Future Directions
+This thesis develops a unified algebraic and discrete-geometric framework for constructing
+closed orientable surfaces from Cayley graphs. Starting from a finite group G and a sym-
+metric generating set S, the Cayley graph
+Cay(G,S )
+provides a highly symmetric one-dimensional skeleton. However, this skeleton alone does
+not determine a surface. The decisive additional datum is the face system F.
+The main conclusion of the thesis is that the topology of the resulting surface is deter-
+mined by the triple
+(G,S,F),
+not by the pair (G,S ) alone. The graph Laplacian
+L =|S|I−A
+is a rigid spectral invariant of the Cayley skeleton, but it is blind to the choice ofF. Therefore
+spectral drawing can suggest natural geometric realizations, but the genus of the surface is
+verified only after the dart condition is checked and the Euler characteristic
+χ =V−E +F
+32
+=== PAGE 33 ===
+is computed.
+The conceptual structure of the thesis can be summarized by the guiding principle
+spectral drawing suggests; face systems verify; face-inflated graphs record.
+Spectral drawing extracts symmetry-preserving coordinates from eigenspaces of L. Face
+systems verify whether the suggested cycles actually assemble into a closed orientable surface.
+Face-inflated graphs then record the verified surface system while preserving vertex identity,
+face incidence, and cyclic dart order.
+6.1 Summary of Principal Contributions
+The main contributions of this thesis are organized into three parts.
+(1) Separation of geometry and topology.
+The thesis shows that geometric embedding and topological classification are logically
+distinct. The spectral embedding of Cay( G,S ) is determined by the unweighted Lapla-
+cian
+L =|S|I−A.
+Hence it depends only on the group-generator pair ( G,S ). By contrast, the genus de-
+pends on the face count
+F =|F|.
+Thus the surface type depends on the full triple ( G,S,F).
+TheD4 example demonstrates this separation explicitly. The same Cayley skeleton with
+V = 8, E = 12
+admits a square-face system with
+F = 6, χ = 8− 12 + 6 = 2,
+producing a sphere, and a hexagon-face system with
+F = 4, χ = 8− 12 + 4 = 0,
+producing a torus. The graph and its vertex spectrum remain fixed; only the face system
+changes.
+(2) Dart formalism for closed orientable surface verification.
+The thesis replaces informal geometric intuition with an exact combinatorial test. A
+dart is a directed edge
+(g,s )∈G×S,
+with reversal
+(g,s ) = (gs,s−1).
+33
+=== PAGE 34 ===
+A face system F is valid precisely when every dart belongs to exactly one face. This
+dart condition simultaneously verifies the two necessary surface properties: every edge
+is paired by opposite dart directions, and the cyclic orientations of adjacent faces are
+compatible.
+This gives a purely discrete verification principle:
+F is valid ⇐⇒ F exactly partitions G×S.
+Once this condition is verified, the topological type follows from
+χ =V−E +F, χ = 2− 2g.
+(3) Face-inflated graphs as topology-sensitive spectral data.
+The classical dual graph Γ ∗ records face adjacency, but it compresses each face into a
+single dual vertex. As a result, it loses the original Cayley vertex identities and the cyclic
+dart order inside each face.
+To retain this information, the thesis introduces the face-inflated graph
+Γinf.
+In Γ inf, each face is replaced by a small ordered polygon whose vertices are face-local
+copies of the original Cayley vertices. The polygon edges record the cyclic dart order,
+and radial incidence edges attach each local copy back to the original Cayley skeleton.
+Therefore Γinf records three layers of structure simultaneously:
+Cay(G,S ), F, cyclic dart order.
+This makes it a refined graph-theoretic object for studying a chosen surface system
+through spectral methods.
+Together, these contributions establish a consistent pipeline from finite group data to
+surface topology. The Cayley graph supplies the symmetric skeleton, the face system sup-
+plies the topological filling, and the face-inflated graph supplies a topology-sensitive spectral
+object.
+6.2 Open Problems and Future Work
+The framework developed in this thesis suggests several directions for future research.
+6.2.1 Hyperbolic Embeddings and Higher-Genus Surfaces
+The examples treated in this thesis mainly involve spherical and toroidal surface types. The
+spherical case corresponds to
+χ = 2, g = 0,
+34
+=== PAGE 35 ===
+while the toroidal case corresponds to
+χ = 0, g = 1.
+For higher-genus surfaces,
+g≥ 2, χ = 2− 2g <0,
+the natural geometric setting is hyperbolic rather than Euclidean.
+A major future direction is to extend the spectral drawing pipeline to hyperbolic models.
+In this setting, low-frequency eigenspaces of
+L =|S|I−A
+may still provide symmetry-preserving coordinates, but the final geometric realization should
+respect the negative-curvature nature of higher-genus surfaces. Possible directions include
+embeddings into the Poincar´ e disk model or other discrete hyperbolic coordinate systems.
+The central question is:
+Can the representation-theoretic spectrum of Cay(G,S ) guide hyperbolic embeddings of valid higher-genus face systems?
+6.2.2 Spectral Uncertainty Bounds and Expander Families
+Another direction concerns the relationship between face systems and spectral gaps. For a
+graph Laplacian, the first non-zero eigenvalue controls connectivity and expansion behavior.
+In the present framework, there are at least two relevant spectral objects:
+L =|S|I−A
+for the original Cayley skeleton, and
+Linf =Dinf−Ainf
+for the face-inflated graph.
+The vertex Laplacian L depends only on ( G,S ), while Linf depends on the full surface
+system (G,S,F). This raises a natural question:
+How does the choice of F affect the spectral gap of Γinf?
+One possible research direction is to investigate whether certain face systems maximize or
+minimize the spectral gap of the inflated graph. If such extremal behavior can be related to
+representation-theoretic constraints onG, then the construction may connect Cayley surface
+systems with the theory of expander graphs.
+35
+=== PAGE 36 ===
+Figure 4: A higher-genus face-domain pattern associated with a Cayley surface system of
+the quaternion group Q8. The mixture of polygonal face types suggests a more complicated
+surface system than the toroidal quadrilateral case treated in Section 5.3. This example
+illustrates why higher-genus Cayley surfaces require additional geometric tools, such as hy-
+perbolic embedding methods, beyond the spherical and toroidal realizations developed in
+the main examples.
+36
+=== PAGE 37 ===
+6.2.3 Geometry-Guided Automated Face Search
+A practical limitation of the current framework is the search for valid face systems. A
+candidate face system is produced by selecting relator cycles, translating them by the left
+G-action, and checking whether the resulting dart sequences exactly partition
+G×S.
+For large groups, this search can become computationally expensive.
+A future algorithmic direction is to use spectral drawing as a geometric guide for face
+search. Instead of enumerating all relator cycles purely algebraically, one may first embed
+the Cayley skeleton using low-frequency eigenspaces of
+L =|S|I−A.
+The resulting geometry may suggest which cycles are likely to bound natural faces. These
+cycles can then be tested by the dart condition.
+This leads to a geometry-guided pipeline:
+spectral drawing−→candidate cycles−→dart verification−→surface classification.
+Such a method would make the construction more scalable and could allow systematic ex-
+ploration of larger non-abelian groups.
+6.2.4 Classification of Face Systems on a Fixed Cayley Skeleton
+TheD4 example shows that a single Cayley skeleton may admit multiple valid face systems
+with different genera. This suggests a broader classification problem.
+For a fixed pair (G,S ), define
+F(G,S )
+to be the collection of allG-invariant face systems satisfying the dart condition. Each element
+F∈ F(G,S ) determines a surface genus by
+g(F) = 1−|G|− |G||S|
+2 +|F|
+2 .
+The classification problem asks:
+What genera can occur among valid face systems on a fixed Cay(G,S )?
+This question isolates the combinatorial freedom of the face system. It also clarifies the
+central distinction of the thesis: the Cayley skeleton fixes the graph, but the face system
+determines the topology.
+37
+=== PAGE 38 ===
+6.2.5 Dual and Inflated Spectra as Surface Invariants
+Finally, the face-inflated graph suggests a new family of topology-sensitive spectral invari-
+ants. The classical dual graph Γ ∗ records face adjacency, while Γ inf records face adjacency
+together with vertex identity and cyclic dart order. Comparing their spectra may reveal how
+much topological information is retained at each level of encoding.
+A possible future program is to study the relationship among
+Spec(L), Spec(L∗), Spec(Linf),
+where L is the vertex Laplacian of Cay( G,S ), L∗ is the dual Laplacian of Γ ∗, and Linf is
+the Laplacian of the face-inflated graph. Since L depends only on (G,S ) while L∗ and Linf
+depend onF, these spectra separate the skeleton-level and surface-level information.
+The guiding question is:
+Which spectral features of Γinf are genuine invariants of the chosen Cayley surface system?
+Answering this question would strengthen the role of face-inflated graphs as a bridge
+between algebraic symmetry, discrete geometry, and surface topology.
+38
