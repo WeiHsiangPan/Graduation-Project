@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "independent_implementation": "reports\\examples\\fixed_graph_lens17.py",
+  "implementation_sha256": "af804e69e4af095b1728ff18ecc5c721912adc88159de29d20d4117ba5c4f77e",
+  "cases": [
+    {
+      "variant": "inferred",
+      "glue_count": 0,
+      "status": "PASS"
+    },
+    {
+      "variant": "inferred",
+      "glue_count": 1,
+      "status": "PASS"
+    },
+    {
+      "variant": "inferred",
+      "glue_count": 2,
+      "status": "PASS"
+    },
+    {
+      "variant": "literal",
+      "glue_count": 2,
+      "status": "PASS"
+    }
+  ],
+  "scope": "links V/E/F/chi/boundary counts/local surface, Ce/Cv, edge consistency and orientation; not a Lean proof"
+}

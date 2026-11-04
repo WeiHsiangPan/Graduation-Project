@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-03T02:06:04.137066+00:00",
+  "results_sha256": "64ef762fdb1f1d0bf1cf6d062b28027a39a5cd721a577b02fadb6f49daca11c9",
+  "verifier_sha256": "582e15793b9b096c09456f628aba922b16b9344ef309ea77f25d09c0b8192eeb",
+  "histories_checked": 6,
+  "eligible_histories": 3,
+  "transitions_checked": 36,
+  "comparisons_checked": 90,
+  "eligible_comparisons": 18,
+  "base_equal_comparisons": 6,
+  "enhanced_equal_comparisons": 0,
+  "base_counterexamples": 2,
+  "enhanced_counterexamples": 0,
+  "histories": [
+    {
+      "history_id": "013",
+      "status": "PASS",
+      "eligible": true
+    },
+    {
+      "history_id": "031",
+      "status": "PASS",
+      "eligible": false
+    },
+    {
+      "history_id": "103",
+      "status": "PASS",
+      "eligible": false
+    },
+    {
+      "history_id": "130",
+      "status": "PASS",
+      "eligible": true
+    },
+    {
+      "history_id": "301",
+      "status": "PASS",
+      "eligible": true
+    },
+    {
+      "history_id": "310",
+      "status": "PASS",
+      "eligible": false
+    }
+  ],
+  "prediction_status_counts": {
+    "PREDICTED": 9,
+    "REJECTED_EDGE_REVERSAL": 9
+  },
+  "predictions_checked_against_truth": 9,
+  "prediction_mismatches": 0,
+  "checks": [
+    "source hashes and all 36 independent census reconstructions",
+    "all six history checkpoints and eligibility decisions",
+    "Ce/Cv-derived marked boundary cell complexes",
+    "chain inclusions J0/J1/J2 and chain-map identities",
+    "homology Smith/kernel certificates and exact minors",
+    "marked H1 inclusion matrices and target-sign canonicalization",
+    "fixed boundary generator cycles and enhanced-state hashes",
+    "all 36 transition checkpoints and held-out truth",
+    "boundary quotients and q* from boundary/completion alone",
+    "Mayer-Vietoris presentations and predicted H1 via exact minors",
+    "all 90 genuine-history comparison checkpoints",
+    "aggregate groups/counts, both counterexample lists and all CSV cells"
+  ],
+  "scope": "Independent marked boundary chain inclusion and exact homology checks. Zero genuine same-enhanced-state pairs remain in this six-history family; absence of counterexamples is not general sufficiency."
+}

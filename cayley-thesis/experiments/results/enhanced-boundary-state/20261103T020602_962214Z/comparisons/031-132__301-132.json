@@ -1,0 +1,26 @@
+{
+  "left_case": "031-132",
+  "right_case": "301-132",
+  "completion": {
+    "source_tet": 0,
+    "source_face": [
+      0,
+      2,
+      3
+    ],
+    "target_tet": 0,
+    "target_face": [
+      1,
+      3,
+      2
+    ]
+  },
+  "eligible": false,
+  "base_equal": null,
+  "enhanced_equal": null,
+  "both_accepted": null,
+  "homology_equal": null,
+  "base_counterexample": false,
+  "enhanced_counterexample": false,
+  "comparison_status": "EXCLUDED_INADMISSIBLE_FIRST_STAGE"
+}

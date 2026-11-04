@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\GitHub\Graduation-Project\cayley-thesis\experiments\relation_automata.py", line 307, in main
+    result = analyse_method(source, method, args.max_check_length)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\GitHub\Graduation-Project\cayley-thesis\experiments\relation_automata.py", line 183, in analyse_method
+    "pruner_regression": crosscheck_pruning(dfa, rules, max_length)}
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\GitHub\Graduation-Project\cayley-thesis\experiments\relation_automata.py", line 157, in crosscheck_pruning
+    require(accepts(dfa, word) == original, f"Pruner mismatch on {word}")
+  File "C:\Users\user\Documents\GitHub\Graduation-Project\cayley-thesis\experiments\relation_automata.py", line 28, in require
+    raise ValueError(message)
+ValueError: Pruner mismatch on (0, 1)

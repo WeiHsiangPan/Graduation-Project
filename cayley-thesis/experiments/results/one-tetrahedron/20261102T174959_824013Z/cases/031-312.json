@@ -1,0 +1,1220 @@
+{
+  "case_id": "031-312",
+  "glues": [
+    {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        1,
+        2
+      ],
+      "target_tet": 0,
+      "target_face": [
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        2,
+        3
+      ],
+      "target_tet": 0,
+      "target_face": [
+        3,
+        1,
+        2
+      ]
+    }
+  ],
+  "orientation_equations": [
+    {
+      "gluing_number": 1,
+      "full_permutation": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "target_tet_sign_over_source": -1
+    },
+    {
+      "gluing_number": 2,
+      "full_permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "target_tet_sign_over_source": 1
+    }
+  ],
+  "after_first": {
+    "glues": [
+      {
+        "source_tet": 0,
+        "source_face": [
+          0,
+          1,
+          2
+        ],
+        "target_tet": 0,
+        "target_face": [
+          0,
+          3,
+          1
+        ]
+      }
+    ],
+    "vertex_classes": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ],
+    "boundary_faces": [
+      "t0:123",
+      "t0:023"
+    ],
+    "edge_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    ],
+    "corner_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          2
+        ]
+      ]
+    ],
+    "side_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          1
+        ]
+      ]
+    ],
+    "link_side_gluings": [
+      {
+        "source_triangle": [
+          0,
+          0
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          0
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          1
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          3
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          2
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          1
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      }
+    ],
+    "links": [
+      {
+        "members": [
+          [
+            0,
+            0
+          ]
+        ],
+        "V": 1,
+        "E": 2,
+        "F": 1,
+        "chi": 0,
+        "boundary_components": 1,
+        "genus": null,
+        "type": "mobius_band",
+        "connected": true,
+        "orientable": false,
+        "is_surface": true,
+        "corner_classes": [
+          0
+        ],
+        "side_classes": [
+          0,
+          1
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 0,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2,
+              2
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": [
+          {
+            "corners": [
+              0
+            ],
+            "sides": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "members": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "V": 5,
+        "E": 7,
+        "F": 3,
+        "chi": 1,
+        "boundary_components": 1,
+        "genus": 0,
+        "type": "disk",
+        "connected": true,
+        "orientable": true,
+        "is_surface": true,
+        "corner_classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "side_classes": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 1,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2,
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 2,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 3,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 4,
+            "connected": true,
+            "degrees": [
+              1,
+              1
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 5,
+            "connected": true,
+            "degrees": [
+              1,
+              1
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": [
+          {
+            "corners": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sides": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                3,
+                1
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "Ce": [
+      [
+        "t0:023/02",
+        "t0:023/03",
+        true
+      ],
+      [
+        "t0:123/12",
+        "t0:123/13",
+        false
+      ],
+      [
+        "t0:123/23",
+        "t0:023/23",
+        true
+      ]
+    ],
+    "Cv": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ],
+    "edge_orientation_consistent": true,
+    "orientable": false,
+    "connected": true,
+    "partial_3_manifold_definition5": false,
+    "manifold_with_boundary_link_test": false
+  },
+  "after": {
+    "glues": [
+      {
+        "source_tet": 0,
+        "source_face": [
+          0,
+          1,
+          2
+        ],
+        "target_tet": 0,
+        "target_face": [
+          0,
+          3,
+          1
+        ]
+      },
+      {
+        "source_tet": 0,
+        "source_face": [
+          0,
+          2,
+          3
+        ],
+        "target_tet": 0,
+        "target_face": [
+          3,
+          1,
+          2
+        ]
+      }
+    ],
+    "vertex_classes": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ],
+    "boundary_faces": [],
+    "edge_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    ],
+    "corner_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ]
+    ],
+    "side_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ]
+    ],
+    "link_side_gluings": [
+      {
+        "source_triangle": [
+          0,
+          0
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          0
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          1
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          3
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          2
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          1
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          0
+        ],
+        "source_side_opposite": 1,
+        "target_triangle": [
+          0,
+          3
+        ],
+        "target_side_opposite": 0,
+        "corner_map": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          2
+        ],
+        "source_side_opposite": 1,
+        "target_triangle": [
+          0,
+          1
+        ],
+        "target_side_opposite": 0,
+        "corner_map": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          3
+        ],
+        "source_side_opposite": 1,
+        "target_triangle": [
+          0,
+          2
+        ],
+        "target_side_opposite": 0,
+        "corner_map": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "links": [
+      {
+        "members": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "V": 1,
+        "E": 6,
+        "F": 4,
+        "chi": -1,
+        "boundary_components": 0,
+        "genus": null,
+        "type": "other",
+        "connected": true,
+        "orientable": false,
+        "is_surface": true,
+        "corner_classes": [
+          0
+        ],
+        "side_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 0,
+            "connected": true,
+            "degrees": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": []
+      }
+    ],
+    "Ce": [],
+    "Cv": [],
+    "edge_orientation_consistent": false,
+    "orientable": false,
+    "connected": true,
+    "partial_3_manifold_definition5": false,
+    "manifold_with_boundary_link_test": false
+  },
+  "decision": {
+    "closed": true,
+    "connected": true,
+    "edge_orientation_consistent": false,
+    "all_links_spheres": false,
+    "orientable": false,
+    "manifold_accepted": false,
+    "accepted": false,
+    "rejection_reasons": [
+      {
+        "code": "REVERSED_SELF_EDGE",
+        "message": "邊反向自識別"
+      },
+      {
+        "code": "NONSPHERICAL_VERTEX_LINK",
+        "message": "頂點 link 非球面",
+        "link_members": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "evidence": {
+          "V": 1,
+          "E": 6,
+          "F": 4,
+          "chi": -1,
+          "boundary_components": 0,
+          "connected": true,
+          "is_surface": true,
+          "orientable": false
+        }
+      },
+      {
+        "code": "AMBIENT_NONORIENTABLE",
+        "message": "整體不可定向"
+      }
+    ]
+  },
+  "edge_reversal_witness": {
+    "closed_walk": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        1
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        -1
+      ],
+      [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        -1
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        1
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        -1
+      ],
+      [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "sign_product": -1
+  },
+  "first_boundary_state": {
+    "boundary_faces": [
+      "t0:023",
+      "t0:123"
+    ],
+    "Ce": [
+      [
+        "t0:023/02",
+        "t0:023/03",
+        true
+      ],
+      [
+        "t0:023/23",
+        "t0:123/23",
+        true
+      ],
+      [
+        "t0:123/12",
+        "t0:123/13",
+        false
+      ]
+    ],
+    "Cv": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ]
+  },
+  "relabeling_key": [
+    [
+      0,
+      1,
+      1,
+      2,
+      0,
+      3
+    ],
+    [
+      2,
+      3,
+      1,
+      2,
+      3,
+      0
+    ]
+  ],
+  "chain_complex": null,
+  "homology": null,
+  "homology_status": "NOT_COMPUTED_REJECTED_TARGET",
+  "seconds": 0.0005593000023509376
+}

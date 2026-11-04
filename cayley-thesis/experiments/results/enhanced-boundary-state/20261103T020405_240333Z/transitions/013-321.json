@@ -1,0 +1,67 @@
+{
+  "case_id": "013-321",
+  "history_id": "013",
+  "completion": {
+    "source_tet": 0,
+    "source_face": [
+      0,
+      2,
+      3
+    ],
+    "target_tet": 0,
+    "target_face": [
+      3,
+      2,
+      1
+    ]
+  },
+  "eligible": true,
+  "base_key": "f6d16cd86eff4d3eb33ded27c7db525ff40dfb67d12e9a0c578feb78ca8dc53c",
+  "enhanced_key": "8abb185317b81d65d2a0ac33730299590a0e3c0fd5414214075d01021345ac7d",
+  "state_predictor": {
+    "status": "REJECTED_EDGE_REVERSAL",
+    "edge_equations": [
+      {
+        "source_occurrence": "t0:023/02",
+        "target_occurrence": "t0:123/23",
+        "source_edge_index": 0,
+        "target_edge_index": 1,
+        "target_sign_over_source": -1
+      },
+      {
+        "source_occurrence": "t0:023/03",
+        "target_occurrence": "t0:123/13",
+        "source_edge_index": 0,
+        "target_edge_index": 2,
+        "target_sign_over_source": -1
+      },
+      {
+        "source_occurrence": "t0:023/23",
+        "target_occurrence": "t0:123/12",
+        "source_edge_index": 1,
+        "target_edge_index": 2,
+        "target_sign_over_source": -1
+      }
+    ],
+    "reason": "The boundary quotient identifies an edge with its reverse; its orbit is not the intended oriented CW edge.",
+    "assumptions": {
+      "M_connected": true,
+      "K_connected": true,
+      "M_connected_justification": "Restricted to the connected single-tetrahedron prefix domain.",
+      "K_is_boundary_CW_subcomplex": true,
+      "formula": "H1(M union_K Q) = coker((i*,-q*): H1(K) -> H1(M) + H1(Q))"
+    },
+    "predicted_H1": null,
+    "uses_completed_history": false
+  },
+  "prediction_H1_matches": null,
+  "truth": {
+    "accepted": false,
+    "rejection_codes": [
+      "AMBIENT_NONORIENTABLE",
+      "NONSPHERICAL_VERTEX_LINK",
+      "REVERSED_SELF_EDGE"
+    ],
+    "homology": null
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "snapshot_date_taipei": "2026-11-05",
+  "generated_utc": "2026-11-04T17:24:57.029096+00:00",
+  "repository_root": "C:\\Users\\user\\Documents\\GitHub\\Graduation-Project",
+  "document_checks": {
+    "local_links_checked": 29,
+    "broken_links": [],
+    "display_and_inline_math_delimiters_balanced": true,
+    "critical_review": "Passed; adjoint conventions and scalar-block conditions clarified."
+  },
+  "documents": [
+    {
+      "path": "cayley-thesis/reports/research-handoff-2026-11-05.md",
+      "sha256": "cb6eaf835257f537d01f9e8a3f18404d5ef5ee7c41996712015a0629c9ea4a81",
+      "bytes": 47806,
+      "approx_whitespace_words": 6501
+    },
+    {
+      "path": "cayley-thesis/reports/new-conversation-starter-2026-11-05.md",
+      "sha256": "da4591081bab5e65ee88eca9d1645c0380485024db7b0bb3e794f1e8ff474847",
+      "bytes": 7648,
+      "approx_whitespace_words": 1010
+    }
+  ],
+  "formal_runs": [
+    {
+      "kind": "circuit",
+      "directory": "cayley-thesis/experiments/results/circuit-model/20261104T102000_570473Z",
+      "files": {
+        "results.json": {
+          "exists": true,
+          "bytes": 298080,
+          "sha256": "f2615df956400b643c558b5117742730ccadb7a64963ecdb33ab73e89dff6995"
+        },
+        "summary.md": {
+          "exists": true,
+          "bytes": 1477,
+          "sha256": "cbb38e7c110e065f4c64dd881ffa412d30b978e609c90fc32c8042b2c928d62b"
+        }
+      },
+      "groups": 10,
+      "targets": 119,
+      "surfaces": 25,
+      "source_provenance": {
+        "archived_source_sha256": "df0d4949e69231c98308541ea113bc4239cfa5e3f2415da04a2f595798667d80",
+        "current_source_sha256": "1c375acbd1bb00d14d9afa06a711c98fcb298942d0d48096e00bfcd9e6000f7f",
+        "old_hash_reproduced_by_only_summary_wording_reversal": true
+      }
+    },
+    {
+      "kind": "partial_irreps",
+      "directory": "cayley-thesis/experiments/results/partial-irreps/20261104T171505_843220Z",
+      "files": {
+        "results.json": {
+          "exists": true,
+          "bytes": 896089,
+          "sha256": "20813f05a76d083ebf1660f3ead9659272446ae6a4235d569a6b3ca8d3e85f2b"
+        },
+        "summary.md": {
+          "exists": true,
+          "bytes": 6167,
+          "sha256": "44397f2c343c16ae1e5ac4e4037a9130e08f37492805ff358401a3c58f3e3bff"
+        }
+      },
+      "groups": 3,
+      "unique_targets": 38,
+      "arms": 78,
+      "arm_target_combinations": 1148,
+      "repeats": 5,
+      "current_source_hash_checks": {
+        "partial_irrep_search.py": {
+          "path": "cayley-thesis/experiments/partial_irrep_search.py",
+          "matches_archived": true
+        },
+        "small_irreps.py": {
+          "path": "cayley-thesis/experiments/small_irreps.py",
+          "matches_archived": true
+        },
+        "circuit_model.py": {
+          "path": "cayley-thesis/experiments/circuit_model.py",
+          "matches_archived": true
+        },
+        "relation_search.py": {
+          "path": "cayley-thesis/experiments/relation_search.py",
+          "matches_archived": true
+        },
+        "catalogue.json": {
+          "path": "cayley-thesis/data/surfaces/catalogue.json",
+          "matches_archived": true
+        }
+      }
+    }
+  ],
+  "historical_run_pointers": [
+    {
+      "pointer": "cayley-thesis/reports/week1-example7-six-choice/latest-run.json",
+      "run_directory": "cayley-thesis/experiments/results/example7-six-choice/20261101T020001_157094Z",
+      "recorded_status": "not recorded",
+      "results_hash_matches_pointer": true
+    },
+    {
+      "pointer": "cayley-thesis/reports/one-tetrahedron-36/latest-run.json",
+      "run_directory": "cayley-thesis/experiments/results/one-tetrahedron/20261102T175239_565263Z",
+      "recorded_status": "PASS",
+      "results_hash_matches_pointer": true
+    },
+    {
+      "pointer": "cayley-thesis/reports/enhanced-boundary-state/latest-run.json",
+      "run_directory": "cayley-thesis/experiments/results/enhanced-boundary-state/20261103T020602_962214Z",
+      "recorded_status": "PASS",
+      "results_hash_matches_pointer": true
+    },
+    {
+      "pointer": "cayley-thesis/reports/two-tetrahedron-1296/latest-run.json",
+      "run_directory": "cayley-thesis/experiments/results/two-tetrahedron/20261103T024244_124186Z",
+      "recorded_status": "not recorded"
+    },
+    {
+      "pointer": "cayley-thesis/reports/d4-relation-automata/latest-run.json",
+      "run_directory": "cayley-thesis/experiments/results/d4-automata/20261102T172436_233689Z",
+      "recorded_status": "PASS",
+      "results_hash_matches_pointer": true
+    },
+    {
+      "pointer": "cayley-thesis/reports/dihedral-automata/latest-run.json",
+      "run_directory": "cayley-thesis/experiments/results/dihedral-automata/20261102T173519_591935Z",
+      "recorded_status": "PASS",
+      "results_hash_matches_pointer": true
+    }
+  ],
+  "verification_record": {
+    "latest_suite_passed": 94,
+    "rerun_for_documentation_task": false,
+    "partial_verifier_recorded_result": "PASS",
+    "scope": "Existing execution evidence plus read-only path/hash audit; not a new test execution."
+  }
+}

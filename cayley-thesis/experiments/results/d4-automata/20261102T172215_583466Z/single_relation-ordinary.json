@@ -1,0 +1,448 @@
+{
+  "method": "ordinary",
+  "labels": [
+    "r",
+    "r^-1",
+    "s"
+  ],
+  "rules": [
+    [
+      [
+        0,
+        1
+      ],
+      []
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      []
+    ],
+    [
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        2
+      ],
+      []
+    ],
+    [
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0,
+        2
+      ],
+      []
+    ],
+    [
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      []
+    ],
+    [
+      [
+        2,
+        0,
+        2,
+        0
+      ],
+      []
+    ],
+    [
+      [
+        2,
+        1,
+        2,
+        1
+      ],
+      []
+    ]
+  ],
+  "relators": [
+    [
+      0,
+      2,
+      0,
+      2
+    ]
+  ],
+  "dfa": {
+    "alphabet_size": 3,
+    "forbidden": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        1
+      ]
+    ],
+    "memory": [
+      [],
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      null
+    ],
+    "start": 0,
+    "dead": 6,
+    "accepting": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "transitions": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        6,
+        4
+      ],
+      [
+        6,
+        2,
+        5
+      ],
+      [
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        6,
+        6
+      ]
+    ],
+    "construction": "Longest suffix that is a proper prefix of a forbidden left side; reachable live states only; not minimized."
+  },
+  "language": {
+    "finite": false,
+    "certificate": {
+      "prefix": [
+        0
+      ],
+      "cycle": [
+        0
+      ],
+      "cycle_state": 1,
+      "access_state_path": [
+        0,
+        1
+      ],
+      "cycle_state_path": [
+        1,
+        1
+      ],
+      "pumping_statement": "prefix + cycle^k is accepted for every integer k >= 0; all visited states are accepting."
+    }
+  },
+  "bfs_diameter": 3,
+  "pruner_regression": {
+    "max_length": 8,
+    "words_checked": 9841,
+    "all_match_original_pruner": true,
+    "scope": "Finite regression only; global language finiteness is certified separately."
+  },
+  "infinite_comparison": {
+    "cycle_word_group_order": 4,
+    "identity_block": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "identity_block_state_path": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "pumped_examples": [
+      {
+        "k": 0,
+        "word": [
+          0
+        ],
+        "state_path": [
+          0,
+          1
+        ],
+        "endpoint": 2,
+        "bfs_distance": 1
+      },
+      {
+        "k": 1,
+        "word": [
+          0,
+          0
+        ],
+        "state_path": [
+          0,
+          1,
+          1
+        ],
+        "endpoint": 4,
+        "bfs_distance": 2
+      },
+      {
+        "k": 2,
+        "word": [
+          0,
+          0,
+          0
+        ],
+        "state_path": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "endpoint": 6,
+        "bfs_distance": 1
+      },
+      {
+        "k": 4,
+        "word": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_path": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "endpoint": 2,
+        "bfs_distance": 1
+      },
+      {
+        "k": 8,
+        "word": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_path": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "endpoint": 2,
+        "bfs_distance": 1
+      }
+    ],
+    "same_endpoint_examples": [
+      {
+        "k": 0,
+        "word": [
+          0
+        ],
+        "endpoint": 2
+      },
+      {
+        "k": 1,
+        "word": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "endpoint": 2
+      },
+      {
+        "k": 2,
+        "word": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "endpoint": 2
+      }
+    ],
+    "diameter_upper_bound": null,
+    "interpretation": "Infinite accepted words, not an infinite group and not an infinite diameter."
+  },
+  "budget": "single_relation",
+  "source_case": "experiments\\results\\20261031T175148_814309Z\\d4-g0-squares-seed0.json"
+}

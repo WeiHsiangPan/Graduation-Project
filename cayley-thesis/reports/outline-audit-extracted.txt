@@ -1,0 +1,274 @@
+PAGE 1
+Midterm Research Report
+Fixed Graphs, Gluing Structures, and Topological Information
+October 30, 2026
+Abstract
+This report summarizes my study of Cayley graph spectra, surface embeddings, and com-
+binatorial constructions of topological spaces. Three main references provide complementary
+tools: representation theory explains spectral information, rotation systems describe surface
+embeddings, and spatial graph constructions address geometric realizability. More recent read-
+ing motivates local link validation and boundary-state representations for tetrahedral gluings.
+The current research direction is to determine what topological information can vary when the
+underlying face-pairing graph remains ﬁxed.
+1 Research Development
+The project began with ﬁnite groups and Cayley graphs, then developed toward face systems,
+surface topology, and diﬀerent notions of equivalence.
+The main conceptual progression is
+ﬁnite groups − → Cayley graphs − → face systems − → topological spaces .
+The central observation is that these levels contain diﬀerent information. A group and generating
+set determine a graph, but the graph does not determine which cycles are ﬁlled as faces. Likewise,
+an algebraic invariant need not determine the entire space.
+My current question is therefore:
+When a combinatorial skeleton is ﬁxed, how much topological variation can diﬀerent
+gluing structures produce, and which invariants detect that variation?
+2 Three Main References and Their Applications
+2.1 Liu–Zhou: Spectra from Group Representations
+Reference. Liu and Zhou, Eigenvalues of Cayley graphs [1].
+Main idea
+Let G be a ﬁnite group and let S = S− 1 be a generating set excluding the identity. Using right-
+multiplication steps, the adjacency operator is
+(Af )(x) =
+∑
+s∈S
+f (xs).
+1
+
+PAGE 2
+Theorem 2.1 (Representation-theoretic decomposition) . For each irreducible unitary representa-
+tion ρ of G, deﬁne
+Mρ=
+∑
+s∈S
+ρ(s).
+The adjacency spectrum is obtained from the spectra of the matrices Mρ, with each block spectrum
+repeated dim ρ times.
+For abelian groups, every irreducible representation is a character, giving
+λχ=
+∑
+s∈S
+χ(s).
+For a k-regular Cayley graph,
+L0 = kI − A.
+Application to my project
+• Compute and check Cayley graph spectra using representation blocks rather than only a full
+adjacency matrix.
+• Interpret spectral drawings through group symmetry and invariant eigenspaces.
+• Use the ordinary graph spectrum as a baseline when comparing diﬀerent face systems on the
+same graph.
+• Compare ordinary graph operators with face-sensitive operators to identify which added struc-
+tural information becomes detectable.
+Proposition 2.2 (Ordinary spectral blindness to faces) . Fix a graph and its edge weights. Chang-
+ing its attached face system does not change its adjacency matrix or ordinary vertex Laplacian.
+Proof. Neither operator uses the attached faces in its deﬁnition.
+Limitation. Spectral coordinates do not automatically give an injective or crossing-free geometric
+embedding. When an eigenvalue is repeated, arbitrary truncation within its eigenspace can also
+destroy symmetry.
+2.2 Brinkmann: Rotation Systems and Genus Search
+Reference. Brinkmann, A Practical Algorithm for the Computation of the Genus [2].
+Main idea
+A rotation system speciﬁes the cyclic order of incident darts at each vertex. Let α reverse darts
+and let σ encode these cyclic orders. With right-to-left composition, the cycles of
+ϕ = σα
+describe the facial walks.
+Theorem 2.3 (Rotation systems and Euler genus) . For a ﬁnite connected graph with at least one
+edge, a rotation system determines an orientable cellular embedding satisfying
+|V | − |E|+ Fσ= 2 − 2gσ,
+where Fσis the number of facial walks. Consequently,
+γ(Γ) = 1 + |E| − |V | −maxσFσ
+2 .
+2
+
+PAGE 3
+Thus minimizing genus is equivalent to maximizing the number of faces.
+Proposition 2.4 (Genus change under edge insertion) . For an edge inserted between speciﬁed
+corners of existing vertices in a connected cellular embedding,
+∆ g =
+{
+0, if the corners belong to the same face ,
+1, if the corners belong to distinct faces .
+Proof. The insertion increases |E|by one. It either splits one face into two or merges two faces
+into one. Euler’s formula gives the result.
+Application to my project
+• Replace visually selected cycles with explicit rotation data and reproducible face tracing.
+• Enumerate diﬀerent surface structures while keeping the Cayley graph ﬁxed.
+• Use Euler characteristic and valid pruning rules to organize ﬁnite searches.
+• Separate uniform rotations from general local rotations, and distinguish a chosen embedding’s
+genus from the graph’s minimum genus.
+• Treat equivalence checking as a separate step: equal genus does not imply equivalent cellular
+embeddings.
+Limitation. An embedding provides an upper bound on minimum genus; minimality requires a
+matching lower bound or complete exclusion of smaller genera. Facial walks may repeat vertices
+or edges, so simple-face restrictions must be stated explicitly.
+2.3 Barthel–Buccoliero: Geometric Realization
+Reference. Barthel and Buccoliero, Constructing embedded surfaces for cellular embeddings of
+leveled spatial graphs [3].
+Main idea
+This paper begins with a graph already embedded in three-dimensional space. It asks whether the
+graph can lie on an embedded closed orientable surface whose complementary regions are open
+disks.
+Theorem 2.5 (Four-level existence result) . If a spatial graph admits a leveled embedding with at
+most four levels, then it admits a cellular embedding in a closed orientable surface embedded in R3.
+This restates Proposition 1 of the paper.
+Application to my project
+• Distinguish an abstract surface construction from its realization in three-dimensional space.
+• Investigate whether a selected spatial realization of a Cayley graph admits a compatible cellular
+surface.
+• Use cylinder and punctured-surface attachments as geometric models for changing the surround-
+ing surface.
+• Check cellularity using the current face boundaries, rather than relying only on the original
+drawing or spine.
+Limitation. The construction concerns a speciﬁed spatial graph. It does not enumerate all
+abstract face systems or automatically produce a minimum-genus surface. Geometric realization
+remains an optional extension of the current ﬁnite gluing study.
+3
+
+PAGE 4
+3 Shared Mathematical Structure
+The three references address diﬀerent parts of the same construction process:
+(G, S )
+representation theory
+− − − − − − − − − − − − − →graph operators ,
+Γ
+rotation system
+− − − − − − − − − →surface cellulation ,
+Γ ⊂ R3 geometric construction
+− − − − − − − − − − − − − − →a compatible embedded surface .
+Their roles should not be confused:
+• Spectral information describes an operator.
+• Rotation data describes a combinatorial embedding.
+• Spatial construction addresses geometric realizability.
+3.1 Homology and Hodge Operators
+For a ﬁnite real chain complex,
+C2
+B2
+− − →C1
+B1
+− − →C0, B 1B2 = 0,
+deﬁne, using orthonormal bases,
+L1 = B⊤
+1 B1 + B2B⊤
+2 .
+Theorem 3.1 (Finite-dimensional Hodge correspondence) . There is an isomorphism
+ker L1 ∼= ker B1/ im B2.
+Therefore,
+dim ker L1 = dim H1(C•; R).
+Proof. For every x ∈ C1,
+x⊤ L1x = ∥B1x∥2 + ∥B⊤
+2 x∥2.
+Hence ker L1 = ker B1 ∩ ker B⊤
+2 . Since im B2 ⊆ ker B1, orthogonal decomposition identiﬁes this
+intersection with the homology quotient.
+For a closed connected orientable surface of genus g, this gives
+dim ker L1 = 2g.
+This provides a connection between face data and spectral information. However, real homology
+does not record integral torsion, and Hodge spectra are not complete topological classiﬁers.
+4 Local Validation and Boundary States
+Recent reading on tetrahedral gluings [ 4] adds a useful methodological principle: a global construc-
+tion should be checked through its local identiﬁcations and vertex links.
+4
+
+PAGE 5
+4.1 Local topology
+A tetrahedral face pairing can create singularities, even when all intended faces have been identiﬁed.
+For a genuine triangulated 3-manifold, vertex links must have the appropriate local type:
+Lk(v) ∼=
+{
+S2, at an interior vertex ,
+D2, at a boundary vertex .
+This motivates checking links rather than inferring manifold structure from a drawing or face
+count.
+4.2 Boundary-state representation
+A partial construction can be summarized by
+C(T ) =
+(
+Ce(T ), Cv(T )
+)
+,
+where Ce records boundary-edge identiﬁcations and orientations, and Cv records equivalence classes
+of boundary vertices.
+The main methodological distinction is:
+enough information for future legality ̸⇒ enough information for topological classiﬁcation .
+4.3 Application to my project
+• Record local identiﬁcations explicitly and reject constructions with invalid links.
+• Use boundary conﬁgurations to organize partial gluing histories.
+• Preserve distinct histories initially, even when they share the same state.
+• Compare their completed homology and topological invariants to determine what the com-
+pressed state has forgotten.
+Theorem 4.1 (Admissibility and treewidth) . For a connected 4-regular multigraph with n nodes
+and treewidth at most k, the existence of a closed 3-manifold triangulation with that face-pairing
+graph can be decided in O(nf (k)) time, given a suitable tree decomposition with O(n) bags.
+This is an existence result from [ 4]. It does not directly provide an equally eﬃcient enumeration
+or homeomorphism-classiﬁcation algorithm.
+5 Current Research Question
+For a ﬁxed face-pairing graph Γ, let MΓ,φdenote the space determined by gluing maps φ.
+The main question is whether two gluing assignments can produce closed, connected, orientable
+3-manifolds satisfying
+Hj(MΓ,φ; Z) ∼= Hj(MΓ,ψ; Z) for every j,
+while
+MΓ,φ̸∼=homeo MΓ,ψ.
+Related questions are:
+• Can such a diﬀerence arise by changing only one face-gluing map?
+• Can equal intermediate boundary states lead to diﬀerent ﬁnal homology?
+• What additional information would a state need to retain a chosen topological invariant?
+These are working research questions. Their novelty and answers have not been established.
+5
+
+PAGE 6
+6 Current Progress
+• Prepared reading summaries connecting representation theory, rotation systems, spatial embed-
+dings, and boundary-state methods.
+• Rechecked an existing catalogue of 25 surface examples; all passed the current validator, includ-
+ing numerical Hodge checks.
+• Reﬁned the main direction toward ﬁxed face-pairing graphs and topological information.
+• Complete three-dimensional enumeration and certiﬁed non-homeomorphic pairs remain unﬁn-
+ished.
+7 Finite Veriﬁcation Plan
+Start with one tetrahedron and a ﬁxed pairing of its four faces. Each pair admits six aﬃne gluing
+maps, giving
+62 = 36
+labeled assignments.
+The next case uses a ﬁxed two-tetrahedron graph with four paired pairs of faces, giving
+64 = 1296
+assignments before ﬁltering and deduplication.
+The veriﬁcation pipeline is:
+ﬁxed face-pairing graph
+↓
+enumeration of gluing maps
+↓
+local topology and orientability checks
+↓
+combinatorial deduplication
+↓
+integral homology and stronger invariants
+↓
+certiﬁed conclusions or unresolved pairs .
+Diﬀerent triangulation signatures alone do not prove non-homeomorphism. Equal selected invari-
+ants alone do not prove homeomorphism.
+6
+
+PAGE 7
+8 Seven-Week Plan
+W eek Main T ask
+1 Finalize the scope and connect the literature review to the ﬁxed-graph question.
+2 Implement and validate gluing data and vertex-link calculations.
+3 Complete the 36 one-tetrahedron assignments and their integral homology analysis.
+4 Extend to a ﬁxed two-tetrahedron graph and record boundary-state histories.
+5 Analyze candidate pairs and separate proved results from unresolved cases.
+6 Complete the ﬁnal report draft and ﬁgures.
+7 Reproduce the core results, revise the report, and prepare the presentation.
+9 Expected Outcome
+The expected outcome is a small, reproducible study showing how ﬁxed combinatorial data can
+support diﬀerent constructions and how selected invariants distinguish them.
+The report will clearly separate known theorems, reconstructed arguments, ﬁnite computations,
+numerical observations, and working hypotheses. A new general classiﬁcation theorem is not
+required for completion.
+References
+[1] X. Liu and S. Zhou, Eigenvalues of Cayley graphs , The Electronic Journal of Combinatorics
+29(2) (2022), Paper P2.9. https://arxiv.org/abs/1809.09829.
+[2] G. Brinkmann, A Practical Algorithm for the Computation of the Genus . https://arxiv.org/
+abs/2005.08243.
+[3] S. Barthel and F. Buccoliero, Constructing embedded surfaces for cellular embeddings of leveled
+spatial graphs. https://arxiv.org/abs/2406.03800.
+[4] B. A. Burton and W. Pettersson, Fixed Parameter Tractable Algorithms in Combinatorial
+Topology, arXiv:1402.3876v2. https://arxiv.org/abs/1402.3876v2.
+7

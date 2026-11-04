@@ -1,0 +1,1940 @@
+{
+  "group": "s4",
+  "surface": "s4-g0-coxeter",
+  "genus": 0,
+  "faces": [
+    [
+      0,
+      6,
+      8,
+      14,
+      12,
+      2
+    ],
+    [
+      4,
+      18,
+      20,
+      10,
+      7,
+      1
+    ],
+    [
+      3,
+      13,
+      16,
+      22,
+      19,
+      5
+    ],
+    [
+      11,
+      21,
+      23,
+      17,
+      15,
+      9
+    ],
+    [
+      0,
+      2,
+      3,
+      5,
+      4,
+      1
+    ],
+    [
+      7,
+      10,
+      11,
+      9,
+      8,
+      6
+    ],
+    [
+      12,
+      14,
+      15,
+      17,
+      16,
+      13
+    ],
+    [
+      19,
+      22,
+      23,
+      21,
+      20,
+      18
+    ],
+    [
+      1,
+      7,
+      6,
+      0
+    ],
+    [
+      2,
+      12,
+      13,
+      3
+    ],
+    [
+      5,
+      19,
+      18,
+      4
+    ],
+    [
+      9,
+      15,
+      14,
+      8
+    ],
+    [
+      10,
+      20,
+      21,
+      11
+    ],
+    [
+      17,
+      23,
+      22,
+      16
+    ]
+  ],
+  "seed": 0,
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "vertex_count": 24,
+    "edge_count": 36,
+    "face_count": 14,
+    "chi": 2,
+    "genus": 0,
+    "profile": {
+      "4": 6,
+      "6": 8
+    }
+  },
+  "transitions": [
+    [
+      6,
+      2,
+      1
+    ],
+    [
+      7,
+      4,
+      0
+    ],
+    [
+      12,
+      0,
+      3
+    ],
+    [
+      13,
+      5,
+      2
+    ],
+    [
+      18,
+      1,
+      5
+    ],
+    [
+      19,
+      3,
+      4
+    ],
+    [
+      0,
+      8,
+      7
+    ],
+    [
+      1,
+      10,
+      6
+    ],
+    [
+      14,
+      6,
+      9
+    ],
+    [
+      15,
+      11,
+      8
+    ],
+    [
+      20,
+      7,
+      11
+    ],
+    [
+      21,
+      9,
+      10
+    ],
+    [
+      2,
+      14,
+      13
+    ],
+    [
+      3,
+      16,
+      12
+    ],
+    [
+      8,
+      12,
+      15
+    ],
+    [
+      9,
+      17,
+      14
+    ],
+    [
+      22,
+      13,
+      17
+    ],
+    [
+      23,
+      15,
+      16
+    ],
+    [
+      4,
+      20,
+      19
+    ],
+    [
+      5,
+      22,
+      18
+    ],
+    [
+      10,
+      18,
+      21
+    ],
+    [
+      11,
+      23,
+      20
+    ],
+    [
+      16,
+      19,
+      23
+    ],
+    [
+      17,
+      21,
+      22
+    ]
+  ],
+  "identity": 0,
+  "inverses": [
+    0,
+    1,
+    2
+  ],
+  "labels": [
+    "(12)",
+    "(23)",
+    "(34)"
+  ],
+  "elements": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      3,
+      2
+    ],
+    [
+      0,
+      2,
+      1,
+      3
+    ],
+    [
+      0,
+      2,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      1,
+      2
+    ],
+    [
+      0,
+      3,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      3
+    ],
+    [
+      1,
+      0,
+      3,
+      2
+    ],
+    [
+      1,
+      2,
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      3,
+      0
+    ],
+    [
+      1,
+      3,
+      0,
+      2
+    ],
+    [
+      1,
+      3,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1,
+      3
+    ],
+    [
+      2,
+      0,
+      3,
+      1
+    ],
+    [
+      2,
+      1,
+      0,
+      3
+    ],
+    [
+      2,
+      1,
+      3,
+      0
+    ],
+    [
+      2,
+      3,
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      1,
+      0,
+      2
+    ],
+    [
+      3,
+      1,
+      2,
+      0
+    ],
+    [
+      3,
+      2,
+      0,
+      1
+    ],
+    [
+      3,
+      2,
+      1,
+      0
+    ]
+  ],
+  "truth_paths": {
+    "0": [],
+    "6": [
+      0
+    ],
+    "2": [
+      1
+    ],
+    "1": [
+      2
+    ],
+    "8": [
+      0,
+      1
+    ],
+    "7": [
+      0,
+      2
+    ],
+    "12": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      2
+    ],
+    "4": [
+      2,
+      1
+    ],
+    "14": [
+      0,
+      1,
+      0
+    ],
+    "9": [
+      0,
+      1,
+      2
+    ],
+    "10": [
+      0,
+      2,
+      1
+    ],
+    "13": [
+      1,
+      0,
+      2
+    ],
+    "5": [
+      1,
+      2,
+      1
+    ],
+    "18": [
+      2,
+      1,
+      0
+    ],
+    "15": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "11": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "20": [
+      0,
+      2,
+      1,
+      0
+    ],
+    "16": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "19": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "17": [
+      0,
+      1,
+      0,
+      2,
+      1
+    ],
+    "21": [
+      0,
+      1,
+      2,
+      1,
+      0
+    ],
+    "22": [
+      1,
+      0,
+      2,
+      1,
+      0
+    ],
+    "23": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      0
+    ]
+  },
+  "diameter": 6,
+  "shared_preprocessing_seconds": 0.00013919999764766544,
+  "face_preprocessing_seconds": 0.0038343000051099807,
+  "generic_pool_size": 3,
+  "face_relators_excluded_by_length": 0,
+  "face_relators_excluded_by_count": 2,
+  "matched_length_histogram": {
+    "4": 1
+  },
+  "relator_overlap": 1,
+  "methods": {
+    "cancellation_only": {
+      "relators": [],
+      "rules": [
+        [
+          [
+            0,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          []
+        ]
+      ],
+      "rule_count": 3,
+      "rule_symbols": 6,
+      "rule_preprocessing_seconds": 1.9499988411553204e-05,
+      "targets": {
+        "0": {
+          "word": [],
+          "distance": 0,
+          "counts": {
+            "entered": 1,
+            "generated": 0,
+            "pruned": 0,
+            "expanded": 0,
+            "rule_checks": 0
+          },
+          "seconds": 2.6000052457675338e-06
+        },
+        "1": {
+          "word": [
+            2
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 5,
+            "generated": 3,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 9
+          },
+          "seconds": 6.999995093792677e-06
+        },
+        "2": {
+          "word": [
+            1
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 4,
+            "generated": 2,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 6
+          },
+          "seconds": 4.0000013541430235e-06
+        },
+        "3": {
+          "word": [
+            1,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 12,
+            "generated": 11,
+            "pruned": 2,
+            "expanded": 4,
+            "rule_checks": 30
+          },
+          "seconds": 1.789999078027904e-05
+        },
+        "4": {
+          "word": [
+            2,
+            1
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 15,
+            "generated": 14,
+            "pruned": 2,
+            "expanded": 5,
+            "rule_checks": 39
+          },
+          "seconds": 2.1400002879090607e-05
+        },
+        "5": {
+          "word": [
+            1,
+            2,
+            1
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 30,
+            "generated": 34,
+            "pruned": 8,
+            "expanded": 12,
+            "rule_checks": 93
+          },
+          "seconds": 5.339999916031957e-05
+        },
+        "6": {
+          "word": [
+            0
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 3,
+            "generated": 1,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 3
+          },
+          "seconds": 2.5999906938523054e-06
+        },
+        "7": {
+          "word": [
+            0,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 9,
+            "generated": 7,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 19
+          },
+          "seconds": 1.1100011761300266e-05
+        },
+        "8": {
+          "word": [
+            0,
+            1
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 8,
+            "generated": 6,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 16
+          },
+          "seconds": 9.499999578110874e-06
+        },
+        "9": {
+          "word": [
+            0,
+            1,
+            2
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 20,
+            "generated": 21,
+            "pruned": 5,
+            "expanded": 8,
+            "rule_checks": 57
+          },
+          "seconds": 3.270000161137432e-05
+        },
+        "10": {
+          "word": [
+            0,
+            2,
+            1
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 23,
+            "generated": 24,
+            "pruned": 5,
+            "expanded": 9,
+            "rule_checks": 66
+          },
+          "seconds": 3.849998756777495e-05
+        },
+        "11": {
+          "word": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 46,
+            "generated": 56,
+            "pruned": 15,
+            "expanded": 20,
+            "rule_checks": 151
+          },
+          "seconds": 8.959999831859022e-05
+        },
+        "12": {
+          "word": [
+            1,
+            0
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 11,
+            "generated": 9,
+            "pruned": 1,
+            "expanded": 4,
+            "rule_checks": 25
+          },
+          "seconds": 1.4800010831095278e-05
+        },
+        "13": {
+          "word": [
+            1,
+            0,
+            2
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 27,
+            "generated": 30,
+            "pruned": 7,
+            "expanded": 11,
+            "rule_checks": 82
+          },
+          "seconds": 4.650000482797623e-05
+        },
+        "14": {
+          "word": [
+            0,
+            1,
+            0
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 19,
+            "generated": 19,
+            "pruned": 4,
+            "expanded": 8,
+            "rule_checks": 52
+          },
+          "seconds": 2.9000002541579306e-05
+        },
+        "15": {
+          "word": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 43,
+            "generated": 52,
+            "pruned": 14,
+            "expanded": 19,
+            "rule_checks": 140
+          },
+          "seconds": 8.120000711642206e-05
+        },
+        "16": {
+          "word": [
+            1,
+            0,
+            2,
+            1
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 61,
+            "generated": 77,
+            "pruned": 21,
+            "expanded": 27,
+            "rule_checks": 208
+          },
+          "seconds": 0.00018400000408291817
+        },
+        "17": {
+          "word": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 93,
+            "generated": 123,
+            "pruned": 36,
+            "expanded": 43,
+            "rule_checks": 331
+          },
+          "seconds": 0.0002015000063693151
+        },
+        "18": {
+          "word": [
+            2,
+            1,
+            0
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 36,
+            "generated": 42,
+            "pruned": 10,
+            "expanded": 15,
+            "rule_checks": 115
+          },
+          "seconds": 6.559999019373208e-05
+        },
+        "19": {
+          "word": [
+            1,
+            2,
+            1,
+            0
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 67,
+            "generated": 86,
+            "pruned": 24,
+            "expanded": 30,
+            "rule_checks": 232
+          },
+          "seconds": 0.0001348999940091744
+        },
+        "20": {
+          "word": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 52,
+            "generated": 64,
+            "pruned": 17,
+            "expanded": 23,
+            "rule_checks": 173
+          },
+          "seconds": 0.00010130000009667128
+        },
+        "21": {
+          "word": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 99,
+            "generated": 132,
+            "pruned": 39,
+            "expanded": 46,
+            "rule_checks": 355
+          },
+          "seconds": 0.0002111999929184094
+        },
+        "22": {
+          "word": [
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 130,
+            "generated": 177,
+            "pruned": 53,
+            "expanded": 61,
+            "rule_checks": 476
+          },
+          "seconds": 0.0003040000010514632
+        },
+        "23": {
+          "word": [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 6,
+          "counts": {
+            "entered": 194,
+            "generated": 271,
+            "pruned": 84,
+            "expanded": 93,
+            "rule_checks": 726
+          },
+          "seconds": 0.00044800000614486635
+        }
+      },
+      "total_generated": 1261,
+      "total_rule_checks": 3404,
+      "search_seconds": 0.0021123000042280182,
+      "counterexample": {
+        "status": "found",
+        "examined_irreducible_words": 13,
+        "word": [
+          0,
+          2,
+          0
+        ],
+        "endpoint": 1,
+        "bfs_word": [
+          2
+        ],
+        "excess_length": 2
+      }
+    },
+    "ordinary": {
+      "relators": [
+        [
+          0,
+          2,
+          0,
+          2
+        ]
+      ],
+      "rules": [
+        [
+          [
+            0,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            0,
+            2,
+            0
+          ],
+          []
+        ]
+      ],
+      "rule_count": 8,
+      "rule_symbols": 26,
+      "rule_preprocessing_seconds": 7.589999586343765e-05,
+      "targets": {
+        "0": {
+          "word": [],
+          "distance": 0,
+          "counts": {
+            "entered": 1,
+            "generated": 0,
+            "pruned": 0,
+            "expanded": 0,
+            "rule_checks": 0
+          },
+          "seconds": 1.0999938240274787e-06
+        },
+        "1": {
+          "word": [
+            2
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 5,
+            "generated": 3,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 24
+          },
+          "seconds": 8.90000956133008e-06
+        },
+        "2": {
+          "word": [
+            1
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 4,
+            "generated": 2,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 16
+          },
+          "seconds": 6.100002792663872e-06
+        },
+        "3": {
+          "word": [
+            1,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 12,
+            "generated": 11,
+            "pruned": 2,
+            "expanded": 4,
+            "rule_checks": 75
+          },
+          "seconds": 3.6299999919719994e-05
+        },
+        "4": {
+          "word": [
+            2,
+            1
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 14,
+            "generated": 14,
+            "pruned": 3,
+            "expanded": 5,
+            "rule_checks": 94
+          },
+          "seconds": 3.429999924264848e-05
+        },
+        "5": {
+          "word": [
+            1,
+            2,
+            1
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 27,
+            "generated": 34,
+            "pruned": 11,
+            "expanded": 12,
+            "rule_checks": 210
+          },
+          "seconds": 8.140000863932073e-05
+        },
+        "6": {
+          "word": [
+            0
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 3,
+            "generated": 1,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 8
+          },
+          "seconds": 3.4999975468963385e-06
+        },
+        "7": {
+          "word": [
+            0,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 9,
+            "generated": 7,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 49
+          },
+          "seconds": 1.7499987734481692e-05
+        },
+        "8": {
+          "word": [
+            0,
+            1
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 8,
+            "generated": 6,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 41
+          },
+          "seconds": 1.4699995517730713e-05
+        },
+        "9": {
+          "word": [
+            0,
+            1,
+            2
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 19,
+            "generated": 21,
+            "pruned": 6,
+            "expanded": 8,
+            "rule_checks": 133
+          },
+          "seconds": 5.4799995268695056e-05
+        },
+        "10": {
+          "word": [
+            0,
+            2,
+            1
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 21,
+            "generated": 24,
+            "pruned": 7,
+            "expanded": 9,
+            "rule_checks": 152
+          },
+          "seconds": 5.740000051446259e-05
+        },
+        "11": {
+          "word": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 39,
+            "generated": 53,
+            "pruned": 19,
+            "expanded": 19,
+            "rule_checks": 318
+          },
+          "seconds": 0.0001281000004382804
+        },
+        "12": {
+          "word": [
+            1,
+            0
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 11,
+            "generated": 9,
+            "pruned": 1,
+            "expanded": 4,
+            "rule_checks": 65
+          },
+          "seconds": 2.269999822601676e-05
+        },
+        "13": {
+          "word": [
+            1,
+            0,
+            2
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 25,
+            "generated": 30,
+            "pruned": 9,
+            "expanded": 11,
+            "rule_checks": 189
+          },
+          "seconds": 7.150000601541251e-05
+        },
+        "14": {
+          "word": [
+            0,
+            1,
+            0
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 18,
+            "generated": 19,
+            "pruned": 5,
+            "expanded": 8,
+            "rule_checks": 123
+          },
+          "seconds": 4.529999569058418e-05
+        },
+        "15": {
+          "word": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 37,
+            "generated": 49,
+            "pruned": 17,
+            "expanded": 18,
+            "rule_checks": 297
+          },
+          "seconds": 0.00011759999324567616
+        },
+        "16": {
+          "word": [
+            1,
+            0,
+            2,
+            1
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 50,
+            "generated": 71,
+            "pruned": 26,
+            "expanded": 25,
+            "rule_checks": 425
+          },
+          "seconds": 0.00017850000585895032
+        },
+        "17": {
+          "word": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 70,
+            "generated": 105,
+            "pruned": 41,
+            "expanded": 37,
+            "rule_checks": 616
+          },
+          "seconds": 0.00026879999495577067
+        },
+        "18": {
+          "word": [
+            2,
+            1,
+            0
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 30,
+            "generated": 39,
+            "pruned": 13,
+            "expanded": 14,
+            "rule_checks": 241
+          },
+          "seconds": 9.359999967273325e-05
+        },
+        "19": {
+          "word": [
+            1,
+            2,
+            1,
+            0
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 53,
+            "generated": 77,
+            "pruned": 29,
+            "expanded": 27,
+            "rule_checks": 458
+          },
+          "seconds": 0.00019330000213813037
+        },
+        "20": {
+          "word": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 42,
+            "generated": 58,
+            "pruned": 21,
+            "expanded": 21,
+            "rule_checks": 349
+          },
+          "seconds": 0.0001432999997632578
+        },
+        "21": {
+          "word": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 73,
+            "generated": 111,
+            "pruned": 44,
+            "expanded": 39,
+            "rule_checks": 649
+          },
+          "seconds": 0.0002832000027410686
+        },
+        "22": {
+          "word": [
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 92,
+            "generated": 144,
+            "pruned": 58,
+            "expanded": 50,
+            "rule_checks": 838
+          },
+          "seconds": 0.00038059998769313097
+        },
+        "23": {
+          "word": [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 6,
+          "counts": {
+            "entered": 125,
+            "generated": 202,
+            "pruned": 84,
+            "expanded": 70,
+            "rule_checks": 1162
+          },
+          "seconds": 0.0005327999970177189
+        }
+      },
+      "total_generated": 1090,
+      "total_rule_checks": 6532,
+      "search_seconds": 0.002775299974018708,
+      "counterexample": {
+        "status": "found",
+        "examined_irreducible_words": 18,
+        "word": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "endpoint": 12,
+        "bfs_word": [
+          1,
+          0
+        ],
+        "excess_length": 2
+      }
+    },
+    "faces": {
+      "relators": [
+        [
+          0,
+          2,
+          0,
+          2
+        ]
+      ],
+      "rules": [
+        [
+          [
+            0,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            0,
+            2,
+            0
+          ],
+          []
+        ]
+      ],
+      "rule_count": 8,
+      "rule_symbols": 26,
+      "rule_preprocessing_seconds": 7.010000990703702e-05,
+      "targets": {
+        "0": {
+          "word": [],
+          "distance": 0,
+          "counts": {
+            "entered": 1,
+            "generated": 0,
+            "pruned": 0,
+            "expanded": 0,
+            "rule_checks": 0
+          },
+          "seconds": 9.999930625781417e-07
+        },
+        "1": {
+          "word": [
+            2
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 5,
+            "generated": 3,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 24
+          },
+          "seconds": 8.699993486516178e-06
+        },
+        "2": {
+          "word": [
+            1
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 4,
+            "generated": 2,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 16
+          },
+          "seconds": 5.699999746866524e-06
+        },
+        "3": {
+          "word": [
+            1,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 12,
+            "generated": 11,
+            "pruned": 2,
+            "expanded": 4,
+            "rule_checks": 75
+          },
+          "seconds": 2.6900001103058457e-05
+        },
+        "4": {
+          "word": [
+            2,
+            1
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 14,
+            "generated": 14,
+            "pruned": 3,
+            "expanded": 5,
+            "rule_checks": 94
+          },
+          "seconds": 3.309999010525644e-05
+        },
+        "5": {
+          "word": [
+            1,
+            2,
+            1
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 27,
+            "generated": 34,
+            "pruned": 11,
+            "expanded": 12,
+            "rule_checks": 210
+          },
+          "seconds": 8.129999332595617e-05
+        },
+        "6": {
+          "word": [
+            0
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 3,
+            "generated": 1,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 8
+          },
+          "seconds": 3.5999983083456755e-06
+        },
+        "7": {
+          "word": [
+            0,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 9,
+            "generated": 7,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 49
+          },
+          "seconds": 1.7300000763498247e-05
+        },
+        "8": {
+          "word": [
+            0,
+            1
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 8,
+            "generated": 6,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 41
+          },
+          "seconds": 1.4399993233382702e-05
+        },
+        "9": {
+          "word": [
+            0,
+            1,
+            2
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 19,
+            "generated": 21,
+            "pruned": 6,
+            "expanded": 8,
+            "rule_checks": 133
+          },
+          "seconds": 4.990000161342323e-05
+        },
+        "10": {
+          "word": [
+            0,
+            2,
+            1
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 21,
+            "generated": 24,
+            "pruned": 7,
+            "expanded": 9,
+            "rule_checks": 152
+          },
+          "seconds": 5.700001202058047e-05
+        },
+        "11": {
+          "word": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 39,
+            "generated": 53,
+            "pruned": 19,
+            "expanded": 19,
+            "rule_checks": 318
+          },
+          "seconds": 0.00012969999806955457
+        },
+        "12": {
+          "word": [
+            1,
+            0
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 11,
+            "generated": 9,
+            "pruned": 1,
+            "expanded": 4,
+            "rule_checks": 65
+          },
+          "seconds": 2.269999822601676e-05
+        },
+        "13": {
+          "word": [
+            1,
+            0,
+            2
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 25,
+            "generated": 30,
+            "pruned": 9,
+            "expanded": 11,
+            "rule_checks": 189
+          },
+          "seconds": 7.220001134555787e-05
+        },
+        "14": {
+          "word": [
+            0,
+            1,
+            0
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 18,
+            "generated": 19,
+            "pruned": 5,
+            "expanded": 8,
+            "rule_checks": 123
+          },
+          "seconds": 4.50000079581514e-05
+        },
+        "15": {
+          "word": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 37,
+            "generated": 49,
+            "pruned": 17,
+            "expanded": 18,
+            "rule_checks": 297
+          },
+          "seconds": 0.00011850000009872019
+        },
+        "16": {
+          "word": [
+            1,
+            0,
+            2,
+            1
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 50,
+            "generated": 71,
+            "pruned": 26,
+            "expanded": 25,
+            "rule_checks": 425
+          },
+          "seconds": 0.0001779000012902543
+        },
+        "17": {
+          "word": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 70,
+            "generated": 105,
+            "pruned": 41,
+            "expanded": 37,
+            "rule_checks": 616
+          },
+          "seconds": 0.0002682000049389899
+        },
+        "18": {
+          "word": [
+            2,
+            1,
+            0
+          ],
+          "distance": 3,
+          "counts": {
+            "entered": 30,
+            "generated": 39,
+            "pruned": 13,
+            "expanded": 14,
+            "rule_checks": 241
+          },
+          "seconds": 9.880001016426831e-05
+        },
+        "19": {
+          "word": [
+            1,
+            2,
+            1,
+            0
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 53,
+            "generated": 77,
+            "pruned": 29,
+            "expanded": 27,
+            "rule_checks": 458
+          },
+          "seconds": 0.000192299994523637
+        },
+        "20": {
+          "word": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 4,
+          "counts": {
+            "entered": 42,
+            "generated": 58,
+            "pruned": 21,
+            "expanded": 21,
+            "rule_checks": 349
+          },
+          "seconds": 0.00014340000052470714
+        },
+        "21": {
+          "word": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 73,
+            "generated": 111,
+            "pruned": 44,
+            "expanded": 39,
+            "rule_checks": 649
+          },
+          "seconds": 0.0002835000050254166
+        },
+        "22": {
+          "word": [
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 5,
+          "counts": {
+            "entered": 92,
+            "generated": 144,
+            "pruned": 58,
+            "expanded": 50,
+            "rule_checks": 838
+          },
+          "seconds": 0.00038080000376794487
+        },
+        "23": {
+          "word": [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "distance": 6,
+          "counts": {
+            "entered": 125,
+            "generated": 202,
+            "pruned": 84,
+            "expanded": 70,
+            "rule_checks": 1162
+          },
+          "seconds": 0.0005317000031936914
+        }
+      },
+      "total_generated": 1090,
+      "total_rule_checks": 6532,
+      "search_seconds": 0.0027636000158963725,
+      "counterexample": {
+        "status": "found",
+        "examined_irreducible_words": 18,
+        "word": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "endpoint": 12,
+        "bfs_word": [
+          1,
+          0
+        ],
+        "excess_length": 2
+      }
+    }
+  }
+}

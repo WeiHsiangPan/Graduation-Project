@@ -1,0 +1,222 @@
+[
+  {
+    "left_case": "130-231",
+    "right_case": "301-231",
+    "same_labeled_boundary_state": {
+      "boundary_faces": [
+        "t0:023",
+        "t0:123"
+      ],
+      "Ce": [
+        [
+          "t0:023/02",
+          "t0:123/13",
+          false
+        ],
+        [
+          "t0:023/03",
+          "t0:123/12",
+          false
+        ],
+        [
+          "t0:023/23",
+          "t0:123/23",
+          true
+        ]
+      ],
+      "Cv": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      ]
+    },
+    "same_final_gluing": {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        2,
+        3
+      ],
+      "target_tet": 0,
+      "target_face": [
+        2,
+        3,
+        1
+      ]
+    },
+    "left_homology": {
+      "H0": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      },
+      "H1": {
+        "free_rank": 0,
+        "torsion": [
+          4
+        ],
+        "label": "Z/4"
+      },
+      "H2": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H3": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      }
+    },
+    "right_homology": {
+      "H0": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      },
+      "H1": {
+        "free_rank": 0,
+        "torsion": [
+          5
+        ],
+        "label": "Z/5"
+      },
+      "H2": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H3": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      }
+    },
+    "conclusion": "Ce/Cv alone does not determine final integral homology, even for this common completion."
+  },
+  {
+    "left_case": "130-312",
+    "right_case": "301-312",
+    "same_labeled_boundary_state": {
+      "boundary_faces": [
+        "t0:023",
+        "t0:123"
+      ],
+      "Ce": [
+        [
+          "t0:023/02",
+          "t0:123/13",
+          false
+        ],
+        [
+          "t0:023/03",
+          "t0:123/12",
+          false
+        ],
+        [
+          "t0:023/23",
+          "t0:123/23",
+          true
+        ]
+      ],
+      "Cv": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      ]
+    },
+    "same_final_gluing": {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        2,
+        3
+      ],
+      "target_tet": 0,
+      "target_face": [
+        3,
+        1,
+        2
+      ]
+    },
+    "left_homology": {
+      "H0": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      },
+      "H1": {
+        "free_rank": 0,
+        "torsion": [
+          5
+        ],
+        "label": "Z/5"
+      },
+      "H2": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H3": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      }
+    },
+    "right_homology": {
+      "H0": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      },
+      "H1": {
+        "free_rank": 0,
+        "torsion": [
+          4
+        ],
+        "label": "Z/4"
+      },
+      "H2": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H3": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      }
+    },
+    "conclusion": "Ce/Cv alone does not determine final integral homology, even for this common completion."
+  }
+]

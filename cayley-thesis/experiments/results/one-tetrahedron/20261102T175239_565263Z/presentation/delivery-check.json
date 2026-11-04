@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-11-02T17:54:51.729739+00:00",
+  "run_directory": "C:\\Users\\user\\Documents\\GitHub\\Graduation-Project\\cayley-thesis\\experiments\\results\\one-tetrahedron\\20261102T175239_565263Z",
+  "status": "PASS",
+  "cases_checked": 36,
+  "accepted": 9,
+  "tests_observed": {
+    "command": "python -m unittest discover -s cayley-thesis/experiments -p test_*.py -v",
+    "count": 53,
+    "status": "PASS"
+  },
+  "independent_verification_sha256": "813709486907a070a5e9738812fd7b236afcd3897164866c7dd8211cf49b94ff",
+  "published_sha256": {
+    "README.md": "89b99347293a7db1bfae6a663335dd19f6d023d8855f9b94d3bc77dbc1c29baf",
+    "teacher-report.md": "9f34f15fa857d08175b2fc33f8cb2505e4bb578ec8127688297ccc4b2aa6b51b",
+    "walkthrough.md": "1d00a4585e91590b65986ea473081a2e5f3dfd60cb1de2b7827c499c62324072",
+    "results-table.md": "08acc1ef9383887ffc4450b21ff015696f86f44f97af441cec47eaf33c3687a3",
+    "results-table.csv": "a7addc057260ec8ac6fcffebb4bccc1e5e3d7ad24721ea27a2cf2ca9cdf35206",
+    "overview.png": "521ce652fcfa1e8c655754aa1dc94f217a6e5eeb05e5d2fc8bb5089c9e4ffda9",
+    "compression-witnesses.json": "031e051340e58c29d3c395dfad7962ad0dfc94f35f3220c79417ca53a8f6572e",
+    "boundary-inclusion-witness.json": "695e254527f24fddf3f525e0af2367598bc298cc850780ba406c2ddc80576c1a",
+    "latest-run.json": "2533fd8de6502a3839cce46df9940e9999e1af4b4f17e4790ae664c000d054f0"
+  },
+  "visual_review": "overview.png inspected after correcting header overlap and footer clipping; tables and witnesses byte-match verified run."
+}

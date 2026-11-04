@@ -1,0 +1,45 @@
+{
+  "run_directory": "C:\\Users\\user\\Documents\\GitHub\\Graduation-Project\\cayley-thesis\\experiments\\results\\one-tetrahedron\\20261102T175239_565263Z",
+  "status": "PASS",
+  "counts": {
+    "assignments": 36,
+    "accepted": 9,
+    "rejected": 27,
+    "closed": 36,
+    "connected": 36,
+    "ambient_orientable": 9,
+    "edge_orientation_consistent": 13,
+    "manifold_accepted": 9,
+    "rejection_case_counts_nonexclusive": {
+      "AMBIENT_NONORIENTABLE": 27,
+      "NONSPHERICAL_VERTEX_LINK": 26,
+      "REVERSED_SELF_EDGE": 23
+    },
+    "accepted_H1_counts": {
+      "0": 5,
+      "Z/4": 2,
+      "Z/5": 2
+    },
+    "accepted_combinatorial_classes": [
+      [
+        "013-123"
+      ],
+      [
+        "013-231",
+        "013-312",
+        "130-123",
+        "301-123"
+      ],
+      [
+        "130-231",
+        "301-312"
+      ],
+      [
+        "130-312",
+        "301-231"
+      ]
+    ],
+    "deduplication_scope": "All 24 vertex relabelings of the single tetrahedron; not homeomorphism classification."
+  },
+  "results_sha256": "2ed3127f349619ec7c0b99803c4040dca3dd84411edc8200b859670ecb5b5839"
+}

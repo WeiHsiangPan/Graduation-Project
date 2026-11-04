@@ -1,0 +1,34 @@
+{
+  "source": "https://arxiv.org/pdf/1402.3876v2",
+  "status": "inference matching published Ce/Cv; NOT an official erratum",
+  "glues": [
+    {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        1,
+        2
+      ],
+      "target_tet": 1,
+      "target_face": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        2,
+        3
+      ],
+      "target_tet": 1,
+      "target_face": [
+        3,
+        2,
+        1
+      ]
+    }
+  ]
+}

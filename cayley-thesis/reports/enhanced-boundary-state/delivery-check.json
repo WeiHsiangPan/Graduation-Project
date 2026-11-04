@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-03T02:07:45.950597+00:00",
+  "status": "PASS",
+  "run_directory": "C:\\Users\\user\\Documents\\GitHub\\Graduation-Project\\cayley-thesis\\experiments\\results\\enhanced-boundary-state\\20261103T020602_962214Z",
+  "results_sha256": "64ef762fdb1f1d0bf1cf6d062b28027a39a5cd721a577b02fadb6f49daca11c9",
+  "independent_verification_sha256": "bfb2cca4bfc9d6f5c9a4c67a08174aa69a6919cb916f2fabb1e4fa0ac7074a1c",
+  "tests_observed": {
+    "command": "python -m unittest discover -s cayley-thesis/experiments -p test_*.py",
+    "status": "PASS",
+    "count": 82
+  },
+  "presentation_sha256": {
+    "README.md": "a681041f8d7cec8c26c5c7dc081dee59b0a77fd5ed19e8c6785eafdb0c3a8883",
+    "teacher-report.md": "d1f8d138478dd5a72819a2459cd6b8d46beed2f458fd335f89c1e205a30a5f07",
+    "walkthrough.md": "f4b9d5e952dab11fa00fade544fa0af7a0b46852a933c37444b5f49958943349",
+    "summary.md": "8273148ae269d78f24cc2af95e67691532de8c665d95d7aa1c340286157e41df",
+    "states.csv": "c7b24bd1dbf51099189524818d189910be59c524a900c8eb1596f060973e86df",
+    "transitions.csv": "b5da25cf0f49680c1fbc5c1474fe66da1847264b41e3f6ba10d0fd710a9e5dae",
+    "comparisons.csv": "a98cca3eb8e9449ab18facf12555db8da736dc481de87aa6b16aab64aab5db66",
+    "counterexamples.json": "982d4665e9769a077f9cc9ce5f015ee2f0ad913a2da6f0a16a3fc69a6c8249f7",
+    "latest-run.json": "8fa8d126865f439b718611ed34059041100402b89912279f023354a9a5c5659c",
+    "overview.png": "6ef382bbe7f970af9218a6c1ae49825ad5e95ee0801377014e1ab518348d53e0"
+  },
+  "source_snapshot_sha256": {
+    "enhanced_boundary_states.py": "3722a1307c80a35268dc37fc21bbd96b21075cc5f57735177deae854e63f97bb",
+    "boundary_homology.py": "2af4d1bf1d5e7d15430c357c34a60b410f35f7a3185e24734f30fe2cb40d06d5",
+    "boundary_completion.py": "defd02ce18ce50ecbec05f1ef75ffb17d8561e18f8835033a62b79d836fd3c6f",
+    "one_tetrahedron_census.py": "661c529c44e3faa8ea1861a6212c0e34a24ee96318fa8eb67b7395bd6e738567",
+    "example7_rebuild.py": "99cf9bd401830459a26eb5afe1a003b56c2d64b14094c8db68acd08be7891caa",
+    "integer_homology.py": "b9cd9cffc2f791b8b9764eedc18c1c796fa3d5ee8e6b62202e1c1bcd4a260b48",
+    "verify_one_tetrahedron.py": "d6f61471ea335f74106bd65d4b327b88606afcb16380e46ef53ac7fc2da2dc55",
+    "verify_enhanced_boundary.py": "582e15793b9b096c09456f628aba922b16b9344ef309ea77f25d09c0b8192eeb"
+  },
+  "visual_QA": "overview inspected; text and cards fit without clipping",
+  "scope": "No genuine equal-enhanced-state distinct-history pair remains; no general sufficiency or compression claim."
+}

@@ -1,0 +1,32 @@
+{
+  "case_id": "103-312",
+  "history_id": "103",
+  "completion": {
+    "source_tet": 0,
+    "source_face": [
+      0,
+      2,
+      3
+    ],
+    "target_tet": 0,
+    "target_face": [
+      3,
+      1,
+      2
+    ]
+  },
+  "eligible": false,
+  "base_key": "0e0391e1d325d0a1f3add4a8b561e9d50a48aecbefc997b56a3b37181438d4ee",
+  "enhanced_key": null,
+  "state_predictor": null,
+  "prediction_H1_matches": null,
+  "truth": {
+    "accepted": false,
+    "rejection_codes": [
+      "AMBIENT_NONORIENTABLE",
+      "NONSPHERICAL_VERTEX_LINK",
+      "REVERSED_SELF_EDGE"
+    ],
+    "homology": null
+  }
+}

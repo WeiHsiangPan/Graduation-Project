@@ -1,0 +1,13 @@
+{
+  "groups": [
+    "d4",
+    "q8",
+    "s4"
+  ],
+  "rounds": 3,
+  "seed": 0,
+  "max_relator_length": 6,
+  "relators": 1,
+  "counterexample_length": 6,
+  "output": "C:\\Users\\user\\Documents\\GitHub\\Graduation-Project\\cayley-thesis\\experiments\\results"
+}

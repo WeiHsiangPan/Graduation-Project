@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "decoded_frames": 1698,
+    "fps": "30/1",
+    "duration_seconds": 56.6
+  },
+  "checks": [
+    "independent verifier: 21 saved cases passed",
+    "all D4 target traces and counters reproduced",
+    "sphere and torus have identical transitions and BFS paths",
+    "all extra prunes occur at iteration depth limit",
+    "4 correctness tests passed",
+    "Manim render and full video decode completed",
+    "seven chapter images generated; layout visually reviewed"
+  ],
+  "sha256": {
+    ".gitignore": "cfb9fa1b0dd1843f1a14509160869efe89c108caaa66c9e3eb48aeca619bfa4a",
+    "computed-tables.md": "0003c8e86b435e69a70d81dc3f63fc8898430cb46e63b0fe43500163580b0f90",
+    "D4Pipeline.mp4": "a49a56d1a41ede98630a53353881651774ffc8fcc532521c29b906a75746f4d2",
+    "d4_lesson_data.json": "adc9a5b86ccddfda65f78d1cec63b87f486085a30b207d124e7e52e1ea538639",
+    "README.md": "c24af704fc290b34accc46cda83b601c0f4ba386f64a1f22b6d57335c105cf60",
+    "run-demo.ps1": "dbfdfa578884b6edcd742ac387628e504ff85a415063bc0e930b18611244cea2",
+    "teacher-brief.md": "3f1b228974731d03303cbcd81987269c2d4573f7ba617b5561fc55d29a914ca0",
+    "figures\\01-model.png": "c86419ce0993abb87bd5b98287c468b31b4b97d0783c99b47044ba3e52de2719",
+    "figures\\02-bfs.png": "e07b23023fdaa06d70b122896a0646afb170f6857951049e83a1fe318635090f",
+    "figures\\03-face.png": "05d3480935fd55b871aecb4ef0f52b3b9b23994b296792e943cff394eab5b809",
+    "figures\\04-ordinary.png": "f5e3cb3a16a770c929a331430506becf44c4867398855346a2630cce08cc0d0c",
+    "figures\\05-face-counterexample.png": "cab3b37d33a376d89f3e38c75e668d57dbd8533ac7b28e21f935970af9ec9feb",
+    "figures\\05-ordinary-counterexample.png": "53e5213981be9937212a0ba2378bb68701f4b1a36e7787838a99115601d11f0a",
+    "figures\\06-results.png": "997727767e3a80569b5d8623a138b7456d3f45bac8a2a26097d2298a5893ee29"
+  }
+}

@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,tabularx,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlist[itemize]{nosep,leftmargin=*}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{\vspace{-1.6cm}Midterm Research Report\\[3pt]\large From Cayley Graphs to Face-Glued Three-Dimensional Spaces}
+\author{}
+\date{October 30, 2026}
+\begin{document}
+\maketitle
+\vspace{-1.2cm}
+
+\section*{1. Learning and Research Development}
+The following summarizes my recent reading and discussions, building on earlier project materials.
+\begin{itemize}
+\item \textbf{Group theory and representation theory:} Constructed Cayley graphs and studied their spectra through irreducible representations.
+\item \textbf{Graph embeddings and surfaces:} Studied face systems, rotation systems, Euler characteristic, and genus.
+\item \textbf{Geometry and equivalence:} Distinguished abstract embeddings, spatial realizations, map isomorphism, homeomorphism, and homotopy equivalence.
+\item \textbf{Algebraic topology:} Introduced boundary matrices, homology, vertex links, and Hodge Laplacians as tools for checking and comparing constructions.
+\item \textbf{Three-dimensional constructions:} Began studying tetrahedral face gluings, boundary configurations, and algorithms parameterized by treewidth.
+\end{itemize}
+
+\section*{2. Main Insight and Current Question}
+A graph does not determine which cycles are filled as faces. Fixing a graph therefore fixes its ordinary graph Laplacian, but need not fix the topology of an associated space.
+
+\textbf{Current question.} For a fixed tetrahedral face-pairing graph $\Gamma$, can different gluing maps produce closed, connected, orientable $3$-manifolds with isomorphic integral homology but different homeomorphism types?
+
+\textbf{Related question.} Which topological information is lost when different partial constructions are represented by the same boundary configuration?
+
+\section*{3. Current Progress}
+\begin{itemize}
+\item Reviewed the main ideas of Cayley spectra, genus algorithms, spatial graph embeddings, and boundary-state methods.
+\item Rechecked an existing catalogue of $25$ surface examples; all passed the current validator, with numerical Hodge-nullity checks.
+\item Worked through Example~7 of Burton--Pettersson: two vertex links are disks and the pinched vertex link is an annulus.
+\item Identified an apparent inconsistency in its printed gluing formula; the reconstruction follows the accompanying figure and configuration tables.
+\item Complete three-dimensional enumeration and a certified same-homology, non-homeomorphic pair remain unfinished.
+\end{itemize}
+
+\section*{4. Initial Scope and Working Hypotheses}
+Start with one tetrahedron ($36$ labeled gluing assignments), then a fixed two-tetrahedron graph. The primary graph family has doubled edges along a path and one loop at each endpoint; its treewidth is $1$ for at least two vertices.
+\begin{itemize}
+\item \textbf{H1:} Some fixed graph in this family supports same-homology, non-homeomorphic manifolds.
+\item \textbf{H2:} Such a pair may differ in only one face-gluing map.
+\end{itemize}
+These are working hypotheses, not established results or claims of previously unknown conjectures.
+
+\newpage
+\section*{5. Seven-Week Plan}
+The schedule assumes seven weeks beginning October~31; dates can be adjusted to the actual submission deadline.
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\textwidth}{@{}p{2.8cm}X@{}}
+\toprule
+\textbf{Week} & \textbf{Main task}\\
+\midrule
+1: Oct.\ 31--Nov.\ 6 & Finalize the midterm report, fix the research scope, and independently reconstruct Example~7.\\
+2: Nov.\ 7--13 & Build and validate the tetrahedral gluing and vertex-link representation.\\
+3: Nov.\ 14--20 & Enumerate the $36$ one-tetrahedron assignments and compute integral homology of valid manifolds.\\
+4: Nov.\ 21--27 & Extend to a fixed two-tetrahedron graph and record boundary-state histories.\\
+5: Nov.\ 28--Dec.\ 4 & Analyze same-homology candidates and distinguish proved conclusions from unresolved pairs.\\
+6: Dec.\ 5--11 & Complete the final report draft, figures, and evidence tables.\\
+7: Dec.\ 12--18 & Reproduce the core results, revise the report, and prepare the presentation.\\
+\bottomrule
+\end{tabularx}
+
+\section*{6. Expected Outcome}
+A small, reproducible study connecting surface examples, vertex-link validation, integral homology, and boundary-state information. A new classification theorem or a successful counterexample is not required for completion.
+
+Known results, finite computations, numerical checks, and unproved hypotheses will be stated separately. Different triangulation signatures alone will not be treated as proof of non-homeomorphism. Larger searches and spectral clustering experiments are optional extensions.
+
+\begin{thebibliography}{9}
+\small
+\bibitem{liu}
+X. Liu and S. Zhou,
+\emph{Eigenvalues of Cayley graphs},
+\href{https://arxiv.org/abs/1809.09829}{arXiv:1809.09829}.
+
+\bibitem{brinkmann}
+G. Brinkmann,
+\emph{A Practical Algorithm for the Computation of the Genus},
+\href{https://arxiv.org/abs/2005.08243}{arXiv:2005.08243}.
+
+\bibitem{barthel}
+S. Barthel and F. Buccoliero,
+\emph{Constructing embedded surfaces for cellular embeddings of leveled spatial graphs},
+\href{https://arxiv.org/abs/2406.03800}{arXiv:2406.03800}.
+
+\bibitem{burton}
+B. A. Burton and W. Pettersson,
+\emph{Fixed Parameter Tractable Algorithms in Combinatorial Topology},
+\href{https://arxiv.org/abs/1402.3876v2}{arXiv:1402.3876v2}.
+\end{thebibliography}
+\end{document}

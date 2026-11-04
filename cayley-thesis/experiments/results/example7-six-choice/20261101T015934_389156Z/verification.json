@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "choices": 6,
+  "checked_utc": "2026-11-01T01:59:34.716127+00:00",
+  "results_sha256": "5edc7d895e1714df1a6a2808e69e672508015dd0e2060888e9e9e5dc4a38cc5e",
+  "checks": [
+    "all maps",
+    "before-state",
+    "saved Ce/Cv and full links",
+    "decisions/reasons",
+    "vertex-merge and orientation traces",
+    "per-case checkpoints",
+    "counts"
+  ],
+  "scope": "Full-oracle replay, not a Ce/Cv-only update proof."
+}

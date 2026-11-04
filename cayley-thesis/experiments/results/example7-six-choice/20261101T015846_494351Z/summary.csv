@@ -1,0 +1,7 @@
+﻿choice,partial_accepted,ambient_orientable,orientable_partial_accepted,rejection_codes
+123,False,False,False,NONORIENTABLE_VERTEX_LINK
+132,True,True,True,
+213,True,True,True,
+231,True,False,False,
+312,True,False,False,
+321,True,True,True,

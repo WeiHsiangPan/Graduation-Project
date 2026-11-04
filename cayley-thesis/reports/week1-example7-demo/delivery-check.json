@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "decoded_frames": 2232,
+    "fps": "30/1",
+    "duration_seconds": 74.4
+  },
+  "checks": [
+    "two input variants retained separately",
+    "inferred Ce/Cv match published tables",
+    "all link local-vertex and boundary checks completed",
+    "literal apex link is nonorientable with one boundary circle",
+    "8 Example7 tests plus 4 existing tests passed",
+    "4 stages/variants cross-checked with another implementation",
+    "nine chapter images visually reviewed",
+    "full video decoding passed"
+  ],
+  "limitations": [
+    "not an official erratum",
+    "not Lean formalization",
+    "not a full tree-decomposition DP or general homeomorphism classifier"
+  ],
+  "sha256": {
+    ".gitignore": "cfb9fa1b0dd1843f1a14509160869efe89c108caaa66c9e3eb48aeca619bfa4a",
+    "computed-tables.md": "67c26b33183289049ca22baae60af5ea9294133dd39ad9bfc33650db3c1485e5",
+    "cross-check.json": "605fdfbfaf5f74a86b15367bac5176f0c89db06bbb3c4dbac81f150ae7deafa3",
+    "Example7Pipeline.mp4": "284970d15cfb88f8e780679c1a642ea522079d7580f59bf7b618400abed46af0",
+    "example7_data.json": "ea0e7550c901e37836b30a4fa09dfb71d637d98f1030b367ee101c543572681b",
+    "input-figure-consistent-inferred.json": "68152e3dbd3179498e61ffb7cabee9f9edd3095ee7b260f6cb1dd54630881d8f",
+    "input-literal-v2.json": "7fb7302e3d06929e88f04eaab9490955f712c67c69a0d4437bd3b53143cb13fd",
+    "README.md": "e555a8128772e6ec49bbeb439397f73056c8f901a4340fe6518a7ddc698cf3e4",
+    "run-demo.ps1": "d46e6141e1b948c6ec7b09aafcdab7397554f472c01db5e0db8f245f5b5c665d",
+    "teacher-brief.md": "411565ec46daf963ba8b3f493443c653665961cab763732a80dd54c0df2282a3",
+    "figures\\01-inputs.png": "3b3075f11186812f1d2c55fb04e84cec3d9dd12e94fa86b195607698c1e87cc3",
+    "figures\\02-first-glue.png": "bee783c84e58905994d0b6b442524ab848500e1f2ea588f537d77b6a1a4a5553",
+    "figures\\03-vertex-classes.png": "34f3311471167dd11ceb83abb87aa0a079e7b7c9dc37e2935f4d47b0a76dfd2e",
+    "figures\\04-link-triangle.png": "bde7e11a0e384ac7f826698e9e7958d7c0a3102308e3cf4c26b1b7f744f98fb6",
+    "figures\\05-two-triangles.png": "ea018d39d8a61029e047e535fc453b110399bbbee199e6764cafde704d59da6d",
+    "figures\\06-annulus.png": "9b728776d73da8461c426f729796cda7c965bc2217ce4b78494e96ffa2923623",
+    "figures\\07-link-table.png": "1ad9d0a3b18e35f863e9550c59f85dd5228e3aa4f7c55035075556554fb592b6",
+    "figures\\08-manifold-test.png": "51f136e2fc82f04dc146406507578922a454b05357cadf3ac4abe19cd59da12b",
+    "figures\\09-pipeline.png": "e6670e00feac7cbf338056c5f6c9ba86a189406bfba27c786cb9ac16d8b80103"
+  }
+}

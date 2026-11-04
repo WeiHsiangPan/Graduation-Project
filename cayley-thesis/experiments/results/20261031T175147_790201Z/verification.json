@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "cases": 21,
+  "checked_utc": "2026-10-31T17:52:13.510192+00:00",
+  "results_sha256": "7097af9438d1a1455b5c77cd86d42120b01efea1e8caf94373902e8940255ef4",
+  "verifier_sha256": "2e380551238f0bfd8cef19ccf0053e7f00cdca1dfd6e2631ac38f40d155d4d02",
+  "checks": [
+    "model",
+    "surface",
+    "face_relation_provenance",
+    "distance_certificates",
+    "rule_soundness",
+    "all_target_solutions",
+    "saved_counterexamples"
+  ],
+  "not_certified": [
+    "timings",
+    "search_counter_instrumentation",
+    "absence_of_counterexamples",
+    "asymptotic_complexity",
+    "minimum_genus"
+  ]
+}

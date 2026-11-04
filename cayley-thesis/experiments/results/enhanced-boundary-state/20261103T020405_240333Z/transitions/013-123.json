@@ -1,0 +1,471 @@
+{
+  "case_id": "013-123",
+  "history_id": "013",
+  "completion": {
+    "source_tet": 0,
+    "source_face": [
+      0,
+      2,
+      3
+    ],
+    "target_tet": 0,
+    "target_face": [
+      1,
+      2,
+      3
+    ]
+  },
+  "eligible": true,
+  "base_key": "f6d16cd86eff4d3eb33ded27c7db525ff40dfb67d12e9a0c578feb78ca8dc53c",
+  "enhanced_key": "8abb185317b81d65d2a0ac33730299590a0e3c0fd5414214075d01021345ac7d",
+  "state_predictor": {
+    "status": "PREDICTED",
+    "quotient_chain_complex": {
+      "dimensions": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "boundaries": {
+        "1": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "2": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "3": [
+          []
+        ]
+      },
+      "bases": {
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "edges": [
+          "t0:023/02",
+          "t0:023/23"
+        ],
+        "faces": [
+          "t0:023"
+        ],
+        "tetrahedra": []
+      }
+    },
+    "quotient_chain_map": {
+      "0": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "1": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "2": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "edge_equations": [
+      {
+        "source_occurrence": "t0:023/02",
+        "target_occurrence": "t0:123/12",
+        "source_edge_index": 0,
+        "target_edge_index": 2,
+        "target_sign_over_source": 1
+      },
+      {
+        "source_occurrence": "t0:023/03",
+        "target_occurrence": "t0:123/13",
+        "source_edge_index": 0,
+        "target_edge_index": 2,
+        "target_sign_over_source": 1
+      },
+      {
+        "source_occurrence": "t0:023/23",
+        "target_occurrence": "t0:123/23",
+        "source_edge_index": 1,
+        "target_edge_index": 1,
+        "target_sign_over_source": 1
+      }
+    ],
+    "face_equation": {
+      "source_index": 0,
+      "target_index": 1,
+      "sign": 1
+    },
+    "quotient_homology": {
+      "coefficients": "Z",
+      "dimensions": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "chain_checks": [
+        {
+          "product": "B1B2",
+          "zero": true
+        },
+        {
+          "product": "B2B3",
+          "zero": true
+        }
+      ],
+      "groups": {
+        "H0": {
+          "free_rank": 1,
+          "torsion": [],
+          "label": "Z"
+        },
+        "H1": {
+          "free_rank": 0,
+          "torsion": [],
+          "label": "0"
+        },
+        "H2": {
+          "free_rank": 0,
+          "torsion": [],
+          "label": "0"
+        },
+        "H3": {
+          "free_rank": 0,
+          "torsion": [],
+          "label": "0"
+        }
+      },
+      "certificates": {
+        "H0": {
+          "outgoing_smith": {
+            "rows": 0,
+            "columns": 2,
+            "U": [],
+            "V": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "D": [],
+            "diagonal": [],
+            "rank": 0
+          },
+          "kernel_basis": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "incoming_in_kernel": [
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "quotient_smith": {
+            "rows": 2,
+            "columns": 2,
+            "U": [
+              [
+                -1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "V": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "D": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "diagonal": [
+              1
+            ],
+            "rank": 1
+          }
+        },
+        "H1": {
+          "outgoing_smith": {
+            "rows": 2,
+            "columns": 2,
+            "U": [
+              [
+                -1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "V": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "D": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "diagonal": [
+              1
+            ],
+            "rank": 1
+          },
+          "kernel_basis": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "incoming_in_kernel": [
+            [
+              1
+            ]
+          ],
+          "quotient_smith": {
+            "rows": 1,
+            "columns": 1,
+            "U": [
+              [
+                1
+              ]
+            ],
+            "V": [
+              [
+                1
+              ]
+            ],
+            "D": [
+              [
+                1
+              ]
+            ],
+            "diagonal": [
+              1
+            ],
+            "rank": 1
+          }
+        },
+        "H2": {
+          "outgoing_smith": {
+            "rows": 2,
+            "columns": 1,
+            "U": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "V": [
+              [
+                1
+              ]
+            ],
+            "D": [
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "diagonal": [
+              1
+            ],
+            "rank": 1
+          },
+          "kernel_basis": [
+            []
+          ],
+          "incoming_in_kernel": [],
+          "quotient_smith": {
+            "rows": 0,
+            "columns": 0,
+            "U": [],
+            "V": [],
+            "D": [],
+            "diagonal": [],
+            "rank": 0
+          }
+        },
+        "H3": {
+          "outgoing_smith": {
+            "rows": 1,
+            "columns": 0,
+            "U": [
+              [
+                1
+              ]
+            ],
+            "V": [],
+            "D": [
+              []
+            ],
+            "diagonal": [],
+            "rank": 0
+          },
+          "kernel_basis": [],
+          "incoming_in_kernel": [],
+          "quotient_smith": {
+            "rows": 0,
+            "columns": 0,
+            "U": [],
+            "V": [],
+            "D": [],
+            "diagonal": [],
+            "rank": 0
+          }
+        }
+      },
+      "method": "Unimodular Smith reduction, integral kernel basis, incoming quotient."
+    },
+    "induced_q_H1": [],
+    "interior_H1_group": {
+      "free_rank": 0,
+      "torsion": [],
+      "label": "0"
+    },
+    "canonical_inclusion_H1": [],
+    "pushout_H1_presentation": {
+      "rows": 0,
+      "columns": 0,
+      "relations": [],
+      "generator_order": "interior free generators, then Q torsion generators, then Q free generators",
+      "smith_certificate": {
+        "rows": 0,
+        "columns": 0,
+        "U": [],
+        "V": [],
+        "D": [],
+        "diagonal": [],
+        "rank": 0
+      }
+    },
+    "predicted_H1": {
+      "free_rank": 0,
+      "torsion": [],
+      "label": "0"
+    },
+    "assumptions": {
+      "M_connected": true,
+      "K_connected": true,
+      "M_connected_justification": "Restricted to the connected single-tetrahedron prefix domain.",
+      "K_is_boundary_CW_subcomplex": true,
+      "formula": "H1(M union_K Q) = coker((i*,-q*): H1(K) -> H1(M) + H1(Q))",
+      "Q_connected": true
+    },
+    "uses_completed_history": false,
+    "scope": "Only connected single-tetrahedron prefixes; prediction concerns H1, not complete homology or local manifold legality."
+  },
+  "prediction_H1_matches": true,
+  "truth": {
+    "accepted": true,
+    "rejection_codes": [],
+    "homology": {
+      "H0": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      },
+      "H1": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H2": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H3": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-02T17:36:03.358472+00:00",
+  "groups": [
+    {
+      "n": 8,
+      "status": "PASS",
+      "checkpoints": 18,
+      "singleton_audit": 6,
+      "matched_pair_audit": 4
+    },
+    {
+      "n": 16,
+      "status": "PASS",
+      "checkpoints": 434,
+      "singleton_audit": 214,
+      "matched_pair_audit": 144
+    }
+  ],
+  "seconds": 27.794629799998802,
+  "results_sha256": "b1664d1da5dc4cfee6204eb53020c280c6f4965d434800e5a69b23104b76c687",
+  "verifier_sha256": "414721378b730d9f3ff5386a56ad070baab5b050856102c1959ac1602ffdfb38",
+  "scope": "Independent dihedral transitions, BFS certificates, complete pool, validated faces, rule provenance, every DFA/cycle/finite/DP proof, gap, singleton minimum and matched-length census. Timing instrumentation not independently proven; not Lean."
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-03T02:04:59.703642+00:00",
+  "results_sha256": "7d5334f44fb7fe982d89e0f445218520648351c6678609a3058054d197e4a4f6",
+  "verifier_sha256": "94a05f5a8ba752bf480b9b123ab6217df8f099502ff82d8266ed5a0f6853d2ef",
+  "histories_checked": 6,
+  "eligible_histories": 3,
+  "transitions_checked": 36,
+  "comparisons_checked": 90,
+  "eligible_comparisons": 18,
+  "base_equal_comparisons": 6,
+  "enhanced_equal_comparisons": 0,
+  "base_counterexamples": 2,
+  "enhanced_counterexamples": 0,
+  "histories": [
+    {
+      "history_id": "013",
+      "status": "PASS",
+      "eligible": true
+    },
+    {
+      "history_id": "031",
+      "status": "PASS",
+      "eligible": false
+    },
+    {
+      "history_id": "103",
+      "status": "PASS",
+      "eligible": false
+    },
+    {
+      "history_id": "130",
+      "status": "PASS",
+      "eligible": true
+    },
+    {
+      "history_id": "301",
+      "status": "PASS",
+      "eligible": true
+    },
+    {
+      "history_id": "310",
+      "status": "PASS",
+      "eligible": false
+    }
+  ],
+  "scope": "Independent marked boundary chain inclusion and exact homology checks. Zero genuine same-enhanced-state pairs remain in this six-history family; absence of counterexamples is not general sufficiency."
+}

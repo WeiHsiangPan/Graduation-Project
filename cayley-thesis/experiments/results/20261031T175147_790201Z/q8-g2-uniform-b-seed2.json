@@ -1,0 +1,899 @@
+{
+  "group": "q8",
+  "surface": "q8-g2-uniform-b",
+  "genus": 2,
+  "faces": [
+    [
+      0,
+      2,
+      7,
+      5,
+      1,
+      3,
+      6,
+      4
+    ],
+    [
+      0,
+      3,
+      1,
+      2
+    ],
+    [
+      0,
+      4,
+      1,
+      5
+    ],
+    [
+      0,
+      5,
+      6,
+      2,
+      1,
+      4,
+      7,
+      3
+    ],
+    [
+      2,
+      6,
+      3,
+      7
+    ],
+    [
+      4,
+      6,
+      5,
+      7
+    ]
+  ],
+  "seed": 2,
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "vertex_count": 8,
+    "edge_count": 16,
+    "face_count": 6,
+    "chi": -2,
+    "genus": 2,
+    "profile": {
+      "4": 4,
+      "8": 2
+    }
+  },
+  "transitions": [
+    [
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      3,
+      2,
+      5,
+      4
+    ],
+    [
+      1,
+      0,
+      6,
+      7
+    ],
+    [
+      0,
+      1,
+      7,
+      6
+    ],
+    [
+      7,
+      6,
+      1,
+      0
+    ],
+    [
+      6,
+      7,
+      0,
+      1
+    ],
+    [
+      4,
+      5,
+      3,
+      2
+    ],
+    [
+      5,
+      4,
+      2,
+      3
+    ]
+  ],
+  "identity": 0,
+  "inverses": [
+    1,
+    0,
+    3,
+    2
+  ],
+  "labels": [
+    "i",
+    "-i",
+    "j",
+    "-j"
+  ],
+  "elements": [
+    "1",
+    "-1",
+    "i",
+    "-i",
+    "j",
+    "-j",
+    "k",
+    "-k"
+  ],
+  "truth_paths": {
+    "0": [],
+    "2": [
+      0
+    ],
+    "3": [
+      1
+    ],
+    "4": [
+      2
+    ],
+    "5": [
+      3
+    ],
+    "1": [
+      0,
+      0
+    ],
+    "6": [
+      0,
+      2
+    ],
+    "7": [
+      0,
+      3
+    ]
+  },
+  "diameter": 2,
+  "shared_preprocessing_seconds": 0.0014435999910347164,
+  "face_preprocessing_seconds": 0.0003046000056201592,
+  "generic_pool_size": 18,
+  "face_relators_excluded_by_length": 1,
+  "face_relators_excluded_by_count": 0,
+  "matched_length_histogram": {
+    "4": 2
+  },
+  "relator_overlap": 2,
+  "methods": {
+    "cancellation_only": {
+      "relators": [],
+      "rules": [
+        [
+          [
+            0,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            2
+          ],
+          []
+        ]
+      ],
+      "rule_count": 4,
+      "rule_symbols": 8,
+      "rule_preprocessing_seconds": 1.340000017080456e-05,
+      "targets": {
+        "0": {
+          "word": [],
+          "distance": 0,
+          "counts": {
+            "entered": 1,
+            "generated": 0,
+            "pruned": 0,
+            "expanded": 0,
+            "rule_checks": 0
+          },
+          "seconds": 1.7999991541728377e-06
+        },
+        "1": {
+          "word": [
+            0,
+            0
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 9,
+            "generated": 6,
+            "pruned": 0,
+            "expanded": 3,
+            "rule_checks": 24
+          },
+          "seconds": 1.3500000932253897e-05
+        },
+        "2": {
+          "word": [
+            0
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 3,
+            "generated": 1,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 4
+          },
+          "seconds": 2.800006768666208e-06
+        },
+        "3": {
+          "word": [
+            1
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 4,
+            "generated": 2,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 8
+          },
+          "seconds": 4.1000021155923605e-06
+        },
+        "4": {
+          "word": [
+            2
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 5,
+            "generated": 3,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 12
+          },
+          "seconds": 5.299996701069176e-06
+        },
+        "5": {
+          "word": [
+            3
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 6,
+            "generated": 4,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 16
+          },
+          "seconds": 6.699992809444666e-06
+        },
+        "6": {
+          "word": [
+            0,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 10,
+            "generated": 8,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 29
+          },
+          "seconds": 1.379998866468668e-05
+        },
+        "7": {
+          "word": [
+            0,
+            3
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 11,
+            "generated": 9,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 33
+          },
+          "seconds": 1.5199999324977398e-05
+        }
+      },
+      "total_generated": 33,
+      "total_rule_checks": 126,
+      "search_seconds": 6.319998647086322e-05,
+      "counterexample": {
+        "status": "found",
+        "examined_irreducible_words": 18,
+        "word": [
+          0,
+          0,
+          0
+        ],
+        "endpoint": 3,
+        "bfs_word": [
+          1
+        ],
+        "excess_length": 2
+      }
+    },
+    "ordinary": {
+      "relators": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "rules": [
+        [
+          [
+            0,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            2,
+            2,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            3,
+            3,
+            3
+          ],
+          []
+        ]
+      ],
+      "rule_count": 14,
+      "rule_symbols": 48,
+      "rule_preprocessing_seconds": 8.199999865610152e-05,
+      "targets": {
+        "0": {
+          "word": [],
+          "distance": 0,
+          "counts": {
+            "entered": 1,
+            "generated": 0,
+            "pruned": 0,
+            "expanded": 0,
+            "rule_checks": 0
+          },
+          "seconds": 9.999930625781417e-07
+        },
+        "1": {
+          "word": [
+            0,
+            0
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 9,
+            "generated": 6,
+            "pruned": 0,
+            "expanded": 3,
+            "rule_checks": 84
+          },
+          "seconds": 2.4900000425986946e-05
+        },
+        "2": {
+          "word": [
+            0
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 3,
+            "generated": 1,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 14
+          },
+          "seconds": 4.8000074457377195e-06
+        },
+        "3": {
+          "word": [
+            1
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 4,
+            "generated": 2,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 28
+          },
+          "seconds": 8.199989679269493e-06
+        },
+        "4": {
+          "word": [
+            2
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 5,
+            "generated": 3,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 42
+          },
+          "seconds": 1.1600001016631722e-05
+        },
+        "5": {
+          "word": [
+            3
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 6,
+            "generated": 4,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 56
+          },
+          "seconds": 1.4700010069645941e-05
+        },
+        "6": {
+          "word": [
+            0,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 10,
+            "generated": 8,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 99
+          },
+          "seconds": 2.849999873433262e-05
+        },
+        "7": {
+          "word": [
+            0,
+            3
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 11,
+            "generated": 9,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 113
+          },
+          "seconds": 3.2199997804127634e-05
+        }
+      },
+      "total_generated": 33,
+      "total_rule_checks": 436,
+      "search_seconds": 0.00012589999823831022,
+      "counterexample": {
+        "status": "found",
+        "examined_irreducible_words": 16,
+        "word": [
+          0,
+          0,
+          2
+        ],
+        "endpoint": 5,
+        "bfs_word": [
+          3
+        ],
+        "excess_length": 2
+      }
+    },
+    "faces": {
+      "relators": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "rules": [
+        [
+          [
+            0,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          []
+        ],
+        [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          []
+        ],
+        [
+          [
+            2,
+            2,
+            2,
+            2
+          ],
+          []
+        ],
+        [
+          [
+            3,
+            3,
+            3,
+            3
+          ],
+          []
+        ]
+      ],
+      "rule_count": 14,
+      "rule_symbols": 48,
+      "rule_preprocessing_seconds": 7.739999273326248e-05,
+      "targets": {
+        "0": {
+          "word": [],
+          "distance": 0,
+          "counts": {
+            "entered": 1,
+            "generated": 0,
+            "pruned": 0,
+            "expanded": 0,
+            "rule_checks": 0
+          },
+          "seconds": 8.999923011288047e-07
+        },
+        "1": {
+          "word": [
+            0,
+            0
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 9,
+            "generated": 6,
+            "pruned": 0,
+            "expanded": 3,
+            "rule_checks": 84
+          },
+          "seconds": 2.4599998141638935e-05
+        },
+        "2": {
+          "word": [
+            0
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 3,
+            "generated": 1,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 14
+          },
+          "seconds": 4.8000074457377195e-06
+        },
+        "3": {
+          "word": [
+            1
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 4,
+            "generated": 2,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 28
+          },
+          "seconds": 8.200004231184721e-06
+        },
+        "4": {
+          "word": [
+            2
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 5,
+            "generated": 3,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 42
+          },
+          "seconds": 1.1600001016631722e-05
+        },
+        "5": {
+          "word": [
+            3
+          ],
+          "distance": 1,
+          "counts": {
+            "entered": 6,
+            "generated": 4,
+            "pruned": 0,
+            "expanded": 1,
+            "rule_checks": 56
+          },
+          "seconds": 1.4999997802078724e-05
+        },
+        "6": {
+          "word": [
+            0,
+            2
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 10,
+            "generated": 8,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 99
+          },
+          "seconds": 2.8599999495781958e-05
+        },
+        "7": {
+          "word": [
+            0,
+            3
+          ],
+          "distance": 2,
+          "counts": {
+            "entered": 11,
+            "generated": 9,
+            "pruned": 1,
+            "expanded": 3,
+            "rule_checks": 113
+          },
+          "seconds": 3.2800002372823656e-05
+        }
+      },
+      "total_generated": 33,
+      "total_rule_checks": 436,
+      "search_seconds": 0.00012650000280700624,
+      "counterexample": {
+        "status": "found",
+        "examined_irreducible_words": 16,
+        "word": [
+          0,
+          0,
+          2
+        ],
+        "endpoint": 5,
+        "bfs_word": [
+          3
+        ],
+        "excess_length": 2
+      }
+    }
+  }
+}

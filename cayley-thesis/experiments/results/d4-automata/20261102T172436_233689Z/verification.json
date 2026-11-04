@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-02T17:24:43.916447+00:00",
+  "cases": [
+    {
+      "budget": "single_relation",
+      "method": "cancellation_only",
+      "status": "PASS",
+      "words_checked": 9841
+    },
+    {
+      "budget": "single_relation",
+      "method": "ordinary",
+      "status": "PASS",
+      "words_checked": 9841
+    },
+    {
+      "budget": "single_relation",
+      "method": "faces",
+      "status": "PASS",
+      "words_checked": 9841
+    },
+    {
+      "budget": "full_budget",
+      "method": "cancellation_only",
+      "status": "PASS",
+      "words_checked": 9841
+    },
+    {
+      "budget": "full_budget",
+      "method": "ordinary",
+      "status": "PASS",
+      "words_checked": 9841
+    },
+    {
+      "budget": "full_budget",
+      "method": "faces",
+      "status": "PASS",
+      "words_checked": 9841
+    }
+  ],
+  "results_sha256": "0e7d028816f54571c545a40c6615cc95f8ea3d1e5e2533407f58bcfb45990187",
+  "verifier_sha256": "fead33722f2c70d4b5d581abb9fc6af556248aff60d3269eb8331267fd31b45a",
+  "checks": [
+    "source rule soundness and strict shortlex",
+    "global suffix-transition invariant",
+    "live reachability",
+    "literal-substring regression",
+    "accepting cycle or topological/DP certificate",
+    "group replay and BFS comparison"
+  ],
+  "limitations": [
+    "not Lean",
+    "not DFA minimization",
+    "no general confluence/complexity claim",
+    "shared source/group validator"
+  ]
+}

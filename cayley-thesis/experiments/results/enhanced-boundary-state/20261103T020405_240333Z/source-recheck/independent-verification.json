@@ -1,0 +1,222 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-03T02:04:05.925323+00:00",
+  "results_sha256": "2ed3127f349619ec7c0b99803c4040dca3dd84411edc8200b859670ecb5b5839",
+  "verifier_sha256": "d6f61471ea335f74106bd65d4b327b88606afcb16380e46ef53ac7fc2da2dc55",
+  "cases_checked": 36,
+  "accepted": 9,
+  "cases": [
+    {
+      "case_id": "013-123",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "013-132",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "013-213",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "013-231",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "013-312",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "013-321",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "031-123",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "031-132",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "031-213",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "031-231",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "031-312",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "031-321",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "103-123",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "103-132",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "103-213",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "103-231",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "103-312",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "103-321",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "130-123",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "130-132",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "130-213",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "130-231",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "130-312",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "130-321",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "301-123",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "301-132",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "301-213",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "301-231",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "301-312",
+      "status": "PASS",
+      "accepted": true
+    },
+    {
+      "case_id": "301-321",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "310-123",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "310-132",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "310-213",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "310-231",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "310-312",
+      "status": "PASS",
+      "accepted": false
+    },
+    {
+      "case_id": "310-321",
+      "status": "PASS",
+      "accepted": false
+    }
+  ],
+  "compression_witness": {
+    "left_case": "130-231",
+    "right_case": "301-231",
+    "same_Ce_Cv": true,
+    "same_completion": true,
+    "H1_torsion_left": [
+      4
+    ],
+    "H1_torsion_right": [
+      5
+    ]
+  },
+  "checks": [
+    "source hashes",
+    "all 36 target permutations",
+    "per-case checkpoints",
+    "signed equivalence classes",
+    "local link circles and orientability",
+    "ambient orientability",
+    "all rejection codes",
+    "oriented simplex boundaries",
+    "chain condition",
+    "integral homology via exact minors",
+    "unimodular Smith/kernel certificates",
+    "edge-reversal closed walks",
+    "all 24 relabelings",
+    "aggregate counts/classes",
+    "compression witnesses",
+    "primitive boundary inclusion and closing relation",
+    "CSV cells"
+  ],
+  "scope": "Independent finite combinatorial and integer-arithmetic check; no manifold-name recognition or homeomorphism classification."
+}

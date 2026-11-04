@@ -1,0 +1,1549 @@
+{
+  "case_id": "013-312",
+  "glues": [
+    {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        1,
+        2
+      ],
+      "target_tet": 0,
+      "target_face": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "source_tet": 0,
+      "source_face": [
+        0,
+        2,
+        3
+      ],
+      "target_tet": 0,
+      "target_face": [
+        3,
+        1,
+        2
+      ]
+    }
+  ],
+  "orientation_equations": [
+    {
+      "gluing_number": 1,
+      "full_permutation": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "target_tet_sign_over_source": 1
+    },
+    {
+      "gluing_number": 2,
+      "full_permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "target_tet_sign_over_source": 1
+    }
+  ],
+  "after_first": {
+    "glues": [
+      {
+        "source_tet": 0,
+        "source_face": [
+          0,
+          1,
+          2
+        ],
+        "target_tet": 0,
+        "target_face": [
+          0,
+          1,
+          3
+        ]
+      }
+    ],
+    "vertex_classes": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ],
+    "boundary_faces": [
+      "t0:123",
+      "t0:023"
+    ],
+    "edge_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    ],
+    "corner_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          2
+        ]
+      ]
+    ],
+    "side_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          1
+        ]
+      ]
+    ],
+    "link_side_gluings": [
+      {
+        "source_triangle": [
+          0,
+          0
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          0
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          1
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          1
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          2
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          3
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "links": [
+      {
+        "members": [
+          [
+            0,
+            0
+          ]
+        ],
+        "V": 2,
+        "E": 2,
+        "F": 1,
+        "chi": 1,
+        "boundary_components": 1,
+        "genus": 0,
+        "type": "disk",
+        "connected": true,
+        "orientable": true,
+        "is_surface": true,
+        "corner_classes": [
+          0,
+          1
+        ],
+        "side_classes": [
+          0,
+          1
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 0,
+            "connected": true,
+            "degrees": [
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 1,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": [
+          {
+            "corners": [
+              1
+            ],
+            "sides": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "members": [
+          [
+            0,
+            1
+          ]
+        ],
+        "V": 2,
+        "E": 2,
+        "F": 1,
+        "chi": 1,
+        "boundary_components": 1,
+        "genus": 0,
+        "type": "disk",
+        "connected": true,
+        "orientable": true,
+        "is_surface": true,
+        "corner_classes": [
+          2,
+          3
+        ],
+        "side_classes": [
+          2,
+          3
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 2,
+            "connected": true,
+            "degrees": [
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 3,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": [
+          {
+            "corners": [
+              3
+            ],
+            "sides": [
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "members": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "V": 4,
+        "E": 5,
+        "F": 2,
+        "chi": 1,
+        "boundary_components": 1,
+        "genus": 0,
+        "type": "disk",
+        "connected": true,
+        "orientable": true,
+        "is_surface": true,
+        "corner_classes": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "side_classes": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 4,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 5,
+            "connected": true,
+            "degrees": [
+              1,
+              1,
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 6,
+            "connected": true,
+            "degrees": [
+              1,
+              1
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 7,
+            "connected": true,
+            "degrees": [
+              1,
+              1
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": [
+          {
+            "corners": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "sides": [
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                3,
+                1
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "Ce": [
+      [
+        "t0:023/02",
+        "t0:023/03",
+        true
+      ],
+      [
+        "t0:123/12",
+        "t0:123/13",
+        true
+      ],
+      [
+        "t0:123/23",
+        "t0:023/23",
+        true
+      ]
+    ],
+    "Cv": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ],
+    "edge_orientation_consistent": true,
+    "orientable": true,
+    "connected": true,
+    "partial_3_manifold_definition5": true,
+    "manifold_with_boundary_link_test": true
+  },
+  "after": {
+    "glues": [
+      {
+        "source_tet": 0,
+        "source_face": [
+          0,
+          1,
+          2
+        ],
+        "target_tet": 0,
+        "target_face": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "source_tet": 0,
+        "source_face": [
+          0,
+          2,
+          3
+        ],
+        "target_tet": 0,
+        "target_face": [
+          3,
+          1,
+          2
+        ]
+      }
+    ],
+    "vertex_classes": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ],
+    "boundary_faces": [],
+    "edge_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    ],
+    "corner_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ]
+    ],
+    "side_classes": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ]
+    ],
+    "link_side_gluings": [
+      {
+        "source_triangle": [
+          0,
+          0
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          0
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          1
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          1
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          2
+        ],
+        "source_side_opposite": 3,
+        "target_triangle": [
+          0,
+          3
+        ],
+        "target_side_opposite": 2,
+        "corner_map": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          0
+        ],
+        "source_side_opposite": 1,
+        "target_triangle": [
+          0,
+          3
+        ],
+        "target_side_opposite": 0,
+        "corner_map": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          2
+        ],
+        "source_side_opposite": 1,
+        "target_triangle": [
+          0,
+          1
+        ],
+        "target_side_opposite": 0,
+        "corner_map": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "source_triangle": [
+          0,
+          3
+        ],
+        "source_side_opposite": 1,
+        "target_triangle": [
+          0,
+          2
+        ],
+        "target_side_opposite": 0,
+        "corner_map": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "links": [
+      {
+        "members": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "V": 4,
+        "E": 6,
+        "F": 4,
+        "chi": 2,
+        "boundary_components": 0,
+        "genus": 0,
+        "type": "sphere",
+        "connected": true,
+        "orientable": true,
+        "is_surface": true,
+        "corner_classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "side_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "local_vertex_checks": [
+          {
+            "corner_class": 0,
+            "connected": true,
+            "degrees": [
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 1,
+            "connected": true,
+            "degrees": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 2,
+            "connected": true,
+            "degrees": [
+              2
+            ],
+            "valid": true
+          },
+          {
+            "corner_class": 3,
+            "connected": true,
+            "degrees": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "valid": true
+          }
+        ],
+        "boundary_cycles": []
+      }
+    ],
+    "Ce": [],
+    "Cv": [],
+    "edge_orientation_consistent": true,
+    "orientable": true,
+    "connected": true,
+    "partial_3_manifold_definition5": true,
+    "manifold_with_boundary_link_test": true
+  },
+  "decision": {
+    "closed": true,
+    "connected": true,
+    "edge_orientation_consistent": true,
+    "all_links_spheres": true,
+    "orientable": true,
+    "manifold_accepted": true,
+    "accepted": true,
+    "rejection_reasons": []
+  },
+  "edge_reversal_witness": null,
+  "first_boundary_state": {
+    "boundary_faces": [
+      "t0:023",
+      "t0:123"
+    ],
+    "Ce": [
+      [
+        "t0:023/02",
+        "t0:023/03",
+        true
+      ],
+      [
+        "t0:023/23",
+        "t0:123/23",
+        true
+      ],
+      [
+        "t0:123/12",
+        "t0:123/13",
+        true
+      ]
+    ],
+    "Cv": [
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    ]
+  },
+  "relabeling_key": [
+    [
+      0,
+      1,
+      1,
+      0,
+      2,
+      3
+    ],
+    [
+      2,
+      3,
+      1,
+      2,
+      3,
+      0
+    ]
+  ],
+  "chain_complex": {
+    "dimensions": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "boundaries": {
+      "1": [
+        [
+          0,
+          0
+        ]
+      ],
+      "2": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "3": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ]
+    },
+    "bases": {
+      "vertices": [
+        [
+          0,
+          0
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "tetrahedra": [
+        0
+      ]
+    },
+    "basis_convention": "Lexicographic local representatives; edge a<b, face vertices ascending, tetrahedron 0123."
+  },
+  "homology": {
+    "coefficients": "Z",
+    "dimensions": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "chain_checks": [
+      {
+        "product": "B1B2",
+        "zero": true
+      },
+      {
+        "product": "B2B3",
+        "zero": true
+      }
+    ],
+    "groups": {
+      "H0": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      },
+      "H1": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H2": {
+        "free_rank": 0,
+        "torsion": [],
+        "label": "0"
+      },
+      "H3": {
+        "free_rank": 1,
+        "torsion": [],
+        "label": "Z"
+      }
+    },
+    "certificates": {
+      "H0": {
+        "outgoing_smith": {
+          "rows": 0,
+          "columns": 1,
+          "U": [],
+          "V": [
+            [
+              1
+            ]
+          ],
+          "D": [],
+          "diagonal": [],
+          "rank": 0
+        },
+        "kernel_basis": [
+          [
+            1
+          ]
+        ],
+        "incoming_in_kernel": [
+          [
+            0,
+            0
+          ]
+        ],
+        "quotient_smith": {
+          "rows": 1,
+          "columns": 2,
+          "U": [
+            [
+              1
+            ]
+          ],
+          "V": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "D": [
+            [
+              0,
+              0
+            ]
+          ],
+          "diagonal": [],
+          "rank": 0
+        }
+      },
+      "H1": {
+        "outgoing_smith": {
+          "rows": 1,
+          "columns": 2,
+          "U": [
+            [
+              1
+            ]
+          ],
+          "V": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "D": [
+            [
+              0,
+              0
+            ]
+          ],
+          "diagonal": [],
+          "rank": 0
+        },
+        "kernel_basis": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "incoming_in_kernel": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            -2
+          ]
+        ],
+        "quotient_smith": {
+          "rows": 2,
+          "columns": 2,
+          "U": [
+            [
+              1,
+              0
+            ],
+            [
+              -2,
+              -1
+            ]
+          ],
+          "V": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "D": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "diagonal": [
+            1,
+            1
+          ],
+          "rank": 2
+        }
+      },
+      "H2": {
+        "outgoing_smith": {
+          "rows": 2,
+          "columns": 2,
+          "U": [
+            [
+              1,
+              0
+            ],
+            [
+              -2,
+              -1
+            ]
+          ],
+          "V": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "D": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "diagonal": [
+            1,
+            1
+          ],
+          "rank": 2
+        },
+        "kernel_basis": [
+          [],
+          []
+        ],
+        "incoming_in_kernel": [],
+        "quotient_smith": {
+          "rows": 0,
+          "columns": 1,
+          "U": [],
+          "V": [
+            [
+              1
+            ]
+          ],
+          "D": [],
+          "diagonal": [],
+          "rank": 0
+        }
+      },
+      "H3": {
+        "outgoing_smith": {
+          "rows": 2,
+          "columns": 1,
+          "U": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "V": [
+            [
+              1
+            ]
+          ],
+          "D": [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "diagonal": [],
+          "rank": 0
+        },
+        "kernel_basis": [
+          [
+            1
+          ]
+        ],
+        "incoming_in_kernel": [
+          []
+        ],
+        "quotient_smith": {
+          "rows": 1,
+          "columns": 0,
+          "U": [
+            [
+              1
+            ]
+          ],
+          "V": [],
+          "D": [
+            []
+          ],
+          "diagonal": [],
+          "rank": 0
+        }
+      }
+    },
+    "method": "Unimodular Smith reduction, integral kernel basis, incoming quotient."
+  },
+  "homology_status": "EXACT_CERTIFICATE_VERIFIED",
+  "seconds": 0.0012319000015850179
+}
