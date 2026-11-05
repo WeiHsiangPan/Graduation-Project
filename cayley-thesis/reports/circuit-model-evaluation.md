@@ -60,6 +60,12 @@ R(v,t)=R(e,v^-1 t) 使用群乘法與左平移。實驗預先建立所有 target
 
 ## 6. 此輪結果
 
+![完整電阻下界相對免費 h=1 減少的節點](bound-figures/circuit-node-reduction.svg)
+
+![電阻下界與真實 diameter 的差距](bound-figures/circuit-diameter-gap.svg)
+
+圖由 `experiments/draw_bound_figures.py` 從下列正式結果唯讀產生。
+
 完整資料：experiments/results/circuit-model/20261104T102000_570473Z/results.json；旁有 summary.md。資料包含 transitions、電位、每個目標的解、原始/對偶證書、所有面及時間。
 
 |群（Dn階為2n）|V|真實直徑|ceil 最大電阻|h=0生成數|h=1生成數|電阻h生成數|

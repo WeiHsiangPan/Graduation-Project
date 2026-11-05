@@ -38,6 +38,8 @@ S4的非平凡表示：sign（1維）、standard_3d（3維）、sign_twist_3d（
 
 ## 主要結果：所有目標生成節點總數
 
+![S4 部分不可約表示組合與節點數](bound-figures/partial-irrep-budget.svg)
+
 |群/表示|d²成本proxy|無關係剪枝|有關係剪枝|
 |---|---:|---:|---:|
 |D4：免費h=1|0|42|42|
@@ -72,6 +74,10 @@ S4最強組合相對免費無剪枝為912→467，少48.8%；相對已有關係�
 訓練選擇所得改善在同群留出目標上存在。D4/S3沒有增益時，正確部署選擇應是免費h=1；程式train_selected只比較非空subset，不能把它在無增益時挑中的表示說成值得保留。
 
 ## 成本：目前沒有端到端勝出
+
+![S4 setup 與搜尋時間](bound-figures/partial-irrep-cost.svg)
+
+圖由 `experiments/draw_bound_figures.py` 從正式結果唯讀產生。
 
 S4正式輪、單位ms；預處理單次實測，搜尋為五次批次的中位數：
 

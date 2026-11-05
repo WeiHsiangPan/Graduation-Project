@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="496" viewBox="0 0 760 496" font-family="'Segoe UI','Noto Sans TC','Microsoft JhengHei',Arial,sans-serif">
+<rect width="760" height="496" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600">完整電阻下界相對「免費 h=1」減少的搜尋節點</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">10 個群、119 個目標的節點總數；6 個群完全沒有改進</text>
+<line x1="110.0" y1="88" x2="110.0" y2="444" stroke="#e1e0d9"/>
+<text x="110.0" y="82.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">0%</text>
+<line x1="214.0" y1="88" x2="214.0" y2="444" stroke="#e1e0d9"/>
+<text x="214.0" y="82.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">10%</text>
+<line x1="318.0" y1="88" x2="318.0" y2="444" stroke="#e1e0d9"/>
+<text x="318.0" y="82.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">20%</text>
+<line x1="422.0" y1="88" x2="422.0" y2="444" stroke="#e1e0d9"/>
+<text x="422.0" y="82.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">30%</text>
+<line x1="526.0" y1="88" x2="526.0" y2="444" stroke="#e1e0d9"/>
+<text x="526.0" y="82.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">40%</text>
+<line x1="630.0" y1="88" x2="630.0" y2="444" stroke="#e1e0d9"/>
+<text x="630.0" y="82.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">50%</text>
+<text x="98.0" y="112.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">D₈</text>
+<path d="M110.0,96.0 h506.3 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-506.3 z" fill="#2a78d6"><title>D₈: 免費 h=1 產生 322 個節點，完整電阻 164 個（減少 49.1%）</title></path>
+<text x="628.3" y="112.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">49.1%　(322 → 164)</text>
+<text x="98.0" y="146.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">S₄</text>
+<path d="M110.0,130.0 h437.3 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-437.3 z" fill="#2a78d6"><title>S₄: 免費 h=1 產生 912 個節點，完整電阻 525 個（減少 42.4%）</title></path>
+<text x="559.3" y="146.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">42.4%　(912 → 525)</text>
+<text x="98.0" y="180.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">A₄</text>
+<path d="M110.0,164.0 h326.9 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-326.9 z" fill="#2a78d6"><title>A₄: 免費 h=1 產生 132 個節點，完整電阻 90 個（減少 31.8%）</title></path>
+<text x="448.9" y="180.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">31.8%　(132 → 90)</text>
+<text x="98.0" y="214.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">D₆</text>
+<path d="M110.0,198.0 h144.6 a4,4 0 0 1 4,4 v14.0 a4,4 0 0 1 -4,4 h-144.6 z" fill="#2a78d6"><title>D₆: 免費 h=1 產生 126 個節點，完整電阻 108 個（減少 14.3%）</title></path>
+<text x="266.6" y="214.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">14.3%　(126 → 108)</text>
+<text x="98.0" y="248.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">D₄</text>
+<circle cx="110" cy="243.0" r="4" fill="#898781"><title>D₄: 免費 h=1 產生 42 個節點，完整電阻 42 個（減少 0.0%）</title></circle>
+<text x="122.0" y="248.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0%　(42 → 42)</text>
+<text x="98.0" y="282.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">Q₈</text>
+<circle cx="110" cy="277.0" r="4" fill="#898781"><title>Q₈: 免費 h=1 產生 31 個節點，完整電阻 31 個（減少 0.0%）</title></circle>
+<text x="122.0" y="282.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0%　(31 → 31)</text>
+<text x="98.0" y="316.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">S₃</text>
+<circle cx="110" cy="311.0" r="4" fill="#898781"><title>S₃: 免費 h=1 產生 21 個節點，完整電阻 21 個（減少 0.0%）</title></circle>
+<text x="122.0" y="316.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0%　(21 → 21)</text>
+<text x="98.0" y="350.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">ℤ₂³</text>
+<circle cx="110" cy="345.0" r="4" fill="#898781"><title>ℤ₂³: 免費 h=1 產生 42 個節點，完整電阻 42 個（減少 0.0%）</title></circle>
+<text x="122.0" y="350.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0%　(42 → 42)</text>
+<text x="98.0" y="384.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">ℤ₃×ℤ₃</text>
+<circle cx="110" cy="379.0" r="4" fill="#898781"><title>ℤ₃×ℤ₃: 免費 h=1 產生 48 個節點，完整電阻 48 個（減少 0.0%）</title></circle>
+<text x="122.0" y="384.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0%　(48 → 48)</text>
+<text x="98.0" y="418.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="normal">ℤ₄×ℤ₄</text>
+<circle cx="110" cy="413.0" r="4" fill="#898781"><title>ℤ₄×ℤ₄: 免費 h=1 產生 272 個節點，完整電阻 272 個（減少 0.0%）</title></circle>
+<text x="122.0" y="418.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0%　(272 → 272)</text>
+<line x1="110" y1="88" x2="110" y2="444" stroke="#c3c2b7"/>
+<text x="24.0" y="482.0" font-size="11" fill="#898781" text-anchor="start" font-weight="normal">資料：experiments/results/circuit-model/20261104T102000_570473Z</text>
+</svg>
